@@ -528,16 +528,58 @@
 
   <!-- Digital Art Page -->
   <div id="digitalart" class="page">
-    <!-- Composites & Digital Works -->
-    <div class="subsection">
-      <button class="subsection-toggle" onclick="toggleSubsection(this)">
+    <div class="page-header">
+      <h2>Digital Art</h2>
+    </div>
+
+    <div class="subsection-menu">
+      <button class="subsection-btn" onclick="showGallery('composites')">
         <h3>Composites & Digital Works</h3>
       </button>
-      <div class="subsection-content" style="display: block;">
-        <div class="gallery">
-          <div class="gallery-item">
-            <img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg">
-          </div>
+      <button class="subsection-btn" onclick="showGallery('inthesameworld')">
+        <h3>In The Same World: ART 141 Final Project</h3>
+      </button>
+    </div>
+
+    <!-- Composites & Digital Works Gallery -->
+    <div id="composites" class="subsection-gallery" style="display: block;">
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/digitalart/4.jpg" alt="Composites & Digital Works - 4.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/digitalart/5.jpg" alt="Composites & Digital Works - 5.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/digitalart/6.tif" alt="Composites & Digital Works - 6.tif">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8.jpg">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg">
+        </div>
+      </div>
+    </div>
+
+    <!-- In The Same World Gallery -->
+    <div id="inthesameworld" class="subsection-gallery" style="display: none;">
+      <div class="gallery">
+        <!-- Images will go here when added -->
+      </div>
+    </div>
           <div class="gallery-item">
             <img src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2.jpg">
           </div>
