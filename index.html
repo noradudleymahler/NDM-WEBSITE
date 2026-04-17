@@ -102,7 +102,7 @@
     }
 
     .page.active {
-      display: nonek;
+      display: block;
     }
 
     .page-header {
@@ -124,6 +124,103 @@
       color: #666;
       font-weight: 700;
       text-transform: uppercase;
+    }
+
+    /* Digital Art subsection headers */
+    .subsection-header {
+      margin: 3rem 0 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid #2c2c2c;
+    }
+
+    .subsection-header h3 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #2c2c2c;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .subsection-header p {
+      font-size: 1rem;
+      color: #666;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 0.4rem;
+    }
+
+    /* Thumbnail Grid (used for Digital Art) */
+    .thumbnail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 1.5rem;
+    }
+
+    .thumbnail-item {
+      overflow: hidden;
+      background: #f4f4f4;
+      aspect-ratio: 1 / 1;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .thumbnail-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .thumbnail-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .thumbnail-item:hover img {
+      transform: scale(1.04);
+    }
+
+    /* Lightbox */
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-overlay.open {
+      display: flex;
+    }
+
+    .lightbox-overlay img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 900;
+      line-height: 1;
+      user-select: none;
+    }
+
+    @media (max-width: 768px) {
+      .thumbnail-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
     }
 
     /* Gallery Grid */
@@ -161,7 +258,7 @@
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-      display: nonek;
+      display: block;
     }
 
     /* Responsive Design */
@@ -533,86 +630,78 @@
       <h2>Digital Art</h2>
     </div>
 
-    <div class="subsection-menu">
-      <button class="subsection-btn" onclick="showGallery('composites')">
-        <h3>Composites & Digital Works</h3>
-      </button>
-      <button class="subsection-btn" onclick="showGallery('inthesameworld')">
-        <h3>In The Same World: ART 141 Final Project</h3>
-      </button>
+    <!-- Section 1: Composites & Digital Works -->
+    <div class="subsection-header">
+      <h3>Composites &amp; Digital Works</h3>
     </div>
-
-    <!-- Composites & Digital Works Gallery -->
-    <div id="composites" class="subsection-gallery" style="display: nonek;">
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2.jpg">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3.jpg">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/digitalart/4.jpg" alt="Composites & Digital Works - 4.jpg">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/digitalart/5.jpg" alt="Composites & Digital Works - 5.jpg">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/digitalart/6.tif" alt="Composites & Digital Works - 6.tif">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7.jpg">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8.jpg">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg">
-        </div>
+    <div class="thumbnail-grid" id="composites">
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/1.jpg')">
+        <img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/2.jpg')">
+        <img src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/3.jpg')">
+        <img src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/4.jpg')">
+        <img src="Images/digitalart/4.jpg" alt="Composites & Digital Works - 4">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/5.jpg')">
+        <img src="Images/digitalart/5.jpg" alt="Composites & Digital Works - 5">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/6.tif')">
+        <img src="Images/digitalart/6.tif" alt="Composites & Digital Works - 6">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/7.jpg')">
+        <img src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/8.jpg')">
+        <img src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/9.jpg')">
+        <img src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9">
       </div>
     </div>
 
-    <!-- In The Same World Gallery -->
-    <div id="inthesameworld" class="subsection-gallery" style="display: none;">
-      <div class="gallery">
-        <!-- Images will go here when added -->
-      </div>
+    <!-- Section 2: In The Same World -->
+    <div class="subsection-header" style="margin-top: 5rem;">
+      <h3>In The Same World</h3>
+      <p>ART 141 Final Project</p>
     </div>
+    <div class="thumbnail-grid" id="inthesameworld">
+      <!-- Add images to Images/inthesameworld/ — they will appear here -->
+      <p style="color:#999;font-style:italic;grid-column:1/-1;padding:2rem 0;">Images coming soon.</p>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Full size">
   </div>
 
   <script>
     function showPage(pageId) {
-      // Hide all pages
       const pages = document.querySelectorAll('.page');
       pages.forEach(page => page.classList.remove('active'));
-
-      // Show selected page
       document.getElementById(pageId).classList.add('active');
-
-      // Scroll to top
       window.scrollTo(0, 0);
     }
 
-    function showGallery(galleryId) {
-      // Hide all subsection galleries
-      const galleries = document.querySelectorAll('.subsection-gallery');
-      galleries.forEach(g => g.style.display = 'none');
-
-      // Remove active class from all buttons
-      const buttons = document.querySelectorAll('.subsection-btn');
-      buttons.forEach(b => b.classList.remove('active'));
-
-      // Show selected gallery
-      document.getElementById(galleryId).style.display = 'block';
-
-      // Add active class to clicked button
-      event.target.closest('.subsection-btn').classList.add('active');
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
     }
 
-    // Preview functionality removed — add images permanently to the Images/ folders on disk.
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.getElementById('lightbox-img').src = '';
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
   </script>
 </body>
 
