@@ -96,34 +96,87 @@
     /* Gallery Pages */
     .page {
       display: none;
-      padding: 3rem 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
     }
 
     .page.active {
       display: block;
     }
 
-    .page-header {
-      text-align: center;
-      margin-bottom: 3rem;
+    /* Content area below the hero */
+    .page-content {
+      padding: 3rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
-    .page-header h2 {
+    /* Hero banner (full-width backdrop image behind page title) */
+    .page-hero {
+      position: relative;
+      width: 100%;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    /* Dark overlay — only visible when a hero image is set */
+    .page-hero.has-hero {
+      min-height: 400px;
+    }
+
+    .page-hero.has-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .page-hero-text {
+      position: relative;
+      z-index: 1;
+      padding: 2.5rem 2rem;
+    }
+
+    .page-hero h2 {
       font-size: 3rem;
       font-weight: 900;
-      color: #2c2c2c;
-      margin-bottom: 1rem;
       letter-spacing: 2px;
       text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: #2c2c2c;
     }
 
-    .page-header p {
+    .page-hero.has-hero h2 {
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .page-hero p {
       font-size: 1.4rem;
       color: #666;
       font-weight: 700;
       text-transform: uppercase;
+    }
+
+    .page-hero.has-hero p {
+      color: rgba(255, 255, 255, 0.88);
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .page-hero.has-hero {
+        min-height: 260px;
+      }
+
+      .page-hero h2 {
+        font-size: 2rem;
+      }
     }
 
     /* Digital Art subsection headers */
@@ -280,7 +333,8 @@
         font-size: 0.75rem;
       }
 
-      .page-header h2 {
+      .page-header h2,
+      .page-hero h2 {
         font-size: 2rem;
       }
 
@@ -339,11 +393,14 @@
 
   <!-- Experimental Processes Page -->
   <div id="experimental" class="page">
-    <div class="page-header">
-      <h2>Experimental Processes</h2>
-      <p>Van Dyke Brown, Cyanotype, and Pinhole Cameras</p>
+    <div id="hero-experimental" class="page-hero has-hero" style="background-image: url('Images/experimental/hero.jpg')">
+      <div class="page-hero-text">
+        <h2>Experimental Processes</h2>
+        <p>Van Dyke Brown, Cyanotype, and Pinhole Cameras</p>
+      </div>
     </div>
-    <div class="gallery">
+    <div class="page-content">
+      <div class="gallery">
       <!-- GALLERY:experimental START -->
       <div class="gallery-item">
         <img src="Images/experimental/1.jpg" alt="experimental - 1.jpg">
@@ -394,16 +451,20 @@
         <img src="Images/experimental/16.jpg" alt="experimental - 16.jpg">
       </div>
       <!-- GALLERY:experimental END -->
-    </div>
+      </div>
+    </div><!-- end .page-content -->
   </div>
 
   <!-- Traditional B&W Photography Page -->
   <div id="traditional" class="page">
-    <div class="page-header">
-      <h2>Traditional B&W Photography</h2>
-      <p>35mm</p>
+    <div id="hero-traditional" class="page-hero has-hero" style="background-image: url('Images/traditional/hero.jpg')">
+      <div class="page-hero-text">
+        <h2>Traditional B&amp;W Photography</h2>
+        <p>35mm</p>
+      </div>
     </div>
-    <div class="gallery">
+    <div class="page-content">
+      <div class="gallery">
       <!-- GALLERY:traditional START -->
       <div class="gallery-item">
         <img src="Images/traditional/1.jpg" alt="traditional - 1.jpg">
@@ -439,16 +500,20 @@
         <img src="Images/traditional/11.jpg" alt="traditional - 11.jpg">
       </div>
       <!-- GALLERY:traditional END -->
-    </div>
+      </div>
+    </div><!-- end .page-content -->
   </div>
 
   <!-- Darkroom Techniques Page -->
   <div id="darkroom" class="page">
-    <div class="page-header">
-      <h2>Darkroom Techniques & Double Exposure</h2>
-      <p>Superimposing, layering, multiple exposures, and use of digital negatives</p>
+    <div id="hero-darkroom" class="page-hero has-hero" style="background-image: url('Images/darkroom/hero.jpg')">
+      <div class="page-hero-text">
+        <h2>Darkroom Techniques &amp; Double Exposure</h2>
+        <p>Superimposing, layering, multiple exposures, and use of digital negatives</p>
+      </div>
     </div>
-    <div class="gallery">
+    <div class="page-content">
+      <div class="gallery">
       <!-- GALLERY:darkroom START -->
       <div class="gallery-item">
         <img src="Images/darkroom/1.jpg" alt="darkroom - 1.jpg">
@@ -532,25 +597,26 @@
         <img src="Images/darkroom/28.jpg" alt="darkroom - 28.jpg">
       </div>
       <div class="gallery-item">
-        <img src="Images/darkroom/7Panorama Collage.jpg" alt="darkroom - 7Panorama Collage.jpg">
-      </div>
-      <div class="gallery-item">
         <img src="Images/darkroom/29.jpg" alt="darkroom - 29.jpg">
       </div>
       <div class="gallery-item">
         <img src="Images/darkroom/30.jpg" alt="darkroom - 30.jpg">
       </div>
       <!-- GALLERY:darkroom END -->
-    </div>
+      </div>
+    </div><!-- end .page-content -->
   </div>
 
   <!-- Color Photography Page -->
   <div id="color" class="page">
-    <div class="page-header">
-      <h2>Color Photography</h2>
-      <p>Using a 35mm camera</p>
+    <div id="hero-color" class="page-hero has-hero" style="background-image: url('Images/color/hero.jpg')">
+      <div class="page-hero-text">
+        <h2>Color Photography</h2>
+        <p>Using a 35mm camera</p>
+      </div>
     </div>
-    <div class="gallery">
+    <div class="page-content">
+      <div class="gallery">
       <!-- GALLERY:color START -->
       <div class="gallery-item">
         <img src="Images/color/1.jpg" alt="color - 1.jpg">
@@ -646,20 +712,24 @@
         <img src="Images/color/64540019.JPG" alt="color - 64540019.JPG">
       </div>
       <!-- GALLERY:color END -->
-    </div>
+      </div>
+    </div><!-- end .page-content -->
   </div>
 
   <!-- Digital Art Page -->
   <div id="digitalart" class="page">
-    <div class="page-header">
-      <h2>Digital Art</h2>
+    <div id="hero-digitalart" class="page-hero">
+      <div class="page-hero-text">
+        <h2>Digital Art</h2>
+      </div>
     </div>
+    <div class="page-content">
 
-    <!-- Section 1: Composites & Digital Works -->
-    <div class="subsection-header">
-      <h3>Composites &amp; Digital Works</h3>
-    </div>
-    <div class="thumbnail-grid" id="composites">
+      <!-- Section 1: Composites & Digital Works -->
+      <div class="subsection-header">
+        <h3>Composites &amp; Digital Works</h3>
+      </div>
+      <div class="thumbnail-grid" id="composites">
       <!-- GALLERY:composites START -->
       <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/1.jpg')">
         <img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg">
@@ -689,18 +759,19 @@
         <img src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg">
       </div>
       <!-- GALLERY:composites END -->
-    </div>
+      </div>
 
-    <!-- Section 2: In The Same World -->
-    <div class="subsection-header" style="margin-top: 5rem;">
-      <h3>In The Same World</h3>
-      <p>ART 141 Final Project</p>
-    </div>
-    <div class="thumbnail-grid" id="inthesameworld">
+      <!-- Section 2: In The Same World -->
+      <div class="subsection-header" style="margin-top: 5rem;">
+        <h3>In The Same World</h3>
+        <p>ART 141 Final Project</p>
+      </div>
+      <div class="thumbnail-grid" id="inthesameworld">
       <!-- GALLERY:inthesameworld START -->
       <p style="color:#999;font-style:italic;grid-column:1/-1;padding:2rem 0;">Images coming soon.</p>
       <!-- GALLERY:inthesameworld END -->
-    </div>
+      </div>
+    </div><!-- end .page-content -->
   </div>
 
   <!-- Lightbox -->

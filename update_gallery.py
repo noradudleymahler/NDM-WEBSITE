@@ -61,6 +61,51 @@ THUMBNAIL_SECTIONS = [
 ]
 
 
+HERO_NAMES = ["hero.jpg", "hero.jpeg", "hero.png", "hero.JPG", "hero.JPEG", "hero.PNG"]
+
+# All sections (gallery + thumbnail) that have a hero div
+ALL_SECTIONS = [
+    {"id": "experimental", "folder": "experimental"},
+    {"id": "traditional",  "folder": "traditional"},
+    {"id": "darkroom",     "folder": "darkroom"},
+    {"id": "color",        "folder": "color"},
+    {"id": "digitalart",   "folder": "digitalart"},
+]
+
+
+def find_hero(folder_path):
+    """Return the hero filename if one exists in the folder, else None."""
+    for name in HERO_NAMES:
+        if os.path.isfile(os.path.join(folder_path, name)):
+            return name
+    return None
+
+
+def update_heroes(html):
+    """Update each hero div's class and background-image style."""
+    for sec in ALL_SECTIONS:
+        folder_path = os.path.join(IMAGES_DIR, sec["folder"])
+        hero_file = find_hero(folder_path)
+        div_id = f"hero-{sec['id']}"
+
+        if hero_file:
+            hero_url = f"Images/{sec['folder']}/{hero_file}"
+            replacement = (
+                f'<div id="{div_id}" class="page-hero has-hero" '
+                f'style="background-image: url(\'{hero_url}\')">'
+            )
+            print(f"  hero for {sec['id']}: {hero_file}")
+        else:
+            replacement = f'<div id="{div_id}" class="page-hero">'
+
+        # Replace whatever the hero div currently looks like
+        pattern = rf'<div id="{re.escape(div_id)}"[^>]*>'
+        html, count = re.subn(pattern, replacement, html)
+        if count == 0:
+            print(f"  ⚠  Hero div 'id={div_id}' not found in HTML — skipped.")
+    return html
+
+
 def natural_sort_key(name):
     """Sort filenames so 2.jpg < 10.jpg (numeric-aware)."""
     parts = re.split(r"(\d+)", name)
@@ -76,13 +121,15 @@ def get_images(folder_path):
     if os.path.isfile(sort_file):
         with open(sort_file) as f:
             ordered = [line.strip() for line in f if line.strip()]
-        # Only include files that actually exist on disk
+        # Only include files that actually exist on disk (exclude hero images)
         existing = set(os.listdir(folder_path))
-        images = [fn for fn in ordered if fn in existing]
+        images = [fn for fn in ordered if fn in existing and fn.lower() not in {h.lower() for h in HERO_NAMES}]
         # Append any new files not yet in sort_order.txt
         in_order = set(images)
         extras = sorted(
-            [fn for fn in existing if fn not in in_order and os.path.splitext(fn)[1] in IMAGE_EXTS],
+            [fn for fn in existing if fn not in in_order
+             and os.path.splitext(fn)[1] in IMAGE_EXTS
+             and fn.lower() not in {h.lower() for h in HERO_NAMES}],
             key=natural_sort_key,
         )
         if extras:
@@ -91,7 +138,9 @@ def get_images(folder_path):
     else:
         all_files = os.listdir(folder_path)
         images = sorted(
-            [fn for fn in all_files if os.path.splitext(fn)[1] in IMAGE_EXTS],
+            [fn for fn in all_files
+             if os.path.splitext(fn)[1] in IMAGE_EXTS
+             and fn.lower() not in {h.lower() for h in HERO_NAMES}],
             key=natural_sort_key,
         )
     return images
@@ -143,6 +192,10 @@ def main():
 
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html = f.read()
+
+    # ── Hero backdrops ────────────────────────────────────────────────────────
+    print("Heroes:")
+    html = update_heroes(html)
 
     # ── Standard gallery sections ─────────────────────────────────────────────
     for sec in GALLERY_SECTIONS:
