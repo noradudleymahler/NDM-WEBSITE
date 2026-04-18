@@ -249,6 +249,10 @@
       min-height: 520px;
     }
 
+    .gallery-item {
+      cursor: pointer;
+    }
+
     .gallery-item:hover {
       transform: translateY(-2px);
     }
@@ -698,6 +702,14 @@
       document.getElementById('lightbox').classList.remove('open');
       document.getElementById('lightbox-img').src = '';
     }
+
+    // Make every gallery-item clickable (experimental, traditional, darkroom, color)
+    document.querySelectorAll('.gallery-item').forEach(function(item) {
+      item.addEventListener('click', function() {
+        var img = item.querySelector('img');
+        if (img) openLightbox(img.src);
+      });
+    });
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeLightbox();
