@@ -398,6 +398,33 @@
       user-select: none;
     }
 
+    .lightbox-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 900;
+      user-select: none;
+      padding: 1rem;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+      z-index: 1001;
+    }
+
+    .lightbox-arrow:hover {
+      opacity: 1;
+    }
+
+    .lightbox-arrow.prev {
+      left: 1rem;
+    }
+
+    .lightbox-arrow.next {
+      right: 1rem;
+    }
+
     @media (max-width: 768px) {
       .thumbnail-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -932,19 +959,21 @@
   </div> <!-- Lightbox -->
   <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span class="lightbox-arrow prev" onclick="event.stopPropagation(); lightboxStep(-1)">&#8592;</span>
     <img id="lightbox-img" src="" alt="Full size">
+    <span class="lightbox-arrow next" onclick="event.stopPropagation(); lightboxStep(1)">&#8594;</span>
   </div>
 
   <script>
+    // ── Page navigation ───────────────────────────────────────────────────────
     function showPage(pageId) {
-      const pages = document.querySelectorAll('.page');
-      pages.forEach(page => page.classList.remove('active'));
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(pageId).classList.add('active');
-      // Reset Digital Art to card view when navigating back to it
       if (pageId === 'digitalart') closeSubfolder();
       window.scrollTo(0, 0);
     }
 
+    // ── Digital Art subfolder toggle ──────────────────────────────────────────
     function openSubfolder(id) {
       document.getElementById('digitalart-cards').style.display = 'none';
       document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));
@@ -958,7 +987,24 @@
       window.scrollTo(0, 0);
     }
 
+    // ── Lightbox with prev/next ───────────────────────────────────────────────
+    let lightboxImages = [];   // list of src strings for the current page/section
+    let lightboxIndex = 0;    // index of the currently shown image
+
+    function buildImageList(clickedSrc) {
+      // Collect all visible images from .gallery-item and .thumbnail-item
+      const imgs = [];
+      document.querySelectorAll(
+        '.page.active .gallery-item img, ' +
+        '.subfolder-view.open .thumbnail-item img'
+      ).forEach(img => imgs.push(img.src));
+      return imgs;
+    }
+
     function openLightbox(src) {
+      lightboxImages = buildImageList(src);
+      lightboxIndex = lightboxImages.indexOf(src);
+      if (lightboxIndex === -1) lightboxIndex = 0;
       document.getElementById('lightbox-img').src = src;
       document.getElementById('lightbox').classList.add('open');
     }
@@ -968,7 +1014,13 @@
       document.getElementById('lightbox-img').src = '';
     }
 
-    // Make every gallery-item clickable (experimental, traditional, darkroom, color)
+    function lightboxStep(dir) {
+      if (!lightboxImages.length) return;
+      lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
+      document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
+    }
+
+    // Click handler for standard .gallery-item images
     document.querySelectorAll('.gallery-item').forEach(function (item) {
       item.addEventListener('click', function () {
         var img = item.querySelector('img');
@@ -976,8 +1028,12 @@
       });
     });
 
+    // Keyboard: Escape closes, arrows navigate
     document.addEventListener('keydown', function (e) {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
       if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') lightboxStep(-1);
+      if (e.key === 'ArrowRight') lightboxStep(1);
     });
   </script>
 </body>
