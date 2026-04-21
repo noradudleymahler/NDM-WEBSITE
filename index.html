@@ -54,7 +54,7 @@
       color: #2c2c2c;
       text-decoration: none;
       font-size: 0.75rem;
-      transition: all 0.3s ease;
+      transition: transform 0.18s ease, color 0.18s ease, font-size 0.18s ease;
       letter-spacing: 0.5px;
       font-weight: 900;
       text-transform: uppercase;
@@ -63,8 +63,13 @@
     }
 
     nav a:hover {
-      color: #666;
-      transform: scale(1.1);
+      color: #000;
+      transform: scale(1.25);
+    }
+
+    nav a.active-link {
+      color: #000;
+      border-bottom: 2px solid #2c2c2c;
     }
 
     /* Home Page */
@@ -517,12 +522,15 @@
   <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="#home" onclick="showPage('home')">Home</a></li>
-      <li><a href="#experimental" onclick="showPage('experimental')">Experimental Processes</a></li>
-      <li><a href="#traditional" onclick="showPage('traditional')">Traditional B&W Photography</a></li>
-      <li><a href="#darkroom" onclick="showPage('darkroom')">Darkroom Techniques & Double Exposure</a></li>
-      <li><a href="#color" onclick="showPage('color')">Color Photography</a></li>
-      <li><a href="#digitalart" onclick="showPage('digitalart')">Digital Art</a></li>
+      <li><a href="#home" data-page="home" onclick="showPage('home')">Home</a></li>
+      <li><a href="#experimental" data-page="experimental" onclick="showPage('experimental')">Experimental Processes</a>
+      </li>
+      <li><a href="#traditional" data-page="traditional" onclick="showPage('traditional')">Traditional B&W
+          Photography</a></li>
+      <li><a href="#darkroom" data-page="darkroom" onclick="showPage('darkroom')">Darkroom Techniques & Double
+          Exposure</a></li>
+      <li><a href="#color" data-page="color" onclick="showPage('color')">Color Photography</a></li>
+      <li><a href="#digitalart" data-page="digitalart" onclick="showPage('digitalart')">Digital Art</a></li>
     </ul>
   </nav>
 
@@ -966,33 +974,71 @@
 
   <script>
     // ── Page navigation ───────────────────────────────────────────────────────
-    function showPage(pageId) {
+    function showPage(pageId, subfolderId, skipHistory) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(pageId).classList.add('active');
-      if (pageId === 'digitalart') closeSubfolder();
+
+      // Update active nav link
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-link'));
+      const navLink = document.querySelector('nav a[data-page="' + pageId + '"]');
+      if (navLink) navLink.classList.add('active-link');
+
+      if (pageId === 'digitalart') {
+        if (subfolderId) {
+          openSubfolder(subfolderId, true);
+        } else {
+          closeSubfolder(true);
+        }
+      }
+
+      // Update URL hash without triggering a scroll
+      if (!skipHistory) {
+        const hash = subfolderId ? '#' + pageId + '/' + subfolderId : '#' + pageId;
+        history.pushState(null, '', hash);
+      }
+
       window.scrollTo(0, 0);
     }
 
     // ── Digital Art subfolder toggle ──────────────────────────────────────────
-    function openSubfolder(id) {
+    function openSubfolder(id, skipHistory) {
       document.getElementById('digitalart-cards').style.display = 'none';
       document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));
       document.getElementById('subfolder-' + id).classList.add('open');
+      if (!skipHistory) {
+        history.pushState(null, '', '#digitalart/' + id);
+      }
       window.scrollTo(0, 0);
     }
 
-    function closeSubfolder() {
+    function closeSubfolder(skipHistory) {
       document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));
       document.getElementById('digitalart-cards').style.display = '';
+      if (!skipHistory) {
+        history.pushState(null, '', '#digitalart');
+      }
       window.scrollTo(0, 0);
     }
 
-    // ── Lightbox with prev/next ───────────────────────────────────────────────
-    let lightboxImages = [];   // list of src strings for the current page/section
-    let lightboxIndex = 0;    // index of the currently shown image
+    // ── Read hash on load and handle back/forward ─────────────────────────────
+    function navigateFromHash() {
+      const hash = location.hash.replace('#', '') || 'home';
+      const parts = hash.split('/');
+      const pageId = parts[0] || 'home';
+      const subfolderId = parts[1] || null;
+      const validPages = ['home', 'experimental', 'traditional', 'darkroom', 'color', 'digitalart'];
+      const target = validPages.includes(pageId) ? pageId : 'home';
+      showPage(target, subfolderId, true);
+    }
 
-    function buildImageList(clickedSrc) {
-      // Collect all visible images from .gallery-item and .thumbnail-item
+    window.addEventListener('popstate', navigateFromHash);
+    window.addEventListener('DOMContentLoaded', navigateFromHash);
+
+    // ── Lightbox with prev/next ───────────────────────────────────────────────
+    let lightboxImages = [];
+    let lightboxIndex = 0;
+
+    function buildImageList(src) {
       const imgs = [];
       document.querySelectorAll(
         '.page.active .gallery-item img, ' +
@@ -1035,6 +1081,56 @@
       if (e.key === 'ArrowLeft') lightboxStep(-1);
       if (e.key === 'ArrowRight') lightboxStep(1);
     });
+  </script>
+
+  // ── Lightbox with prev/next ───────────────────────────────────────────────
+  let lightboxImages = []; // list of src strings for the current page/section
+  let lightboxIndex = 0; // index of the currently shown image
+
+  function buildImageList(clickedSrc) {
+  // Collect all visible images from .gallery-item and .thumbnail-item
+  const imgs = [];
+  document.querySelectorAll(
+  '.page.active .gallery-item img, ' +
+  '.subfolder-view.open .thumbnail-item img'
+  ).forEach(img => imgs.push(img.src));
+  return imgs;
+  }
+
+  function openLightbox(src) {
+  lightboxImages = buildImageList(src);
+  lightboxIndex = lightboxImages.indexOf(src);
+  if (lightboxIndex === -1) lightboxIndex = 0;
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+  }
+
+  function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightbox-img').src = '';
+  }
+
+  function lightboxStep(dir) {
+  if (!lightboxImages.length) return;
+  lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
+  document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
+  }
+
+  // Click handler for standard .gallery-item images
+  document.querySelectorAll('.gallery-item').forEach(function (item) {
+  item.addEventListener('click', function () {
+  var img = item.querySelector('img');
+  if (img) openLightbox(img.src);
+  });
+  });
+
+  // Keyboard: Escape closes, arrows navigate
+  document.addEventListener('keydown', function (e) {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') lightboxStep(-1);
+  if (e.key === 'ArrowRight') lightboxStep(1);
+  });
   </script>
 </body>
 
