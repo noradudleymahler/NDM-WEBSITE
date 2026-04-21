@@ -30,41 +30,44 @@
       color: #333;
     }
 
-    /* Navigation Bar */
     nav {
       background-color: #ffffff;
-      padding: 0.75rem 1rem;
+      padding: 0.6rem 1rem;
       position: sticky;
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       border-bottom: 1px solid #e0e0e0;
+      width: 100%;
     }
 
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: nowrap;
       align-items: center;
+      flex-wrap: nowrap;
+      gap: clamp(0.3rem, 1.2vw, 1.4rem);
+      margin: 0;
+      padding: 0;
     }
 
     nav a {
       color: #2c2c2c;
       text-decoration: none;
-      font-size: 0.75rem;
-      transition: transform 0.18s ease, color 0.18s ease, font-size 0.18s ease;
-      letter-spacing: 0.5px;
+      font-size: clamp(0.55rem, 0.9vw, 0.78rem);
+      transition: transform 0.18s ease, color 0.18s ease;
+      letter-spacing: 0.4px;
       font-weight: 900;
       text-transform: uppercase;
       white-space: nowrap;
       display: inline-block;
+      padding: 0.2rem 0;
     }
 
     nav a:hover {
       color: #000;
-      transform: scale(1.25);
+      transform: scale(1.4);
     }
 
     nav a.active-link {
@@ -611,9 +614,6 @@
         </div>
         <div class="gallery-item">
           <img src="Images/experimental/16.jpg" alt="experimental - 16.jpg">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/experimental/17.jpg" alt="experimental - 17.jpg">
         </div>
         <!-- GALLERY:experimental END -->
       </div>
