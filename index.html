@@ -1202,7 +1202,9 @@
 
     function lightboxStep(dir) {
       if (!lightboxImages.length) return;
-      lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
+      var next = lightboxIndex + dir;
+      if (next < 0 || next >= lightboxImages.length) return;
+      lightboxIndex = next;
       document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
       updateCounter();
     }
@@ -1228,6 +1230,8 @@
     document.addEventListener('keydown', function (e) {
       if (!document.getElementById('lightbox').classList.contains('open')) return;
       if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') lightboxStep(-1);
+      if (e.key === 'ArrowRight') lightboxStep(1);
     });
 
     // ── Swipe support for lightbox on mobile ─────────────────────────────────
