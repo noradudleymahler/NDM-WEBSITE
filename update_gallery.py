@@ -144,9 +144,6 @@ def main():
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html = f.read()
 
-    print("Heroes:")
-    html = update_heroes(html)
-
     print("Galleries:")
     for sec in GALLERY_SECTIONS:
         folder_path = os.path.join(IMAGES_DIR, sec["folder"])
