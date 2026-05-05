@@ -50,10 +50,10 @@
     }
 
     .nav-brand {
-      font-family: 'Arial Black', Arial, sans-serif;
+      font-family: Georgia, serif;
       font-size: 1.1rem;
-      font-style: normal;
-      font-weight: 900;
+      font-style: italic;
+      font-weight: normal;
       color: #2c2c2c;
       text-decoration: none;
       white-space: nowrap;
@@ -78,7 +78,7 @@
     nav a {
       color: #2c2c2c;
       text-decoration: none;
-      font-family: 'Arial Black', Arial, sans-serif;
+      font-family: Georgia, serif;
       font-size: clamp(1.1rem, 2vw, 1.4rem);
       white-space: nowrap;
       display: inline-block;
@@ -577,7 +577,12 @@
         <h1>Photography</h1>
       </div>
       <div id="featured" style="width:100%;max-width:1100px;margin:1.5rem auto 0;">
-        <img id="featured-img" src="Images/darkroom/5.jpg" alt="Panorama"
+        <img id="featured-img" src="Images/home/featured.jpg" alt="Featured"
+          style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
+          onclick="openLightbox('Images/home/featured.jpg')">
+      </div>
+      <div id="panorama" style="width:100%;max-width:1100px;margin:2rem auto 0;">
+        <img id="panorama-img" src="Images/darkroom/5.jpg" alt="Panorama"
           style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
           onclick="openLightbox('Images/darkroom/5.jpg')">
       </div>
