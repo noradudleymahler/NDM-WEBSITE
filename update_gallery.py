@@ -177,8 +177,6 @@ def main():
             print("🚀  Pushed successfully!")
         except subprocess.CalledProcessError as e:
             print(f"❌  Error pushing: {e}")
-        except Exception as e:
-            print(f"❌  Unexpected error: {e}")
 
 
 if __name__ == "__main__":
