@@ -29,7 +29,7 @@
     }
 
     body {
-      font-family: 'Times New Roman', Times, serif;
+      font-family: 'Arial Black', Arial, sans-serif;
       background-color: #ffffff;
       color: #333;
       font-size: 18px;
@@ -50,9 +50,10 @@
     }
 
     .nav-brand {
-      font-family: 'Times New Roman', Times, serif;
+      font-family: 'Arial Black', Arial, sans-serif;
       font-size: 1.1rem;
-      font-style: italic;
+      font-style: normal;
+      font-weight: 900;
       color: #2c2c2c;
       text-decoration: none;
       white-space: nowrap;
@@ -77,8 +78,8 @@
     nav a {
       color: #2c2c2c;
       text-decoration: none;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: clamp(0.75rem, 1vw, 1rem);
+      font-family: 'Arial Black', Arial, sans-serif;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
       white-space: nowrap;
       display: inline-block;
       padding: 0.2rem 0;
@@ -302,16 +303,20 @@
     }
 
     .thumbnail-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
       margin-top: 1.5rem;
+      align-items: center;
     }
 
     .thumbnail-item {
+      width: 85%;
+      max-width: 900px;
       overflow: hidden;
       background: #f4f4f4;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: unset;
+      height: auto;
       cursor: pointer;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
@@ -338,10 +343,12 @@
       flex-direction: column;
       gap: 2rem;
       margin-top: 1.5rem;
+      align-items: center;
     }
 
     .itsw-item {
-      width: 100%;
+      width: 85%;
+      max-width: 900px;
       cursor: pointer;
     }
 
@@ -570,9 +577,9 @@
         <h1>Photography</h1>
       </div>
       <div id="featured" style="width:100%;max-width:1100px;margin:1.5rem auto 0;">
-        <img id="featured-img" src="Images/home/featured.jpg" alt="Featured"
+        <img id="featured-img" src="Images/darkroom/5.jpg" alt="Panorama"
           style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
-          onclick="openLightbox('Images/home/featured.jpg')">
+          onclick="openLightbox('Images/darkroom/5.jpg')">
       </div>
       <p style="text-align:center;margin-top:2rem;font-size:1.1rem;">
         <strong>Contact:</strong>
@@ -1064,9 +1071,14 @@
 
     function buildImageList(src) {
       const imgs = [];
-      document.querySelectorAll(
-        '.page.active .gallery-item img, .subfolder-view.open .thumbnail-item img, .subfolder-view.open .itsw-item img'
-      ).forEach(img => imgs.push(img.src));
+      const activePage = document.querySelector('.page.active');
+      const activeSubfolder = document.querySelector('.subfolder-view.open');
+
+      if (activeSubfolder) {
+        activeSubfolder.querySelectorAll('.thumbnail-item img, .itsw-item img').forEach(img => imgs.push(img.src));
+      } else if (activePage.id !== 'digitalart') {
+        activePage.querySelectorAll('.gallery-item img').forEach(img => imgs.push(img.src));
+      }
       return imgs;
     }
 
