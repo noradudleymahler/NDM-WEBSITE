@@ -141,6 +141,17 @@ def replace_block(html, section_id, new_block):
 def main():
     auto_push = True  # Always push by default
 
+    # Clean up any stuck git lock files
+    import time
+    lock_file = os.path.join(BASE_DIR, ".git", "index.lock")
+    if os.path.exists(lock_file):
+        try:
+            os.remove(lock_file)
+            time.sleep(1)
+            print("  Cleaned up git lock file")
+        except:
+            pass
+
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html = f.read()
 
