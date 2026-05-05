@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nora Dudley Mahler Photography</title>
+  <title>Nora Mahler Photography</title>
   <link rel="canonical" href="https://noradmahlerphoto.com/">
-  <meta property="og:site_name" content="Nora Dudley Mahler Photography">
-  <meta property="og:title" content="Nora Dudley Mahler Photography">
-  <meta property="og:description" content="Photography portfolio by Nora Dudley Mahler.">
+  <meta property="og:site_name" content="Nora Mahler Photography">
+  <meta property="og:title" content="Nora Mahler Photography">
+  <meta property="og:description" content="Photography portfolio by Nora Mahler.">
   <meta property="og:url" content="https://noradmahlerphoto.com/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://noradmahlerphoto.com/Images/home/featured.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nora Dudley Mahler Photography">
-  <meta name="twitter:description" content="Photography portfolio by Nora Dudley Mahler.">
+  <meta name="twitter:title" content="Nora Mahler Photography">
+  <meta name="twitter:description" content="Photography portfolio by Nora Mahler.">
   <meta name="twitter:image" content="https://noradmahlerphoto.com/Images/home/featured.jpg">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -559,7 +559,7 @@
 <body>
 
   <nav>
-    <a class="nav-brand" href="#home" onclick="showPage('home')">Nora Dudley Mahler</a>
+    <a class="nav-brand" href="#home" onclick="showPage('home')">Nora Mahler</a>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -576,7 +576,7 @@
   <div id="home" class="page active">
     <div class="home-container">
       <div class="home-title">
-        <h1>Nora Dudley Mahler</h1>
+        <h1>Nora Mahler</h1>
         <h1>Photography</h1>
       </div>
       <div id="featured" style="width:100%;max-width:1100px;margin:1.5rem auto 0;">
@@ -1026,14 +1026,14 @@
       const navLink = document.querySelector('nav a[data-page="' + pageId + '"]');
       if (navLink) navLink.classList.add('active-link');
       const titles = {
-        home: 'Nora Dudley Mahler Photography',
-        experimental: 'Experimental Processes — Nora Dudley Mahler',
-        traditional: 'Traditional B&W — Nora Dudley Mahler',
-        darkroom: 'Darkroom & Double Exposure — Nora Dudley Mahler',
-        color: 'Color Photography — Nora Dudley Mahler',
-        digitalart: 'Digital Art — Nora Dudley Mahler'
+        home: 'Nora Mahler Photography',
+        experimental: 'Experimental Processes — Nora Mahler',
+        traditional: 'Traditional B&W — Nora Mahler',
+        darkroom: 'Darkroom & Double Exposure — Nora Mahler',
+        color: 'Color Photography — Nora Mahler',
+        digitalart: 'Digital Art — Nora Mahler'
       };
-      document.title = titles[pageId] || 'Nora Dudley Mahler Photography';
+      document.title = titles[pageId] || 'Nora Mahler Photography';
       document.getElementById('nav-menu').classList.remove('open');
       if (pageId === 'digitalart') {
         if (subfolderId) { openSubfolder(subfolderId, true); }
