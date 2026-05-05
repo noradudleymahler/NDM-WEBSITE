@@ -139,7 +139,7 @@ def replace_block(html, section_id, new_block):
 
 
 def main():
-    auto_push = "--push" in sys.argv
+    auto_push = "--push" in sys.argv or True  # Always push by default
 
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html = f.read()
