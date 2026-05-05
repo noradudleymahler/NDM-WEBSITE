@@ -139,7 +139,7 @@ def replace_block(html, section_id, new_block):
 
 
 def main():
-    auto_push = "--push" in sys.argv or True  # Always push by default
+    auto_push = True  # Always push by default
 
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html = f.read()
@@ -170,12 +170,15 @@ def main():
 
     if auto_push:
         print("\n📤  Pushing to GitHub...")
-        subprocess.run(["git", "-C", BASE_DIR, "add", "."], check=True)
-        subprocess.run(["git", "-C", BASE_DIR, "commit", "-m", "Auto-update galleries"], check=True)
-        subprocess.run(["git", "-C", BASE_DIR, "push", "origin", "main"], check=True)
-        print("🚀  Pushed!")
-    else:
-        print("To push: python3 update_gallery.py --push")
+        try:
+            subprocess.run(["git", "-C", BASE_DIR, "add", "."], check=True)
+            subprocess.run(["git", "-C", BASE_DIR, "commit", "-m", "Auto-update galleries"], check=True)
+            subprocess.run(["git", "-C", BASE_DIR, "push", "origin", "main"], check=True)
+            print("🚀  Pushed successfully!")
+        except subprocess.CalledProcessError as e:
+            print(f"❌  Error pushing: {e}")
+        except Exception as e:
+            print(f"❌  Unexpected error: {e}")
 
 
 if __name__ == "__main__":
