@@ -108,23 +108,61 @@
       align-items: center;
       justify-content: center;
       background: #ffffff;
-      padding: 3rem 2rem;
+      padding: 1.5rem 2rem 2.5rem;
     }
 
     .home-title {
       text-align: center;
       color: #2c2c2c;
-      padding: 2rem;
-      margin-bottom: 3rem;
+      padding: 1rem 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .home-title h1 {
       font-family: 'Times New Roman', Times, serif;
-      font-size: 4.2rem;
+      font-size: 5rem;
       font-weight: bold;
       font-style: normal;
       letter-spacing: 3px;
       margin-bottom: 0.5rem;
+    }
+
+    .home-layout {
+      display: flex;
+      gap: 5rem;
+      max-width: 1800px;
+      width: 100%;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    .home-images {
+      flex: 0 0 58%;
+      min-width: 0;
+    }
+
+    .home-text {
+      flex: 1;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #000;
+      font-weight: bold;
+      padding-top: 2rem;
+      min-width: 0;
+    }
+
+    .itsw-layout {
+      display: flex;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .itsw-sidebar {
+      flex: 0 0 300px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
     }
 
     .page {
@@ -181,7 +219,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 520px;
+      min-height: 620px;
       cursor: pointer;
     }
 
@@ -501,7 +539,33 @@
 
     @media (max-width: 768px) {
       .home-title h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+      }
+
+      .home-layout {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .home-images {
+        flex: none;
+        width: 100%;
+      }
+
+      .home-text {
+        flex: 1;
+        font-size: 1rem;
+        padding-top: 0;
+      }
+
+      .itsw-layout {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .itsw-sidebar {
+        flex: none;
+        width: 100%;
       }
 
       .page-header h2 {
@@ -514,7 +578,7 @@
       }
 
       .gallery-item {
-        min-height: 360px;
+        min-height: 320px;
       }
 
       .thumbnail-grid {
@@ -524,22 +588,6 @@
 
       .folder-card {
         width: 100%;
-      }
-
-      div[style*="display: flex; gap: 6rem"] {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 2rem !important;
-      }
-
-      div[style*="flex: 0 0 750px"] {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-      }
-
-      div[style*="flex: 1; font-size: 1.2rem"] {
-        flex: 1 !important;
-        font-size: 0.95rem !important;
       }
     }
 
@@ -597,9 +645,9 @@
         <h1>Nora Mahler</h1>
         <h1>Photography</h1>
       </div>
-      <div style="display: flex; gap: 8rem; max-width: 1800px; margin: 2rem auto 0; align-items: flex-start;">
-        <div style="flex: 0 0 850px;">
-          <div id="featured" style="width:100%;margin-bottom:8rem;">
+      <div class="home-layout">
+        <div class="home-images">
+          <div id="featured" style="width:100%;margin-bottom:4rem;">
             <img id="featured-img" src="Images/home/featured.jpg" alt="Featured"
               style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
               onclick="openLightbox('Images/home/featured.jpg')">
@@ -610,7 +658,7 @@
               onclick="openLightbox('Images/darkroom/5.jpg')">
           </div>
         </div>
-        <div style="flex: 1; font-size: 1.3rem; line-height: 1.8; color: #000; font-weight: bold; padding-top: 2rem;">
+        <div class="home-text">
           <p style="margin-bottom: 1.5rem;"><strong>"I can't put into words what I'm trying to say."</strong> Most of us
             have said this and felt the frustration of struggling to put our thoughts into comprehensible words at least
             once in our lives. This phrase most accurately captures the frustration of grappling with the gap between a
@@ -1041,7 +1089,7 @@
           <h3>In The Same World</h3>
           <p>ART 141 Final Project</p>
         </div>
-        <div style="display: flex; gap: 3rem; max-width: 1200px; margin: 0 auto;">
+        <div class="itsw-layout">
           <div class="itsw-grid" style="flex: 1;">
       <!-- GALLERY:inthesameworld START -->
       <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-1.png')">
@@ -1058,7 +1106,7 @@
       </div>
       <!-- GALLERY:inthesameworld END -->
           </div>
-          <div style="flex: 0 0 300px; font-size: 0.95rem; line-height: 1.6; color: #555;">
+          <div class="itsw-sidebar">
             <p style="margin-bottom: 1rem;">Much of my work and techniques have attempted to draw attention to the
               non-perceptual mediations that ineffably construct our lives. I took a trip to Kenya in January, and the
               typical mediation I try to represent in my work almost seemed louder than the obvious perceptual
