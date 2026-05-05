@@ -1205,9 +1205,9 @@
       const activeSubfolder = document.querySelector('.subfolder-view.open');
 
       if (activeSubfolder) {
-        activeSubfolder.querySelectorAll('.thumbnail-item img, .itsw-item img').forEach(img => imgs.push(img.src));
+        activeSubfolder.querySelectorAll('.thumbnail-item img, .itsw-item img').forEach(img => imgs.push(img.getAttribute('src')));
       } else if (activePage.id !== 'digitalart') {
-        activePage.querySelectorAll('.gallery-item img').forEach(img => imgs.push(img.src));
+        activePage.querySelectorAll('.gallery-item img').forEach(img => imgs.push(img.getAttribute('src')));
       }
       return imgs;
     }
@@ -1243,7 +1243,7 @@
     document.querySelectorAll('.gallery-item').forEach(function (item) {
       item.addEventListener('click', function () {
         var img = item.querySelector('img');
-        if (img) openLightbox(img.src);
+        if (img) openLightbox(img.getAttribute('src'));
       });
     });
 
