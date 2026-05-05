@@ -109,47 +109,47 @@
     /* Gallery Pages */
     .page {
       display: none;
-    }
+    }    // ...existing code...
 
-    .page.active {
+    .page.active { World — full width stacked images */
       display: block;
-    }
-
+    } width: 100%;
+      cursor: pointer;
     /* Content area below the hero */
     .page-content {
       padding: 3rem 2rem;
       max-width: 1400px;
       margin: 0 auto;
-    }
-
+    } display: block;
+      object-fit: contain;
     /* Page header (plain, no backdrop) */
     .page-header {
-      text-align: center;
-      padding: 3rem 2rem 2rem;
+      text-align: center;image */
+      padding: 3rem 2rem 2rem;r {
       margin-bottom: 1rem;
-    }
-
+    } height: 220px;
+      object-fit: cover;
     .page-header h2 {
       font-size: 3rem;
       font-weight: 900;
-      color: #2c2c2c;
+      color: #2c2c2c;de...
       margin-bottom: 1rem;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
-    .page-header p {
+    .page-header p {below the hero */
       font-size: 1.4rem;
-      color: #666;
-      font-weight: 700;
+      color: #666;m 2rem;
+      font-weight: 700;;
       text-transform: uppercase;
     }
 
     /* Hero banner (full-width backdrop image behind page title) */
-    .page-hero {
+    .page-hero { {
       position: relative;
-      width: 100%;
-      min-height: 200px;
+      width: 100%;m 2rem 2rem;
+      min-height: 200px;m;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -157,303 +157,303 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      text-align: center;
-      margin-bottom: 0;
+      text-align: center;;
+      margin-bottom: 0;ppercase;
     }
 
     /* Dark overlay — only visible when a hero image is set */
     .page-hero.has-hero {
       min-height: 400px;
-    }
-
+    } font-weight: 700;
+      text-transform: uppercase;
     .page-hero.has-hero::before {
       content: '';
-      position: absolute;
-      inset: 0;
+      position: absolute;width backdrop image behind page title) */
+      inset: 0;{
       background: rgba(0, 0, 0, 0.45);
-    }
-
+    } width: 100%;
+      min-height: 200px;
     .page-hero-text {
-      position: relative;
-      z-index: 1;
-      padding: 2.5rem 2rem;
-    }
-
-    .page-hero h2 {
-      font-size: 3rem;
+      position: relative;;
+      z-index: 1;tent: center;
+      padding: 2.5rem 2rem;ffff;
+    } background-size: cover;
+      background-position: center;
+    .page-hero h2 {peat: no-repeat;
+      font-size: 3rem;er;
       font-weight: 900;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 1rem;
-      color: #2c2c2c;
+      margin-bottom: 1rem; visible when a hero image is set */
+      color: #2c2c2c;ro {
+    } min-height: 400px;
     }
-
     .page-hero.has-hero h2 {
-      color: #ffffff;
+      color: #ffffff;ro::before {
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-    }
-
-    .page-hero p {
+    } position: absolute;
+      inset: 0;
+    .page-hero p {rgba(0, 0, 0, 0.45);
       font-size: 1.4rem;
       color: #666;
       font-weight: 700;
       text-transform: uppercase;
-    }
-
+    } z-index: 1;
+      padding: 2.5rem 2rem;
     .page-hero.has-hero p {
       color: rgba(255, 255, 255, 0.88);
       text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
-    }
-
+    } font-size: 3rem;
+      font-weight: 900;
     @media (max-width: 768px) {
-      .page-hero.has-hero {
+      .page-hero.has-hero {case;
         min-height: 260px;
-      }
-
-      .page-hero h2 {
-        font-size: 2rem;
-      }
+      }olor: #2c2c2c;
     }
-
+      .page-hero h2 {
+        font-size: 2rem;h2 {
+      }olor: #ffffff;
+    } text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
     /* Digital Art subsection headers */
     /* Digital Art — folder cards (shown first) */
-    .folder-cards {
+    .folder-cards {4rem;
       display: flex;
-      gap: 2rem;
-      justify-content: center;
+      gap: 2rem;t: 700;
+      justify-content: center;e;
       flex-wrap: wrap;
       padding: 2rem 0 3rem;
-    }
-
-    .folder-card {
+    }page-hero.has-hero p {
+      color: rgba(255, 255, 255, 0.88);
+    .folder-card { 0 1px 5px rgba(0, 0, 0, 0.5);
       position: relative;
       width: 380px;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      cursor: pointer;
+      aspect-ratio: 4 / 3;px) {
+      overflow: hidden;ro {
+      cursor: pointer;0px;
       background: #1a1a1a;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
+    } .page-hero h2 {
+        font-size: 2rem;
     .folder-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
-    }
-
+    }* Digital Art subsection headers */
+    /* Digital Art — folder cards (shown first) */
     .folder-card img {
-      width: 100%;
+      width: 100%;x;
       height: 100%;
-      object-fit: cover;
-      display: block;
-      opacity: 0.65;
+      object-fit: cover;enter;
+      display: block;;
+      opacity: 0.65;0 3rem;
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
-
+    .folder-card {
     .folder-card:hover img {
       opacity: 0.45;
       transform: scale(1.04);
-    }
-
-    .folder-card-label {
-      position: absolute;
+    } overflow: hidden;
+      cursor: pointer;
+    .folder-card-label {a;
+      position: absolute;rm 0.2s ease, box-shadow 0.2s ease;
       inset: 0;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      align-items: center;Y(-4px);
+      justify-content: center;rgba(0, 0, 0, 0.22);
       padding: 1.5rem;
       text-align: center;
-    }
-
+    }folder-card img {
+      width: 100%;
     .folder-card-label h3 {
-      color: #fff;
+      color: #fff;cover;
       font-size: 1.5rem;
       font-weight: 900;
-      text-transform: uppercase;
+      text-transform: uppercase;ase, transform 0.3s ease;
       letter-spacing: 1.5px;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
       margin-bottom: 0.5rem;
-    }
-
+    } opacity: 0.45;
+      transform: scale(1.04);
     .folder-card-label p {
       color: rgba(255, 255, 255, 0.85);
       font-size: 0.9rem;
-      font-weight: 700;
+      font-weight: 700;e;
       text-transform: uppercase;
       text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
-    }
-
+    } flex-direction: column;
+      align-items: center;
     /* Back button inside a subfolder */
-    .back-btn {
+    .back-btn {1.5rem;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2rem;{
       background: none;
       border: 2px solid #2c2c2c;
-      color: #2c2c2c;
-      font-family: inherit;
-      font-size: 0.8rem;
-      font-weight: 900;
+      color: #2c2c2c;0;
+      font-family: inherit;case;
+      font-size: 0.8rem;5px;
+      font-weight: 900;x 8px rgba(0, 0, 0, 0.7);
       text-transform: uppercase;
       letter-spacing: 1px;
       padding: 0.5rem 1.2rem;
-      cursor: pointer;
+      cursor: pointer; p {
       transition: background 0.2s, color 0.2s;
-    }
-
-    .back-btn:hover {
-      background: #2c2c2c;
+    } font-size: 0.9rem;
+      font-weight: 700;
+    .back-btn:hover { uppercase;
+      background: #2c2c2c;px rgba(0, 0, 0, 0.6);
       color: #fff;
     }
-
+    /* Back button inside a subfolder */
     /* Subfolder view (hidden until card clicked) */
-    .subfolder-view {
-      display: none;
-    }
-
+    .subfolder-view {-flex;
+      display: none;enter;
+    } gap: 0.5rem;
+      margin-bottom: 2rem;
     .subfolder-view.open {
-      display: block;
-    }
-
+      display: block;id #2c2c2c;
+    } color: #2c2c2c;
+      font-family: inherit;
     @media (max-width: 768px) {
-      .folder-card {
-        width: 100%;
-      }
-    }
-
-    .subsection-header {
+      .folder-card {00;
+        width: 100%;: uppercase;
+      }etter-spacing: 1px;
+    } padding: 0.5rem 1.2rem;
+      cursor: pointer;
+    .subsection-header {ound 0.2s, color 0.2s;
       margin: 3rem 0 1.5rem;
       padding-bottom: 0.75rem;
       border-bottom: 3px solid #2c2c2c;
-    }
-
+    } background: #2c2c2c;
+      color: #fff;
     .subsection-header h3 {
       font-size: 1.6rem;
-      font-weight: 900;
+      font-weight: 900;hidden until card clicked) */
       color: #2c2c2c;
       text-transform: uppercase;
       letter-spacing: 1.5px;
     }
-
+    .subfolder-view.open {
     .subsection-header p {
       font-size: 1rem;
       color: #666;
-      font-weight: 700;
+      font-weight: 700;768px) {
       text-transform: uppercase;
       margin-top: 0.4rem;
+    } }
     }
-
     /* Thumbnail Grid (used for Digital Art) */
-    .thumbnail-grid {
-      display: grid;
+    .thumbnail-grid {r {
+      display: grid; 1.5rem;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 14px;tom: 3px solid #2c2c2c;
       margin-top: 1.5rem;
     }
-
-    .thumbnail-item {
+    .subsection-header h3 {
+    .thumbnail-item {em;
       overflow: hidden;
       background: #f4f4f4;
-      aspect-ratio: 1 / 1;
-      cursor: pointer;
+      aspect-ratio: 1 / 1;rcase;
+      cursor: pointer;1.5px;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
-
+    .subsection-header p {
     .thumbnail-item:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-
+    } text-transform: uppercase;
+      margin-top: 0.4rem;
     .thumbnail-item img {
       width: 100%;
-      height: 100%;
+      height: 100%;id (used for Digital Art) */
       object-fit: cover;
       display: block;
-      transition: transform 0.3s ease;
-    }
-
+      transition: transform 0.3s ease; 1fr);
+    } gap: 14px;
+      margin-top: 1.5rem;
     .thumbnail-item:hover img {
       transform: scale(1.04);
-    }
-
-    /* Lightbox */
-    .lightbox-overlay {
-      display: none;
-      position: fixed;
+    }thumbnail-item {
+      overflow: hidden;
+    /* Lightbox */#f4f4f4;
+    .lightbox-overlay { 1;
+      display: none;r;
+      position: fixed;sform 0.15s ease, box-shadow 0.15s ease;
       inset: 0;
       background: rgba(0, 0, 0, 0.88);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
+      z-index: 1000;hover {
+      align-items: center;Y(-3px);
+      justify-content: center;gba(0, 0, 0, 0.15);
     }
 
     .lightbox-overlay.open {
       display: flex;
-    }
-
+    } height: 100%;
+      object-fit: cover;
     .lightbox-overlay img {
-      max-width: 90vw;
+      max-width: 90vw;sform 0.3s ease;
       max-height: 90vh;
       object-fit: contain;
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    } transform: scale(1.04);
     }
-
     .lightbox-close {
       position: absolute;
-      top: 1.2rem;
+      top: 1.2rem;lay {
       right: 1.5rem;
       font-size: 2.5rem;
       color: #fff;
-      cursor: pointer;
+      cursor: pointer;(0, 0, 0, 0.88);
       font-weight: 900;
-      line-height: 1;
-      user-select: none;
+      line-height: 1;nter;
+      user-select: none;enter;
     }
 
-    .lightbox-arrow {
+    .lightbox-arrow {.open {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 3rem;
-      color: #fff;
-      cursor: pointer;
-      font-weight: 900;
-      user-select: none;
+      font-size: 3rem;img {
+      color: #fff;0vw;
+      cursor: pointer;;
+      font-weight: 900;in;
+      user-select: none;40px rgba(0, 0, 0, 0.6);
       padding: 1rem;
       opacity: 0.7;
       transition: opacity 0.2s;
-      z-index: 1001;
-    }
-
+      z-index: 1001;lute;
+    } top: 1.2rem;
+      right: 1.5rem;
     .lightbox-arrow:hover {
-      opacity: 1;
-    }
-
+      opacity: 1;;
+    } cursor: pointer;
+      font-weight: 900;
     .lightbox-arrow.prev {
-      left: 1rem;
+      left: 1rem;: none;
     }
 
     .lightbox-arrow.next {
-      right: 1rem;
-    }
-
+      right: 1rem;solute;
+    } top: 50%;
+      transform: translateY(-50%);
     /* Lightbox image counter */
     .lightbox-counter {
       position: absolute;
-      bottom: 1.2rem;
-      left: 50%;
+      bottom: 1.2rem;0;
+      left: 50%;t: none;
       transform: translateX(-50%);
-      color: #fff;
-      font-size: 0.85rem;
+      color: #fff;;
+      font-size: 0.85rem; 0.2s;
       font-weight: 700;
       letter-spacing: 1px;
       opacity: 0.75;
-      user-select: none;
+      user-select: none;r {
+    } opacity: 1;
     }
-
     /* Back to top button */
-    #back-to-top {
+    #back-to-top {w.prev {
       position: fixed;
       bottom: 2rem;
       right: 1.5rem;
@@ -461,185 +461,206 @@
       color: #fff;
       border: none;
       border-radius: 50%;
-      width: 42px;
-      height: 42px;
-      font-size: 1.2rem;
+      width: 42px;age counter */
+      height: 42px;er {
+      font-size: 1.2rem;;
       cursor: pointer;
       display: none;
-      align-items: center;
+      align-items: center;X(-50%);
       justify-content: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-      z-index: 500;
+      z-index: 500;700;
       transition: opacity 0.2s;
-      opacity: 0.8;
+      opacity: 0.8;;
+    } user-select: none;
     }
-
     #back-to-top:hover {
-      opacity: 1;
-    }
-
+      opacity: 1;p button */
+    }back-to-top {
+      position: fixed;
     @media (max-width: 768px) {
       .thumbnail-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-      }
-    }
-
+      }order: none;
+    } border-radius: 50%;
+      width: 42px;
     /* Gallery Grid */
-    .gallery {
-      display: grid;
+    .gallery {e: 1.2rem;
+      display: grid;r;
       /* two items per row */
       grid-template-columns: repeat(2, 1fr);
       /* small gap to separate images subtly */
-      gap: 12px;
+      gap: 12px;: 0 2px 8px rgba(0, 0, 0, 0.25);
       margin-top: 2rem;
-      align-items: stretch;
+      align-items: stretch;.2s;
+    } opacity: 0.8;
     }
-
     .gallery-item {
       position: relative;
       overflow: hidden;
       /* no visible borders or shadows */
       border-radius: 0;
-      box-shadow: none;
+      box-shadow: none;768px) {
       transition: transform 0.12s ease;
-      background-color: transparent;
+      background-color: transparent;t(2, 1fr);
       display: flex;
       align-items: center;
       justify-content: center;
       /* let items size consistently while keeping images contained */
       min-height: 520px;
-    }
-
-    .gallery-item {
-      cursor: pointer;
-    }
-
+    }gallery {
+      display: grid;
+    .gallery-item {per row */
+      cursor: pointer;lumns: repeat(2, 1fr);
+    } /* small gap to separate images subtly */
+      gap: 12px;
     .gallery-item:hover {
       transform: translateY(-2px);
     }
 
     .gallery-item img {
       /* show the full image without cropping */
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 100%;;
+      max-height: 100%;ders or shadows */
       object-fit: contain;
-      display: block;
-    }
-
+      display: block;e;
+    } transition: transform 0.12s ease;
+      background-color: transparent;
     /* Responsive Design */
     @media (max-width: 768px) {
-      .home-title h1 {
-        font-size: 2.5rem;
-      }
-
+      .home-title h1 { center;
+        font-size: 2.5rem;nsistently while keeping images contained */
+      }in-height: 520px;
+    }
       nav ul {
-        gap: 1rem;
+        gap: 1rem;{
         flex-wrap: wrap;
       }
 
-      nav a {
-        font-size: 0.75rem;
+      nav a {item:hover {
+        font-size: 0.75rem;(-2px);
       }
 
-      .page-header h2,
-      .page-hero h2 {
+      .page-header h2,{
+      .page-hero h2 {l image without cropping */
         font-size: 2rem;
-      }
-
-      .gallery {
+      }ax-height: 100%;
+      object-fit: contain;
+      .gallery {lock;
         /* single column on small screens */
         grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .gallery-item {
+        gap: 12px;Design */
+      }dia (max-width: 768px) {
+      .home-title h1 {
+      .gallery-item {5rem;
         min-height: 360px;
       }
-
+      nav ul {
       .gallery-item img {
         /* contained and constrained by the smaller row height */
         max-width: 100%;
         max-height: 100%;
+      }av a {
+    }   font-size: 0.75rem;
       }
-    }
-
     /* Image fade-in on load */
     .gallery-item img,
-    #featured-img,
+    #featured-img,2 {
     .thumbnail-item img,
     .card-cover {
       opacity: 0;
       transition: opacity 0.5s ease;
-    }
-
+    }   /* single column on small screens */
+        grid-template-columns: 1fr;
     .gallery-item img.loaded,
     #featured-img.loaded,
     .thumbnail-item img.loaded,
     .card-cover.loaded {
-      opacity: 1;
-    }
+      opacity: 1;t: 360px;
+    } }
 
     /* Hamburger menu (mobile only) */
-    .hamburger {
-      display: none;
+    .hamburger {ined and constrained by the smaller row height */
+      display: none;00%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 5px;
-      background: none;
-      border: none;
+      background: none; load */
+      border: none;mg,
       cursor: pointer;
-      padding: 0.4rem;
+      padding: 0.4rem;g,
       position: absolute;
       right: 1rem;
-      top: 50%;
+      top: 50%;n: opacity 0.5s ease;
       transform: translateY(-50%);
     }
-
-    .hamburger span {
-      display: block;
-      width: 22px;
+    .gallery-item img.loaded,
+    .hamburger span {ded,
+      display: block;mg.loaded,
+      width: 22px;aded {
       height: 2px;
       background: #2c2c2c;
       border-radius: 2px;
-      transition: all 0.2s ease;
-    }
-
-    nav {
-      position: relative;
-    }
-
+      transition: all 0.2s ease;ly) */
+    }hamburger {
+      display: none;
+    nav {x-direction: column;
+      position: relative;nter;
+    } align-items: center;
+      gap: 5px;
     @media (max-width: 640px) {
-      .hamburger {
+      .hamburger {;
         display: flex;
-      }
-
-      nav ul {
+      }adding: 0.4rem;
+      position: absolute;
+      nav ul {rem;
         display: none;
-        flex-direction: column;
+        flex-direction: column;%);
         align-items: center;
         gap: 1rem;
         padding: 1rem 0;
         background: #fff;
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
+        left: 0;: #2c2c2c;
+        width: 100%; 2px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         z-index: 200;
         border-bottom: 1px solid #e0e0e0;
-      }
-
+      } {
+      position: relative;
       nav ul.open {
         display: flex;
-      }
-
-      nav a {
+      }dia (max-width: 640px) {
+      .hamburger {
+      nav a {ay: flex;
         font-size: 0.9rem;
       }
-    }
-  </style>
+    } nav ul {
+splay: none;
+    /* In The Same World — full width stacked images */ flex-direction: column;
+    .itsw-item {        align-items: center;
+      width: 100%;  gap: 1rem;
+      cursor: pointer; 0;
+    } background: #fff;
+
+    .itsw-item img {
+      width: 100%; 0;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }der-bottom: 1px solid #e0e0e0;
+
+    /* Folder card cover image */
+    .folder-card img.card-cover {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block; a {
+    }font-size: 0.9rem;
+  </style>      }
 </head>
 
 <body>
@@ -651,641 +672,664 @@
     <ul id="nav-menu">
       <li><a href="#home" data-page="home" onclick="showPage('home')">Home</a></li>
       <li><a href="#experimental" data-page="experimental" onclick="showPage('experimental')">Experimental Processes</a>
-      </li>
-      <li><a href="#traditional" data-page="traditional" onclick="showPage('traditional')">Traditional B&W
-          Photography</a></li>
-      <li><a href="#darkroom" data-page="darkroom" onclick="showPage('darkroom')">Darkroom Techniques & Double
+      </li>'home')">Home</a></li>
+      <li><a href="#traditional" data-page="traditional" onclick="showPage('traditional')">Traditional B&W href="#experimental" data-page="experimental" onclick="showPage('experimental')">Experimental Processes</a>
+          Photography</a></li>      </li>
+      <li><a href="#darkroom" data-page="darkroom" onclick="showPage('darkroom')">Darkroom Techniques & Doubleional B&W
           Exposure</a></li>
-      <li><a href="#color" data-page="color" onclick="showPage('color')">Color Photography</a></li>
-      <li><a href="#digitalart" data-page="digitalart" onclick="showPage('digitalart')">Digital Art</a></li>
+      <li><a href="#color" data-page="color" onclick="showPage('color')">Color Photography</a></li>      <li><a href="#darkroom" data-page="darkroom" onclick="showPage('darkroom')">Darkroom Techniques & Double
+      <li><a href="#digitalart" data-page="digitalart" onclick="showPage('digitalart')">Digital Art</a></li>Exposure</a></li>
+    </ul>i><a href="#color" data-page="color" onclick="showPage('color')">Color Photography</a></li>
+  </nav>      <li><a href="#digitalart" data-page="digitalart" onclick="showPage('digitalart')">Digital Art</a></li>
     </ul>
-  </nav>
-
-  <!-- Home Page -->
+  <!-- Home Page -->  </nav>
   <div id="home" class="page active">
     <div class="home-container">
-      <div class="home-title">
+      <div class="home-title">active">
         <h1>Nora Dudley Mahler</h1>
         <h1>Photography</h1>
-      </div>
+      </div>1>Nora Dudley Mahler</h1>
       <!-- Featured image on Home: place a file at Images/home/featured.jpg to show here -->
       <div id="featured" style="width:100%;max-width:1100px;margin:1.5rem auto 0;">
-        <img id="featured-img" src="Images/home/featured.jpg" alt="Featured"
-          style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
-          onclick="openLightbox('Images/home/featured.jpg')">
-      </div>
-
+        <img id="featured-img" src="Images/home/featured.jpg" alt="Featured"a file at Images/home/featured.jpg to show here -->
+          style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"width:100%;max-width:1100px;margin:1.5rem auto 0;">
+          onclick="openLightbox('Images/home/featured.jpg')">red"
+      </div>yle="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
+'Images/home/featured.jpg')">
       <p style="text-align:center;margin-top:2rem;font-size:1.1rem;"><strong>Contact:</strong> <a
           href="mailto:noradmahler@gmail.com" style="color:#2c2c2c;text-decoration:none;">noradmahler@gmail.com</a></p>
-
-    </div>
+r;margin-top:2rem;font-size:1.1rem;"><strong>Contact:</strong> <a
+    </div>decoration:none;">noradmahler@gmail.com</a></p>
   </div>
 
 
 
   <!-- Experimental Processes Page -->
   <div id="experimental" class="page">
-    <div class="page-header">
-      <h2>Experimental Processes</h2>
+    <div class="page-header">imental Processes Page -->
+      <h2>Experimental Processes</h2>page">
       <p>Van Dyke Brown, Cyanotype, and Pinhole Cameras</p>
-    </div>
-    <div class="page-content">
+    </div>perimental Processes</h2>
+    <div class="page-content">pe, and Pinhole Cameras</p>
       <div class="gallery">
-      <!-- GALLERY:experimental START -->
+      <!-- GALLERY:experimental START -->ss="page-content">
       <div class="gallery-item">
         <img src="Images/experimental/1.jpg" alt="experimental - 1.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">ental/1.jpg" alt="experimental - 1.jpg">
         <img src="Images/experimental/2.jpg" alt="experimental - 2.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">ental/2.jpg" alt="experimental - 2.jpg">
         <img src="Images/experimental/3.jpg" alt="experimental - 3.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">ental/3.jpg" alt="experimental - 3.jpg">
         <img src="Images/experimental/4.jpg" alt="experimental - 4.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">ental/4.jpg" alt="experimental - 4.jpg">
         <img src="Images/experimental/5.jpg" alt="experimental - 5.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">ental/5.jpg" alt="experimental - 5.jpg">
         <img src="Images/experimental/6.jpg" alt="experimental - 6.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">ental/6.jpg" alt="experimental - 6.jpg">
         <img src="Images/experimental/7.jpg" alt="experimental - 7.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">ental/7.jpg" alt="experimental - 7.jpg">
         <img src="Images/experimental/8.jpg" alt="experimental - 8.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">ental/8.jpg" alt="experimental - 8.jpg">
         <img src="Images/experimental/9.jpg" alt="experimental - 9.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="experimental - 9.jpg">
         <img src="Images/experimental/10.jpg" alt="experimental - 10.jpg">
       </div>
-      <div class="gallery-item">
-        <img src="Images/experimental/11.jpg" alt="experimental - 11.jpg">
+      <div class="gallery-item"><img src="Images/experimental/10.jpg" alt="experimental - 10.jpg">
+        <img src="Images/experimental/11.jpg" alt="experimental - 11.jpg">      </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item">/11.jpg" alt="experimental - 11.jpg">
         <img src="Images/experimental/12.jpg" alt="experimental - 12.jpg">
       </div>
-      <div class="gallery-item">
-        <img src="Images/experimental/13.jpg" alt="experimental - 13.jpg">
-      </div>
-      <div class="gallery-item">
+      <div class="gallery-item">"Images/experimental/12.jpg" alt="experimental - 12.jpg">
+        <img src="Images/experimental/13.jpg" alt="experimental - 13.jpg">v>
+      </div>">
+      <div class="gallery-item">perimental/13.jpg" alt="experimental - 13.jpg">
         <img src="Images/experimental/14.jpg" alt="experimental - 14.jpg">
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item">pg">
         <img src="Images/experimental/15.jpg" alt="experimental - 15.jpg">
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item">pg">
         <img src="Images/experimental/16.jpg" alt="experimental - 16.jpg">
       </div>
-      <!-- GALLERY:experimental END -->
+      <!-- GALLERY:experimental END -->pg">
       </div>
-    </div><!-- end .page-content -->
+    </div><!-- end .page-content -->END -->
   </div>
-
+-- end .page-content -->
   <!-- Traditional B&W Photography Page -->
   <div id="traditional" class="page">
-    <div class="page-header">
-      <h2>Traditional B&amp;W Photography</h2>
+    <div class="page-header">tional B&W Photography Page -->
+      <h2>Traditional B&amp;W Photography</h2>age">
       <p>35mm</p>
-    </div>
+    </div>aditional B&amp;W Photography</h2>
     <div class="page-content">
       <div class="gallery">
-      <!-- GALLERY:traditional START -->
+      <!-- GALLERY:traditional START -->ss="page-content">
       <div class="gallery-item">
         <img src="Images/traditional/1.jpg" alt="traditional - 1.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">onal/1.jpg" alt="traditional - 1.jpg">
         <img src="Images/traditional/2.jpg" alt="traditional - 2.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">onal/2.jpg" alt="traditional - 2.jpg">
         <img src="Images/traditional/3.jpg" alt="traditional - 3.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">onal/3.jpg" alt="traditional - 3.jpg">
         <img src="Images/traditional/4.jpg" alt="traditional - 4.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">onal/4.jpg" alt="traditional - 4.jpg">
         <img src="Images/traditional/5.jpg" alt="traditional - 5.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="traditional - 5.jpg">
         <img src="Images/traditional/6.jpg" alt="traditional - 6.jpg">
       </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/7.jpg" alt="traditional - 7.jpg">
+      <div class="gallery-item"><img src="Images/traditional/6.jpg" alt="traditional - 6.jpg">
+        <img src="Images/traditional/7.jpg" alt="traditional - 7.jpg">      </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item">al/7.jpg" alt="traditional - 7.jpg">
         <img src="Images/traditional/8.jpg" alt="traditional - 8.jpg">
       </div>
       <div class="gallery-item">
-        <img src="Images/traditional/9.jpg" alt="traditional - 9.jpg">
-      </div>
-      <div class="gallery-item">
+        <img src="Images/traditional/9.jpg" alt="traditional - 9.jpg">v>
+      </div>">
+      <div class="gallery-item">aditional/9.jpg" alt="traditional - 9.jpg">
         <img src="Images/traditional/10.jpg" alt="traditional - 10.jpg">
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item">10.jpg">
         <img src="Images/traditional/11.jpg" alt="traditional - 11.jpg">
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item">11.jpg">
         <img src="Images/traditional/12.JPG" alt="traditional - 12.JPG">
       </div>
-      <!-- GALLERY:traditional END -->
+      <!-- GALLERY:traditional END -->12.JPG">
       </div>
-    </div><!-- end .page-content -->
+    </div><!-- end .page-content -->ND -->
   </div>
-
+-- end .page-content -->
   <!-- Darkroom Techniques Page -->
   <div id="darkroom" class="page">
-    <div class="page-header">
-      <h2>Darkroom Techniques &amp; Double Exposure</h2>
+    <div class="page-header">oom Techniques Page -->
+      <h2>Darkroom Techniques &amp; Double Exposure</h2>">
       <p>Superimposing, layering, multiple exposures, and use of digital negatives</p>
-    </div>
-    <div class="page-content">
+    </div>rkroom Techniques &amp; Double Exposure</h2>
+    <div class="page-content">, multiple exposures, and use of digital negatives</p>
       <div class="gallery">
-      <!-- GALLERY:darkroom START -->
+      <!-- GALLERY:darkroom START -->ss="page-content">
       <div class="gallery-item">
         <img src="Images/darkroom/1.jpg" alt="darkroom - 1.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/1.jpg" alt="darkroom - 1.jpg">
         <img src="Images/darkroom/2.jpg" alt="darkroom - 2.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/2.jpg" alt="darkroom - 2.jpg">
         <img src="Images/darkroom/3.jpg" alt="darkroom - 3.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/3.jpg" alt="darkroom - 3.jpg">
         <img src="Images/darkroom/4.jpg" alt="darkroom - 4.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/4.jpg" alt="darkroom - 4.jpg">
         <img src="Images/darkroom/5.jpg" alt="darkroom - 5.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/5.jpg" alt="darkroom - 5.jpg">
         <img src="Images/darkroom/6.jpg" alt="darkroom - 6.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/6.jpg" alt="darkroom - 6.jpg">
         <img src="Images/darkroom/7.jpg" alt="darkroom - 7.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/7.jpg" alt="darkroom - 7.jpg">
         <img src="Images/darkroom/8.jpg" alt="darkroom - 8.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/8.jpg" alt="darkroom - 8.jpg">
         <img src="Images/darkroom/9.jpg" alt="darkroom - 9.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/9.jpg" alt="darkroom - 9.jpg">
         <img src="Images/darkroom/10.jpg" alt="darkroom - 10.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/10.jpg" alt="darkroom - 10.jpg">
         <img src="Images/darkroom/11.jpg" alt="darkroom - 11.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/11.jpg" alt="darkroom - 11.jpg">
         <img src="Images/darkroom/12.jpg" alt="darkroom - 12.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/12.jpg" alt="darkroom - 12.jpg">
         <img src="Images/darkroom/14.jpg" alt="darkroom - 14.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/14.jpg" alt="darkroom - 14.jpg">
         <img src="Images/darkroom/15.jpg" alt="darkroom - 15.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/15.jpg" alt="darkroom - 15.jpg">
         <img src="Images/darkroom/16.jpg" alt="darkroom - 16.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/16.jpg" alt="darkroom - 16.jpg">
         <img src="Images/darkroom/17.jpg" alt="darkroom - 17.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/17.jpg" alt="darkroom - 17.jpg">
         <img src="Images/darkroom/18.jpg" alt="darkroom - 18.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/18.jpg" alt="darkroom - 18.jpg">
         <img src="Images/darkroom/19.jpg" alt="darkroom - 19.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/19.jpg" alt="darkroom - 19.jpg">
         <img src="Images/darkroom/20.jpg" alt="darkroom - 20.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/20.jpg" alt="darkroom - 20.jpg">
         <img src="Images/darkroom/21.jpg" alt="darkroom - 21.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/21.jpg" alt="darkroom - 21.jpg">
         <img src="Images/darkroom/22.jpg" alt="darkroom - 22.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/22.jpg" alt="darkroom - 22.jpg">
         <img src="Images/darkroom/23.jpg" alt="darkroom - 23.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">m/23.jpg" alt="darkroom - 23.jpg">
         <img src="Images/darkroom/24.jpg" alt="darkroom - 24.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">4.jpg" alt="darkroom - 24.jpg">
         <img src="Images/darkroom/25.jpg" alt="darkroom - 25.jpg">
       </div>
-      <div class="gallery-item">
-        <img src="Images/darkroom/26.jpg" alt="darkroom - 26.jpg">
+      <div class="gallery-item"><img src="Images/darkroom/25.jpg" alt="darkroom - 25.jpg">
+        <img src="Images/darkroom/26.jpg" alt="darkroom - 26.jpg">      </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item">om/26.jpg" alt="darkroom - 26.jpg">
         <img src="Images/darkroom/27.jpg" alt="darkroom - 27.jpg">
       </div>
-      <div class="gallery-item">
-        <img src="Images/darkroom/28.jpg" alt="darkroom - 28.jpg">
-      </div>
-      <div class="gallery-item">
+      <div class="gallery-item">m/27.jpg" alt="darkroom - 27.jpg">
+        <img src="Images/darkroom/28.jpg" alt="darkroom - 28.jpg">v>
+      </div>">
+      <div class="gallery-item">rkroom/28.jpg" alt="darkroom - 28.jpg">
         <img src="Images/darkroom/29.jpg" alt="darkroom - 29.jpg">
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item">29.jpg">
         <img src="Images/darkroom/30.jpg" alt="darkroom - 30.jpg">
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item">30.jpg">
         <img src="Images/darkroom/31.jpg" alt="darkroom - 31.jpg">
       </div>
-      <!-- GALLERY:darkroom END -->
+      <!-- GALLERY:darkroom END -->31.jpg">
       </div>
-    </div><!-- end .page-content -->
+    </div><!-- end .page-content -->-->
   </div>
-
+-- end .page-content -->
   <!-- Color Photography Page -->
   <div id="color" class="page">
-    <div class="page-header">
+    <div class="page-header"> Photography Page -->
       <h2>Color Photography</h2>
       <p>Using a 35mm camera</p>
-    </div>
+    </div>lor Photography</h2>
     <div class="page-content">
       <div class="gallery">
-      <!-- GALLERY:color START -->
+      <!-- GALLERY:color START -->ss="page-content">
       <div class="gallery-item">
         <img src="Images/color/1.jpg" alt="color - 1.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="color - 1.jpg">
         <img src="Images/color/3.jpg" alt="color - 3.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="color - 3.jpg">
         <img src="Images/color/4.jpg" alt="color - 4.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="color - 4.jpg">
         <img src="Images/color/5.jpg" alt="color - 5.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="color - 5.jpg">
         <img src="Images/color/6.jpg" alt="color - 6.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="color - 6.jpg">
         <img src="Images/color/7.jpg" alt="color - 7.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="color - 7.jpg">
         <img src="Images/color/8.jpg" alt="color - 8.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="color - 8.jpg">
         <img src="Images/color/9.jpg" alt="color - 9.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">.jpg" alt="color - 9.jpg">
         <img src="Images/color/10.jpg" alt="color - 10.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">0.jpg" alt="color - 10.jpg">
         <img src="Images/color/11.jpg" alt="color - 11.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">1.jpg" alt="color - 11.jpg">
         <img src="Images/color/12.jpg" alt="color - 12.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">2.jpg" alt="color - 12.jpg">
         <img src="Images/color/13.jpg" alt="color - 13.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">3.jpg" alt="color - 13.jpg">
         <img src="Images/color/14.jpg" alt="color - 14.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">4.jpg" alt="color - 14.jpg">
         <img src="Images/color/15.jpg" alt="color - 15.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">5.jpg" alt="color - 15.jpg">
         <img src="Images/color/16.jpg" alt="color - 16.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">6.jpg" alt="color - 16.jpg">
         <img src="Images/color/17.jpg" alt="color - 17.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">7.jpg" alt="color - 17.jpg">
         <img src="Images/color/18.jpg" alt="color - 18.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">8.jpg" alt="color - 18.jpg">
         <img src="Images/color/19.jpg" alt="color - 19.jpg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">9.jpg" alt="color - 19.jpg">
         <img src="Images/color/20.jpeg" alt="color - 20.jpeg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">0.jpeg" alt="color - 20.jpeg">
         <img src="Images/color/21.jpeg" alt="color - 21.jpeg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">1.jpeg" alt="color - 21.jpeg">
         <img src="Images/color/22.jpeg" alt="color - 22.jpeg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">2.jpeg" alt="color - 22.jpeg">
         <img src="Images/color/23.jpeg" alt="color - 23.jpeg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">3.jpeg" alt="color - 23.jpeg">
         <img src="Images/color/24.jpeg" alt="color - 24.jpeg">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">4.jpeg" alt="color - 24.jpeg">
         <img src="Images/color/25.JPG" alt="color - 25.JPG">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">5.JPG" alt="color - 25.JPG">
         <img src="Images/color/26.JPG" alt="color - 26.JPG">
-      </div>
-      <div class="gallery-item">
+      </div>lass="gallery-item">
+      <div class="gallery-item">6.JPG" alt="color - 26.JPG">
         <img src="Images/color/27.JPG" alt="color - 27.JPG">
       </div>
-      <div class="gallery-item">
-        <img src="Images/color/28.JPG" alt="color - 28.JPG">
-      </div>
-      <div class="gallery-item">
+      <div class="gallery-item"><img src="Images/color/27.JPG" alt="color - 27.JPG">
+        <img src="Images/color/28.JPG" alt="color - 28.JPG">      </div>
+      </div>tem">
+      <div class="gallery-item">G" alt="color - 28.JPG">
         <img src="Images/color/29.JPG" alt="color - 29.JPG">
-      </div>
-      <div class="gallery-item">
+      </div>item">
+      <div class="gallery-item">mg src="Images/color/29.JPG" alt="color - 29.JPG">
         <img src="Images/color/30.JPG" alt="color - 30.JPG">
-      </div>
-      <div class="gallery-item">
+      </div>      <div class="gallery-item">
+      <div class="gallery-item">lor - 30.JPG">
         <img src="Images/color/32.jpg" alt="color - 32.jpg">
-      </div>
+      </div>      <div class="gallery-item">
       <div class="gallery-item">
         <img src="Images/color/33.JPG" alt="color - 33.JPG">
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item"> 33.JPG">
         <img src="Images/color/34.JPG" alt="color - 34.JPG">
-      </div>
-      <!-- GALLERY:color END -->
+      </div>ss="gallery-item">
+      <!-- GALLERY:color END -->        <img src="Images/color/34.JPG" alt="color - 34.JPG">
       </div>
     </div><!-- end .page-content -->
   </div>
 
   <!-- Digital Art Page -->
   <div id="digitalart" class="page">
-    <div class="page-header">
-      <h2>Digital Art</h2>
-    </div>
+    <div class="page-header">  <!-- Digital Art Page -->
+      <h2>Digital Art</h2>igitalart" class="page">
+    </div>    <div class="page-header">
     <div class="page-content">
 
       <!-- Folder cards — shown by default -->
       <div id="digitalart-cards" class="folder-cards">
 
-        <div class="folder-card" onclick="openSubfolder('composites')">
+        <div class="folder-card" onclick="openSubfolder('composites')">"digitalart-cards" class="folder-cards">
           <img src="Images/digitalart/1.jpg" alt="Composites preview">
-          <div class="folder-card-label">
+          <div class="folder-card-label">k="openSubfolder('composites')">
             <h3>Composites &amp; Digital Works</h3>
           </div>
-        </div>
+        </div><h3>Composites &amp; Digital Works</h3>
 
         <div class="folder-card" onclick="openSubfolder('inthesameworld')" style="background:#1a1a1a;">
           <div class="folder-card-label">
-            <h3>In The Same World</h3>
+            <h3>In The Same World</h3>ckground:#1a1a1a;">
             <p>ART 141 Final Project</p>
-          </div>
+          </div><h3>In The Same World</h3>
         </div>
 
-      </div>
+      </div>v>
 
       <!-- Composites subfolder view -->
       <div id="subfolder-composites" class="subfolder-view">
         <button class="back-btn" onclick="closeSubfolder()">&#8592; Back</button>
         <div class="subsection-header">
-          <h3>Composites &amp; Digital Works</h3>
+          <h3>Composites &amp; Digital Works</h3>ton class="back-btn" onclick="closeSubfolder()">&#8592; Back</button>
         </div>
         <div class="thumbnail-grid">
-      <!-- GALLERY:composites START -->
+      <!-- GALLERY:composites START -->v>
       <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/1.jpg')">
         <img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg">
-      </div>
+      </div>lass="thumbnail-item" onclick="openLightbox('Images/digitalart/1.jpg')">
       <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/2.jpg')">
         <img src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/3.jpg')">
+      </div>lass="thumbnail-item" onclick="openLightbox('Images/digitalart/2.jpg')">
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/3.jpg')">.jpg" alt="Composites & Digital Works - 2.jpg">
         <img src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/4.jpg')">
+      </div>lass="thumbnail-item" onclick="openLightbox('Images/digitalart/3.jpg')">
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/4.jpg')">        <img src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3.jpg">
         <img src="Images/digitalart/4.jpg" alt="Composites & Digital Works - 4.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/5.jpg')">
+      </div>digitalart/4.jpg')">
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/5.jpg')">g">
         <img src="Images/digitalart/5.jpg" alt="Composites & Digital Works - 5.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/6.jpg')">
+      </div>click="openLightbox('Images/digitalart/5.jpg')">
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/6.jpg')">jpg" alt="Composites & Digital Works - 5.jpg">
         <img src="Images/digitalart/6.jpg" alt="Composites & Digital Works - 6.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/7.jpg')">
+      </div>click="openLightbox('Images/digitalart/6.jpg')">
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/7.jpg')">alt="Composites & Digital Works - 6.jpg">
         <img src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7.jpg">
       </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/8.jpg')">
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/8.jpg')"> src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7.jpg">
         <img src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8.jpg">
       </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/9.jpg')">
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/9.jpg')"> src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8.jpg">
         <img src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg">
       </div>
-      <!-- GALLERY:composites END -->
+      <!-- GALLERY:composites END --> src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg">
         </div>
       </div>
-
+v>
       <!-- In The Same World subfolder view -->
       <div id="subfolder-inthesameworld" class="subfolder-view">
-        <button class="back-btn" onclick="closeSubfolder()">&#8592; Back</button>
-        <div class="subsection-header">
-          <h3>In The Same World</h3>
-          <p>ART 141 Final Project</p>
+        <button class="back-btn" onclick="closeSubfolder()">&#8592; Back</button>n The Same World subfolder view -->
+        <div class="subsection-header">      <div id="subfolder-inthesameworld" class="subfolder-view">
+          <h3>In The Same World</h3>lick="closeSubfolder()">&#8592; Back</button>
+          <p>ART 141 Final Project</p>tion-header">
         </div>
         <div class="thumbnail-grid">
       <!-- GALLERY:inthesameworld START -->
       <div class="thumbnail-item" onclick="openLightbox('Images/inthesameworld/FINAL-1.png')">
         <img src="Images/inthesameworld/FINAL-1.png" alt="In The Same World - FINAL-1.png">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/inthesameworld/FINAL-2.png')">
-        <img src="Images/inthesameworld/FINAL-2.png" alt="In The Same World - FINAL-2.png">
-      </div>
+      </div>inthesameworld/FINAL-1.png')">
+      <div class="thumbnail-item" onclick="openLightbox('Images/inthesameworld/FINAL-2.png')"><img src="Images/inthesameworld/FINAL-1.png" alt="In The Same World - FINAL-1.png">
+        <img src="Images/inthesameworld/FINAL-2.png" alt="In The Same World - FINAL-2.png">      </div>
+      </div>bnail-item" onclick="openLightbox('Images/inthesameworld/FINAL-2.png')">
       <div class="thumbnail-item" onclick="openLightbox('Images/inthesameworld/FINAL-3.png')">
-        <img src="Images/inthesameworld/FINAL-3.png" alt="In The Same World - FINAL-3.png">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/inthesameworld/FINAL-4.png')">
+        <img src="Images/inthesameworld/FINAL-3.png" alt="In The Same World - FINAL-3.png">      </div>
+      </div> class="thumbnail-item" onclick="openLightbox('Images/inthesameworld/FINAL-3.png')">
+      <div class="thumbnail-item" onclick="openLightbox('Images/inthesameworld/FINAL-4.png')">AL-3.png">
         <img src="Images/inthesameworld/FINAL-4.png" alt="In The Same World - FINAL-4.png">
-      </div>
-      <!-- GALLERY:inthesameworld END -->
-        </div>
-      </div>
+      </div>-4.png')">
+      <!-- GALLERY:inthesameworld END -->he Same World - FINAL-4.png">
+        </div>      </div>
+      </div>ld END -->
 
     </div><!-- end .page-content -->
   </div> <!-- Lightbox -->
-  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">    </div><!-- end .page-content -->
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <span class="lightbox-arrow prev" onclick="event.stopPropagation(); lightboxStep(-1)">&#8592;</span>
-    <img id="lightbox-img" src="" alt="Full size">
-    <span class="lightbox-arrow next" onclick="event.stopPropagation(); lightboxStep(1)">&#8594;</span>
+    <span class="lightbox-arrow prev" onclick="event.stopPropagation(); lightboxStep(-1)">&#8592;</span>-overlay" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full size">Lightbox()">&times;</span>
+    <span class="lightbox-arrow next" onclick="event.stopPropagation(); lightboxStep(1)">&#8594;</span>(); lightboxStep(-1)">&#8592;</span>
     <span class="lightbox-counter" id="lightbox-counter"></span>
-  </div>
-
+  </div>(); lightboxStep(1)">&#8594;</span>
+></span>
   <!-- Back to top -->
   <button id="back-to-top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
-  <script>
+  <script>  <button id="back-to-top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
     // ── Page navigation ───────────────────────────────────────────────────────
     function showPage(pageId, subfolderId, skipHistory) {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      document.getElementById(pageId).classList.add('active');
-
-      // Update active nav link
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));    // ── Page navigation ───────────────────────────────────────────────────────
+      document.getElementById(pageId).classList.add('active');derId, skipHistory) {
+orAll('.page').forEach(p => p.classList.remove('active'));
+      // Update active nav linkList.add('active');
       document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-link'));
       const navLink = document.querySelector('nav a[data-page="' + pageId + '"]');
-      if (navLink) navLink.classList.add('active-link');
-
-      // Update page title
+      if (navLink) navLink.classList.add('active-link');ument.querySelectorAll('nav a').forEach(a => a.classList.remove('active-link'));
+onst navLink = document.querySelector('nav a[data-page="' + pageId + '"]');
+      // Update page title      if (navLink) navLink.classList.add('active-link');
       const titles = {
-        home: 'Nora Dudley Mahler Photography',
+        home: 'Nora Dudley Mahler Photography',e
         experimental: 'Experimental Processes — Nora Dudley Mahler',
-        traditional: 'Traditional B&W — Nora Dudley Mahler',
-        darkroom: 'Darkroom & Double Exposure — Nora Dudley Mahler',
-        color: 'Color Photography — Nora Dudley Mahler',
-        digitalart: 'Digital Art — Nora Dudley Mahler'
-      };
-      document.title = titles[pageId] || 'Nora Dudley Mahler Photography';
+        traditional: 'Traditional B&W — Nora Dudley Mahler',phy',
+        darkroom: 'Darkroom & Double Exposure — Nora Dudley Mahler', experimental: 'Experimental Processes — Nora Dudley Mahler',
+        color: 'Color Photography — Nora Dudley Mahler',        traditional: 'Traditional B&W — Nora Dudley Mahler',
+        digitalart: 'Digital Art — Nora Dudley Mahler'& Double Exposure — Nora Dudley Mahler',
+      };   color: 'Color Photography — Nora Dudley Mahler',
+      document.title = titles[pageId] || 'Nora Dudley Mahler Photography';        digitalart: 'Digital Art — Nora Dudley Mahler'
 
-      // Close mobile menu if open
+      // Close mobile menu if opena Dudley Mahler Photography';
       document.getElementById('nav-menu').classList.remove('open');
 
       if (pageId === 'digitalart') {
         if (subfolderId) {
           openSubfolder(subfolderId, true);
-        } else {
-          closeSubfolder(true);
-        }
-      }
+        } else { if (subfolderId) {
+          closeSubfolder(true);olderId, true);
+        }   } else {
+      }          closeSubfolder(true);
 
       // Update URL hash without triggering a scroll
       if (!skipHistory) {
-        const hash = subfolderId ? '#' + pageId + '/' + subfolderId : '#' + pageId;
+        const hash = subfolderId ? '#' + pageId + '/' + subfolderId : '#' + pageId;without triggering a scroll
         history.pushState(null, '', hash);
-      }
-
-      window.scrollTo(0, 0);
+      } const hash = subfolderId ? '#' + pageId + '/' + subfolderId : '#' + pageId;
+ll, '', hash);
+      window.scrollTo(0, 0); }
     }
 
     // ── Digital Art subfolder toggle ──────────────────────────────────────────
     function openSubfolder(id, skipHistory) {
-      document.getElementById('digitalart-cards').style.display = 'none';
-      document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));
-      document.getElementById('subfolder-' + id).classList.add('open');
+      document.getElementById('digitalart-cards').style.display = 'none';le ──────────────────────────────────────────
+      document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));ry) {
+      document.getElementById('subfolder-' + id).classList.add('open');ards').style.display = 'none';
       if (!skipHistory) {
-        history.pushState(null, '', '#digitalart/' + id);
+        history.pushState(null, '', '#digitalart/' + id);n');
       }
-      window.scrollTo(0, 0);
-    }
+      window.scrollTo(0, 0);   history.pushState(null, '', '#digitalart/' + id);
+    }      }
 
     function closeSubfolder(skipHistory) {
       document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));
       document.getElementById('digitalart-cards').style.display = '';
-      if (!skipHistory) {
-        history.pushState(null, '', '#digitalart');
-      }
-      window.scrollTo(0, 0);
+      if (!skipHistory) {All('.subfolder-view').forEach(el => el.classList.remove('open'));
+        history.pushState(null, '', '#digitalart');yId('digitalart-cards').style.display = '';
+      }      if (!skipHistory) {
+      window.scrollTo(0, 0);, '#digitalart');
     }
 
     // ── Read hash on load and handle back/forward ─────────────────────────────
     function navigateFromHash() {
-      const hash = location.hash.replace('#', '') || 'home';
-      const parts = hash.split('/');
-      const pageId = parts[0] || 'home';
-      const subfolderId = parts[1] || null;
-      const validPages = ['home', 'experimental', 'traditional', 'darkroom', 'color', 'digitalart'];
+      const hash = location.hash.replace('#', '') || 'home';/forward ─────────────────────────────
+      const parts = hash.split('/');ateFromHash() {
+      const pageId = parts[0] || 'home'; const hash = location.hash.replace('#', '') || 'home';
+      const subfolderId = parts[1] || null;      const parts = hash.split('/');
+      const validPages = ['home', 'experimental', 'traditional', 'darkroom', 'color', 'digitalart']; 'home';
       const target = validPages.includes(pageId) ? pageId : 'home';
-      showPage(target, subfolderId, true);
-    }
+      showPage(target, subfolderId, true);'traditional', 'darkroom', 'color', 'digitalart'];
+    } pageId : 'home';
 
     window.addEventListener('popstate', navigateFromHash);
     window.addEventListener('DOMContentLoaded', navigateFromHash);
-
-    // ── Lightbox with prev/next ───────────────────────────────────────────────
+indow.addEventListener('popstate', navigateFromHash);
+    // ── Lightbox with prev/next ───────────────────────────────────────────────    window.addEventListener('DOMContentLoaded', navigateFromHash);
     let lightboxImages = [];
-    let lightboxIndex = 0;
+    let lightboxIndex = 0;──────────────
 
-    function buildImageList(src) {
+    function buildImageList(src) {et lightboxIndex = 0;
       const imgs = [];
-      document.querySelectorAll(
+      document.querySelectorAll( {
         '.page.active .gallery-item img, ' +
         '.subfolder-view.open .thumbnail-item img'
       ).forEach(img => imgs.push(img.src));
-      return imgs;
+      return imgs;en .thumbnail-item img'
     }
 
     function openLightbox(src) {
       lightboxImages = buildImageList(src);
-      lightboxIndex = lightboxImages.indexOf(src);
+      lightboxIndex = lightboxImages.indexOf(src); {
       if (lightboxIndex === -1) lightboxIndex = 0;
-      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').src = src;ndexOf(src);
       document.getElementById('lightbox').classList.add('open');
-      updateCounter();
-    }
-
+      updateCounter();.getElementById('lightbox-img').src = src;
+    }d('lightbox').classList.add('open');
+pdateCounter();
     function closeLightbox() {
       document.getElementById('lightbox').classList.remove('open');
       document.getElementById('lightbox-img').src = '';
     }
-
+= '';
     function lightboxStep(dir) {
       if (!lightboxImages.length) return;
-      var next = lightboxIndex + dir;
-      if (next < 0 || next >= lightboxImages.length) return;
-      lightboxIndex = next;
-      document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
+      var next = lightboxIndex + dir;ion lightboxStep(dir) {
+      if (next < 0 || next >= lightboxImages.length) return;f (!lightboxImages.length) return;
+      lightboxIndex = next;      var next = lightboxIndex + dir;
+      document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];mages.length) return;
       updateCounter();
     }
 
     function updateCounter() {
       var el = document.getElementById('lightbox-counter');
-      if (lightboxImages.length > 1) {
-        el.textContent = (lightboxIndex + 1) + ' / ' + lightboxImages.length;
+      if (lightboxImages.length > 1) {ction updateCounter() {
+        el.textContent = (lightboxIndex + 1) + ' / ' + lightboxImages.length;      var el = document.getElementById('lightbox-counter');
       } else {
-        el.textContent = '';
+        el.textContent = '';tent = (lightboxIndex + 1) + ' / ' + lightboxImages.length;
       }
     }
 
     // Click handler for standard .gallery-item images
     document.querySelectorAll('.gallery-item').forEach(function (item) {
-      item.addEventListener('click', function () {
-        var img = item.querySelector('img');
+      item.addEventListener('click', function () {es
+        var img = item.querySelector('img');ery-item').forEach(function (item) {
         if (img) openLightbox(img.src);
       });
-    });
+    });ightbox(img.src);
 
     // Keyboard: Escape closes lightbox
     document.addEventListener('keydown', function (e) {
       if (!document.getElementById('lightbox').classList.contains('open')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') lightboxStep(-1);
-      if (e.key === 'ArrowRight') lightboxStep(1);
-    });
+      if (e.key === 'Escape') closeLightbox();er('keydown', function (e) {
+      if (e.key === 'ArrowLeft') lightboxStep(-1);open')) return;
+      if (e.key === 'ArrowRight') lightboxStep(1); if (e.key === 'Escape') closeLightbox();
+    });      if (e.key === 'ArrowLeft') lightboxStep(-1);
 
     // ── Swipe support for lightbox on mobile ─────────────────────────────────
     (function () {
-      var startX = null;
-      var lb = document.getElementById('lightbox');
+      var startX = null; on mobile ─────────────────────────────────
+      var lb = document.getElementById('lightbox');() {
       lb.addEventListener('touchstart', function (e) {
         startX = e.touches[0].clientX;
-      }, { passive: true });
-      lb.addEventListener('touchend', function (e) {
+      }, { passive: true });b.addEventListener('touchstart', function (e) {
+      lb.addEventListener('touchend', function (e) {   startX = e.touches[0].clientX;
         if (startX === null) return;
-        var diff = startX - e.changedTouches[0].clientX;
+        var diff = startX - e.changedTouches[0].clientX;e) {
         if (Math.abs(diff) > 40) lightboxStep(diff > 0 ? 1 : -1);
-        startX = null;
-      }, { passive: true });
+        startX = null;ouches[0].clientX;
+      }, { passive: true });ep(diff > 0 ? 1 : -1);
     })();
 
     // ── Hamburger menu toggle ─────────────────────────────────────────────────
     function toggleMenu() {
-      document.getElementById('nav-menu').classList.toggle('open');
-    }
+      document.getElementById('nav-menu').classList.toggle('open');───────────────
+    }    function toggleMenu() {
 
     // ── Image fade-in on load ─────────────────────────────────────────────────
     function attachFadeIn(img) {
-      if (img.complete) {
-        img.classList.add('loaded');
+      if (img.complete) {── Image fade-in on load ─────────────────────────────────────────────────
+        img.classList.add('loaded');    function attachFadeIn(img) {
       } else {
         img.addEventListener('load', function () { img.classList.add('loaded'); });
         img.addEventListener('error', function () { img.classList.add('loaded'); });
-      }
-    }
+      }d', function () { img.classList.add('loaded'); });
+    }', function () { img.classList.add('loaded'); });
     document.querySelectorAll('img').forEach(attachFadeIn);
     // Also attach to dynamically-present images
-    new MutationObserver(function (mutations) {
-      mutations.forEach(function (m) {
-        m.addedNodes.forEach(function (n) {
-          if (n.nodeName === 'IMG') attachFadeIn(n);
-          if (n.querySelectorAll) n.querySelectorAll('img').forEach(attachFadeIn);
-        });
+    new MutationObserver(function (mutations) {ument.querySelectorAll('img').forEach(attachFadeIn);
+      mutations.forEach(function (m) {Also attach to dynamically-present images
+        m.addedNodes.forEach(function (n) {    new MutationObserver(function (mutations) {
+          if (n.nodeName === 'IMG') attachFadeIn(n);ions.forEach(function (m) {
+          if (n.querySelectorAll) n.querySelectorAll('img').forEach(attachFadeIn); m.addedNodes.forEach(function (n) {
+        });          if (n.nodeName === 'IMG') attachFadeIn(n);
+      });   if (n.querySelectorAll) n.querySelectorAll('img').forEach(attachFadeIn);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html></body>  </script>    });      }        btt.style.display = 'none';      } else {        btt.style.display = 'flex';      if (window.scrollY > 400) {    window.addEventListener('scroll', function () {    var btt = document.getElementById('back-to-top');    // ── Back to top button ────────────────────────────────────────────────────    });      img.setAttribute('loading', 'lazy');    document.querySelectorAll('.gallery-item img, .thumbnail-item img').forEach(function (img) {    // ── Lazy loading ──────────────────────────────────────────────────────────    }).observe(document.body, { childList: true, subtree: true });        });
       });
     }).observe(document.body, { childList: true, subtree: true });
 

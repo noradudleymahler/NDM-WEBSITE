@@ -104,7 +104,26 @@ def update_heroes(html):
         if count == 0:
             print(f"  ⚠  Hero div 'id={div_id}' not found in HTML — skipped.")
     return html
-
+// ...existing code...
+def build_thumbnail_block(section_id, images, folder, label):
+    """Build HTML for a 3-column thumbnail-grid block."""
+    lines = [f"      <!-- GALLERY:{section_id} START -->"]
+    if images:
+        for fn in images:
+            path = f"Images/{folder}/{fn}"
+            if section_id == "inthesameworld":
+                lines.append(f'      <div class="itsw-item" onclick="openLightbox(\'{path}\')">')
+                lines.append(f'        <img src="{path}" alt="{label} - {fn}">')
+                lines.append(f'      </div>')
+            else:
+                lines.append(f'      <div class="thumbnail-item" onclick="openLightbox(\'{path}\')">')
+                lines.append(f'        <img src="{path}" alt="{label} - {fn}">')
+                lines.append(f'      </div>')
+    else:
+        lines.append('      <p style="color:#999;font-style:italic;grid-column:1/-1;padding:2rem 0;">Images coming soon.</p>')
+    lines.append(f"      <!-- GALLERY:{section_id} END -->")
+    return "\n".join(lines)
+// ...existing code...
 
 def natural_sort_key(name):
     """Sort filenames so 2.jpg < 10.jpg (numeric-aware)."""
@@ -164,9 +183,14 @@ def build_thumbnail_block(section_id, images, folder, label):
     if images:
         for fn in images:
             path = f"Images/{folder}/{fn}"
-            lines.append(f'      <div class="thumbnail-item" onclick="openLightbox(\'{path}\')">')
-            lines.append(f'        <img src="{path}" alt="{label} - {fn}">')
-            lines.append(f'      </div>')
+            if section_id == "inthesameworld":
+                lines.append(f'      <div class="itsw-item" onclick="openLightbox(\'{path}\')">')
+                lines.append(f'        <img src="{path}" alt="{label} - {fn}">')
+                lines.append(f'      </div>')
+            else:
+                lines.append(f'      <div class="thumbnail-item" onclick="openLightbox(\'{path}\')">')
+                lines.append(f'        <img src="{path}" alt="{label} - {fn}">')
+                lines.append(f'      </div>')
     else:
         lines.append('      <p style="color:#999;font-style:italic;grid-column:1/-1;padding:2rem 0;">Images coming soon.</p>')
     lines.append(f"      <!-- GALLERY:{section_id} END -->")
