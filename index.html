@@ -32,9 +32,9 @@
     }
 
     body {
-      font-family: 'Arial Black', Arial, sans-serif;
+      font-family: 'Times New Roman', Times, serif;
       background-color: #ffffff;
-      color: #333;
+      color: #000;
       font-size: 19px;
       font-weight: bold;
     }
@@ -47,7 +47,6 @@
       z-index: 100;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       border-bottom: 1px solid #e0e0e0;
-      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -56,12 +55,9 @@
     .nav-brand {
       font-family: Georgia, serif;
       font-size: 1.2rem;
-      font-style: normal;
       font-weight: bold;
       color: #2c2c2c;
       text-decoration: none;
-      white-space: nowrap;
-      flex-shrink: 0;
     }
 
     .nav-brand:hover {
@@ -71,9 +67,6 @@
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      flex-wrap: nowrap;
       gap: clamp(1rem, 2vw, 2.5rem);
       margin: 0;
       padding: 0;
@@ -86,7 +79,6 @@
       font-size: clamp(1.2rem, 2vw, 1.5rem);
       font-weight: bold;
       white-space: nowrap;
-      display: inline-block;
       padding: 0.2rem 0;
       transition: color 0.18s ease;
     }
@@ -101,70 +93,6 @@
       border-bottom: 1px solid #2c2c2c;
     }
 
-    .home-container {
-      min-height: calc(100vh - 60px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #ffffff;
-      padding: 1.5rem 2rem 2.5rem;
-    }
-
-    .home-title {
-      text-align: center;
-      color: #2c2c2c;
-      padding: 1rem 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .home-title h1 {
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 5rem;
-      font-weight: bold;
-      font-style: normal;
-      letter-spacing: 3px;
-      margin-bottom: 0.5rem;
-    }
-
-    .home-layout {
-      display: flex;
-      gap: 5rem;
-      max-width: 1800px;
-      width: 100%;
-      margin: 0 auto;
-      align-items: flex-start;
-    }
-
-    .home-images {
-      flex: 0 0 68%;
-      min-width: 0;
-    }
-
-    .home-text {
-      flex: 1;
-      font-size: 1.3rem;
-      line-height: 1.8;
-      color: #000;
-      font-weight: bold;
-      padding-top: 2rem;
-      min-width: 0;
-    }
-
-    .itsw-layout {
-      display: flex;
-      gap: 3rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .itsw-sidebar {
-      flex: 0 0 300px;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
     .page {
       display: none;
     }
@@ -173,6 +101,73 @@
       display: block;
     }
 
+    /* HOME PAGE */
+    .home-container {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      padding: 3rem 2rem;
+    }
+
+    .home-title {
+      text-align: center;
+      color: #2c2c2c;
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .home-title h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 4.2rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 0.5rem;
+    }
+
+    .home-content {
+      display: flex;
+      gap: 6rem;
+      max-width: 1600px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    .home-images {
+      flex: 0 0 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .home-image-item {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .home-image-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .home-text {
+      flex: 1;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.8;
+      color: #000;
+    }
+
+    .home-text p {
+      margin-bottom: 2rem;
+    }
+
+    /* GALLERY PAGES */
     .page-content {
       padding: 3rem 2rem;
       max-width: 1400px;
@@ -189,10 +184,8 @@
       font-family: 'Times New Roman', Times, serif;
       font-size: 3.4rem;
       font-weight: bold;
-      font-style: normal;
       color: #2c2c2c;
       margin-bottom: 1rem;
-      letter-spacing: 2px;
     }
 
     .page-header p {
@@ -206,21 +199,17 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
       margin-top: 2rem;
-      align-items: stretch;
     }
 
     .gallery-item {
       position: relative;
       overflow: hidden;
-      border-radius: 0;
-      box-shadow: none;
-      transition: transform 0.12s ease;
-      background-color: transparent;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 620px;
+      min-height: 520px;
       cursor: pointer;
+      transition: transform 0.12s ease;
     }
 
     .gallery-item:hover {
@@ -234,6 +223,7 @@
       display: block;
     }
 
+    /* SUBFOLDER CARDS */
     .folder-cards {
       display: flex;
       gap: 2rem;
@@ -286,16 +276,9 @@
       color: #fff;
       font-family: 'Times New Roman', Times, serif;
       font-size: 1.6rem;
-      font-style: normal;
       font-weight: bold;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
       margin-bottom: 0.5rem;
-    }
-
-    .folder-card-label p {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 0.9rem;
-      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
     }
 
     .subfolder-view {
@@ -336,73 +319,10 @@
       font-family: 'Times New Roman', Times, serif;
       font-size: 1.9rem;
       font-weight: bold;
-      font-style: normal;
       color: #2c2c2c;
     }
 
-    .subsection-header p {
-      font-size: 1rem;
-      color: #666;
-      margin-top: 0.4rem;
-    }
-
-    .thumbnail-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-top: 1.5rem;
-      align-items: center;
-    }
-
-    .thumbnail-item {
-      width: 85%;
-      max-width: 900px;
-      overflow: hidden;
-      background: #f4f4f4;
-      aspect-ratio: unset;
-      height: auto;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .thumbnail-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .thumbnail-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .thumbnail-item:hover img {
-      transform: scale(1.04);
-    }
-
-    .itsw-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-top: 1.5rem;
-      align-items: center;
-    }
-
-    .itsw-item {
-      width: 85%;
-      max-width: 900px;
-      cursor: pointer;
-    }
-
-    .itsw-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-    }
-
+    /* LIGHTBOX */
     .lightbox-overlay {
       display: none;
       position: fixed;
@@ -432,7 +352,6 @@
       color: #fff;
       cursor: pointer;
       font-weight: 900;
-      line-height: 1;
       user-select: none;
     }
 
@@ -492,7 +411,6 @@
       justify-content: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
       z-index: 500;
-      transition: opacity 0.2s;
       opacity: 0.8;
     }
 
@@ -500,28 +418,18 @@
       opacity: 1;
     }
 
-    .gallery-item img,
-    #featured-img,
-    .thumbnail-item img,
-    .itsw-item img,
-    .folder-card img {
+    img {
       opacity: 0;
       transition: opacity 0.5s ease;
     }
 
-    .gallery-item img.loaded,
-    #featured-img.loaded,
-    .thumbnail-item img.loaded,
-    .itsw-item img.loaded,
-    .folder-card img.loaded {
+    img.loaded {
       opacity: 1;
     }
 
     .hamburger {
       display: none;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       gap: 5px;
       background: none;
       border: none;
@@ -538,56 +446,27 @@
     }
 
     @media (max-width: 768px) {
-      .home-title h1 {
-        font-size: 3rem;
-      }
-
-      .home-layout {
+      .home-content {
         flex-direction: column;
         gap: 2rem;
+        align-items: center;
       }
 
       .home-images {
         flex: none;
-        width: 100%;
+        max-width: 100%;
       }
 
       .home-text {
-        flex: 1;
-        font-size: 1rem;
-        padding-top: 0;
-      }
-
-      .itsw-layout {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .itsw-sidebar {
-        flex: none;
-        width: 100%;
-      }
-
-      .page-header h2 {
-        font-size: 2rem;
+        font-size: 1.3rem;
       }
 
       .gallery {
         grid-template-columns: 1fr;
-        gap: 12px;
       }
 
       .gallery-item {
-        min-height: 320px;
-      }
-
-      .thumbnail-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
-
-      .folder-card {
-        width: 100%;
+        min-height: 360px;
       }
     }
 
@@ -598,26 +477,17 @@
 
       nav ul {
         display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem 0;
-        background: #fff;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        z-index: 200;
-        border-bottom: 1px solid #e0e0e0;
       }
 
       nav ul.open {
         display: flex;
-      }
-
-      nav a {
-        font-size: 1rem;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        gap: 1rem;
+        padding: 1rem 0;
       }
     }
   </style>
@@ -627,12 +497,12 @@
 
   <nav>
     <a class="nav-brand" href="#home" onclick="showPage('home')">Nora Mahler</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     <ul id="nav-menu">
-      <li><a href="#experimental" data-page="experimental" onclick="showPage('experimental')">Experimental</a></li>
-      <li><a href="#traditional" data-page="traditional" onclick="showPage('traditional')">Traditional B&W</a></li>
+      <li><a href="#experimental" data-page="experimental" onclick="showPage('experimental')">Experimental</a>
+      </li>
+      <li><a href="#traditional" data-page="traditional" onclick="showPage('traditional')">Traditional B&W</a>
+      </li>
       <li><a href="#darkroom" data-page="darkroom" onclick="showPage('darkroom')">Darkroom</a></li>
       <li><a href="#color" data-page="color" onclick="showPage('color')">Color</a></li>
       <li><a href="#digitalart" data-page="digitalart" onclick="showPage('digitalart')">Digital Art</a></li>
@@ -645,56 +515,55 @@
         <h1>Nora Mahler</h1>
         <h1>Photography</h1>
       </div>
-      <div class="home-layout">
+      <div class="home-content">
         <div class="home-images">
-          <div id="featured" style="width:100%;margin-bottom:8rem;">
-            <img id="featured-img" src="Images/home/featured.jpg" alt="Featured"
-              style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
-              onclick="openLightbox('Images/home/featured.jpg')">
+          <div class="home-image-item" onclick="openLightbox('Images/home/featured.jpg')">
+            <img class="loaded" src="Images/home/featured.jpg" alt="Featured">
           </div>
-          <div id="featured2" style="width:100%;margin-bottom:8rem;">
-            <img id="featured-img2" src="Images/home/13.jpg" alt="13"
-              style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
-              onclick="openLightbox('Images/home/13.jpg')">
+          <div class="home-image-item" onclick="openLightbox('Images/home/13.jpg')">
+            <img class="loaded" src="Images/home/13.jpg" alt="13">
           </div>
-          <div id="panorama" style="width:100%;">
-            <img id="panorama-img" src="Images/darkroom/5.jpg" alt="Panorama"
-              style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
-              onclick="openLightbox('Images/darkroom/5.jpg')">
+          <div class="home-image-item" onclick="openLightbox('Images/home/7Panorama Collage.jpg')">
+            <img class="loaded" src="Images/home/7Panorama Collage.jpg" alt="Panorama">
           </div>
         </div>
         <div class="home-text">
-          <p style="margin-bottom: 1.5rem;"><strong>"I can't put into words what I'm trying to say."</strong> Most of us
-            have said this and felt the frustration of struggling to put our thoughts into comprehensible words at least
-            once in our lives. This phrase most accurately captures the frustration of grappling with the gap between a
+          <p>"I can't put into words what I'm trying to say." Most of us have said this and felt the
+            frustration of struggling to put our thoughts into comprehensible words at least once in our
+            lives. This phrase most accurately captures the frustration of grappling with the gap between a
             clear thought existing in our minds and the words we use.</p>
-          <p style="margin-bottom: 1.5rem;">Language is our primary tool for connecting our minds to the world, but it
-            also limits the accuracy of what we can express. Our brains, bodies, and perception are present long before
-            words come into play; they shape our experiences in ways that can't always be reproduced verbally. Language
-            is all we have to mediate our brains and the world around us; it's what we use to connect to reality, but it
-            also limits our ability to be accurately understood. Translating complex thoughts into words is akin to
-            writing musical notes as a paragraph in English; the tools capture different kinds of meaning. We value
-            language for its ability to transform personal experiences into universal ones, but in reality, its capacity
-            to do so is severely limited.</p>
-          <p style="margin-bottom: 1.5rem;">In the digital age, the pressure to make our inner lives legible, to turn
-            every thought into something to be consumed, viable for communication, or limpid language, feels even
-            stronger. The moment our inner lives become shareable or consumable, they become vulnerable to others'
+
+          <p>Language is our primary tool for connecting our minds to the world, but it also limits the
+            accuracy of what we can express. Our brains, bodies, and perception are present long before
+            words come into play; they shape our experiences in ways that can't always be reproduced
+            verbally. Language is all we have to mediate our brains and the world around us; it's what we
+            use to connect to reality, but it also limits our ability to be accurately understood.
+            Translating complex thoughts into words is akin to writing musical notes as a paragraph in
+            English; the tools capture different kinds of meaning. We value language for its ability to
+            transform personal experiences into universal ones, but in reality, its capacity to do so is
+            severely limited.</p>
+
+          <p>In the digital age, the pressure to make our inner lives legible, to turn every thought into
+            something to be consumed, viable for communication, or limpid language, feels even stronger. The
+            moment our inner lives become shareable or consumable, they become vulnerable to others'
             opinions and subject to change based on what viewers take from them.</p>
-          <p style="margin-bottom: 1.5rem;">It was when I first began experimental darkroom photography that I remember
-            making my first print by manipulating multiple negatives in the enlargers – the first time I had ever
-            successfully translated an image from my imagination into something tangible. There was a sense of relief,
-            because what I had never believed possible, bringing something from my imagination to life, suddenly became
-            feasible. Before this experience, I was content knowing that everything that goes on in my mind, images,
-            thoughts, ideas, opinions, did not need to be proved essential or interesting to anybody, mainly because it
-            couldn't be. However, once it became possible for me to translate at least some of what transpired in my
-            brain, the significance of my work, and coincidentally my imagination, was suddenly placed in the hands of
-            the viewer.</p>
-          <p style="margin-bottom: 1.5rem;">So is the key to a life of expression forming a path that aligns with how
-            you
-            think, or is it the ability to live contentedly and confidently in the significance of our imaginations
-            without needing them to be consumable?</p>
-          <p>I want any viewer of my work to be reminded that inner experience will always be richer, stranger, and more
-            personal than anything to be consumed.</p>
+
+          <p>It was when I first began experimental darkroom photography that I remember making my first print
+            by manipulating multiple negatives in the enlargers – the first time I had ever successfully
+            translated an image from my imagination into something tangible. There was a sense of relief,
+            because what I had never believed possible, bringing something from my imagination to life,
+            suddenly became feasible. Before this experience, I was content knowing that everything that
+            goes on in my mind, images, thoughts, ideas, opinions, did not need to be proved essential or
+            interesting to anybody, mainly because it couldn't be. However, once it became possible for me
+            to translate at least some of what transpired in my brain, the significance of my work, and
+            coincidentally my imagination, was suddenly placed in the hands of the viewer.</p>
+
+          <p>So is the key to a life of expression forming a path that aligns with how you think, or is it the
+            ability to live contentedly and confidently in the significance of our imaginations without
+            needing them to be consumable?</p>
+
+          <p>I want any viewer of my work to be reminded that inner experience will always be richer,
+            stranger, and more personal than anything to be consumed.</p>
         </div>
       </div>
       <p style="text-align:center;margin-top:2rem;font-size:1.1rem;">
@@ -703,15 +572,64 @@
       </p>
     </div>
   </div>
+
   <div id="experimental" class="page">
     <div class="page-header">
       <h2>Experimental Processes</h2>
       <p>Van Dyke Brown, Cyanotype, and Pinhole Cameras</p>
     </div>
     <div class="page-content">
-      <div class="gallery">
-      <!-- GALLERY:experimental START -->
-      <!-- GALLERY:experimental END -->
+      <div id="experimental-cards" class="folder-cards">
+        <div class="folder-card" onclick="openSubfolder('experimental', 'uv-prints')">
+          <img src="Images/experimental/UV PRINTS/1.jpg" alt="UV Prints">
+          <div class="folder-card-label">
+            <h3>UV Prints</h3>
+          </div>
+        </div>
+        <div class="folder-card" onclick="openSubfolder('experimental', 'pinhole-silvering')">
+          <img src="Images/experimental/PINHOLE & SILVERING/9.jpg" alt="Pinhole & Silvering">
+          <div class="folder-card-label">
+            <h3>Pinhole & Silvering</h3>
+          </div>
+        </div>
+      </div>
+
+      <div id="subfolder-experimental-uv-prints" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder('experimental')">&#8592; Back</button>
+        <div class="subsection-header">
+          <h3>UV Prints</h3>
+        </div>
+        <div class="gallery">
+      <!-- GALLERY:uv-prints START -->
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/1.jpg" alt="uv-prints - 1.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/2.jpg" alt="uv-prints - 2.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/3.jpg" alt="uv-prints - 3.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/4.jpg" alt="uv-prints - 4.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/5.jpg" alt="uv-prints - 5.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/6.jpg" alt="uv-prints - 6.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/7.jpg" alt="uv-prints - 7.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/8.jpg" alt="uv-prints - 8.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/12.jpg" alt="uv-prints - 12.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/14.jpg" alt="uv-prints - 14.jpg"></div>
+      <!-- GALLERY:uv-prints END -->
+        </div>
+      </div>
+
+      <div id="subfolder-experimental-pinhole-silvering" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder('experimental')">&#8592; Back</button>
+        <div class="subsection-header">
+          <h3>Pinhole & Silvering</h3>
+        </div>
+        <div class="gallery">
+      <!-- GALLERY:pinhole-silvering START -->
+      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/9.jpg" alt="pinhole-silvering - 9.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/10.jpg" alt="pinhole-silvering - 10.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/11.jpg" alt="pinhole-silvering - 11.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/15.jpg" alt="pinhole-silvering - 15.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/16.jpg" alt="pinhole-silvering - 16.jpg"></div>
+      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/17.jpg" alt="pinhole-silvering - 17.jpg"></div>
+      <!-- GALLERY:pinhole-silvering END -->
+        </div>
       </div>
     </div>
   </div>
@@ -724,42 +642,18 @@
     <div class="page-content">
       <div class="gallery">
       <!-- GALLERY:traditional START -->
-      <div class="gallery-item">
-        <img src="Images/traditional/1.jpg" alt="traditional - 1.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/2.jpg" alt="traditional - 2.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/3.jpg" alt="traditional - 3.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/4.jpg" alt="traditional - 4.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/5.jpg" alt="traditional - 5.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/6.jpg" alt="traditional - 6.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/7.jpg" alt="traditional - 7.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/8.jpg" alt="traditional - 8.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/9.jpg" alt="traditional - 9.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/10.jpg" alt="traditional - 10.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/11.jpg" alt="traditional - 11.jpg">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/traditional/12.JPG" alt="traditional - 12.JPG">
-      </div>
+      <div class="gallery-item"><img src="Images/traditional/1.jpg" alt="traditional - 1.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/2.jpg" alt="traditional - 2.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/3.jpg" alt="traditional - 3.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/4.jpg" alt="traditional - 4.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/5.jpg" alt="traditional - 5.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/6.jpg" alt="traditional - 6.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/7.jpg" alt="traditional - 7.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/8.jpg" alt="traditional - 8.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/9.jpg" alt="traditional - 9.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/10.jpg" alt="traditional - 10.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/11.jpg" alt="traditional - 11.jpg"></div>
+      <div class="gallery-item"><img src="Images/traditional/12.JPG" alt="traditional - 12.JPG"></div>
       <!-- GALLERY:traditional END -->
       </div>
     </div>
@@ -771,9 +665,68 @@
       <p>Superimposing, layering, multiple exposures, and use of digital negatives</p>
     </div>
     <div class="page-content">
-      <div class="gallery">
-      <!-- GALLERY:darkroom START -->
-      <!-- GALLERY:darkroom END -->
+      <div id="darkroom-cards" class="folder-cards">
+        <div class="folder-card" onclick="openSubfolder('darkroom', 'smartphone')">
+          <img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/11.jpg" alt="Smartphone">
+          <div class="folder-card-label">
+            <h3>Smartphone Darkroom Printing</h3>
+          </div>
+        </div>
+        <div class="folder-card" onclick="openSubfolder('darkroom', 'superimposing')">
+          <img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/1.jpg" alt="Superimposing">
+          <div class="folder-card-label">
+            <h3>Superimposing & Double Exposures</h3>
+          </div>
+        </div>
+      </div>
+
+      <div id="subfolder-darkroom-smartphone" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder('darkroom')">&#8592; Back</button>
+        <div class="subsection-header">
+          <h3>Smartphone Darkroom Printing</h3>
+        </div>
+        <div class="gallery">
+      <!-- GALLERY:smartphone-darkroom-printing START -->
+      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/6.jpg" alt="smartphone-darkroom-printing - 6.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/8.jpg" alt="smartphone-darkroom-printing - 8.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/9.jpg" alt="smartphone-darkroom-printing - 9.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/11.jpg" alt="smartphone-darkroom-printing - 11.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/17.jpg" alt="smartphone-darkroom-printing - 17.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/21.jpg" alt="smartphone-darkroom-printing - 21.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/29.jpg" alt="smartphone-darkroom-printing - 29.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/30.jpg" alt="smartphone-darkroom-printing - 30.jpg"></div>
+      <!-- GALLERY:smartphone-darkroom-printing END -->
+        </div>
+      </div>
+
+      <div id="subfolder-darkroom-superimposing" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder('darkroom')">&#8592; Back</button>
+        <div class="subsection-header">
+          <h3>Superimposing & Double Exposures</h3>
+        </div>
+        <div class="gallery">
+      <!-- GALLERY:superimposing-double-exposures START -->
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/1.jpg" alt="superimposing-double-exposures - 1.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/2.jpg" alt="superimposing-double-exposures - 2.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/3.jpg" alt="superimposing-double-exposures - 3.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/4.jpg" alt="superimposing-double-exposures - 4.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/7.jpg" alt="superimposing-double-exposures - 7.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/12.jpg" alt="superimposing-double-exposures - 12.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/14.jpg" alt="superimposing-double-exposures - 14.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/15.jpg" alt="superimposing-double-exposures - 15.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/16.jpg" alt="superimposing-double-exposures - 16.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/18.jpg" alt="superimposing-double-exposures - 18.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/19.jpg" alt="superimposing-double-exposures - 19.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/20.jpg" alt="superimposing-double-exposures - 20.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/23.jpg" alt="superimposing-double-exposures - 23.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/24.jpg" alt="superimposing-double-exposures - 24.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/25.jpg" alt="superimposing-double-exposures - 25.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/26.jpg" alt="superimposing-double-exposures - 26.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/27.jpg" alt="superimposing-double-exposures - 27.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/28.jpg" alt="superimposing-double-exposures - 28.jpg"></div>
+      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/31.jpg" alt="superimposing-double-exposures - 31.jpg"></div>
+      <!-- GALLERY:superimposing-double-exposures END -->
+        </div>
       </div>
     </div>
   </div>
@@ -784,9 +737,72 @@
       <p>Using a 35mm camera</p>
     </div>
     <div class="page-content">
-      <div class="gallery">
-      <!-- GALLERY:color START -->
-      <!-- GALLERY:color END -->
+      <div id="color-cards" class="folder-cards">
+        <div class="folder-card" onclick="openSubfolder('color', 'color-film')">
+          <img src="Images/color/COLOR FILM/1.jpg" alt="Color Film">
+          <div class="folder-card-label">
+            <h3>Color Film</h3>
+          </div>
+        </div>
+        <div class="folder-card" onclick="openSubfolder('color', 'digital')">
+          <img src="Images/color/DIGITAL/33.jpeg" alt="Digital">
+          <div class="folder-card-label">
+            <h3>Digital</h3>
+          </div>
+        </div>
+      </div>
+
+      <div id="subfolder-color-color-film" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder('color')">&#8592; Back</button>
+        <div class="subsection-header">
+          <h3>Color Film</h3>
+        </div>
+        <div class="gallery">
+      <!-- GALLERY:color-film START -->
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/1.jpg" alt="color-film - 1.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/3.jpg" alt="color-film - 3.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/4.jpg" alt="color-film - 4.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/5.jpg" alt="color-film - 5.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/6.jpg" alt="color-film - 6.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/7.jpg" alt="color-film - 7.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/8.jpg" alt="color-film - 8.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/9.jpg" alt="color-film - 9.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/10.jpg" alt="color-film - 10.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/11.jpg" alt="color-film - 11.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/12.jpg" alt="color-film - 12.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/13.jpg" alt="color-film - 13.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/14.jpg" alt="color-film - 14.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/15.jpg" alt="color-film - 15.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/16.jpg" alt="color-film - 16.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/17.jpg" alt="color-film - 17.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/18.jpg" alt="color-film - 18.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/19.jpg" alt="color-film - 19.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/25.JPG" alt="color-film - 25.JPG"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/26.JPG" alt="color-film - 26.JPG"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/27.JPG" alt="color-film - 27.JPG"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/28.JPG" alt="color-film - 28.JPG"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/29.JPG" alt="color-film - 29.JPG"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/30.JPG" alt="color-film - 30.JPG"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/32.jpg" alt="color-film - 32.jpg"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/33.JPG" alt="color-film - 33.JPG"></div>
+      <div class="gallery-item"><img src="Images/color/COLOR FILM/34.JPG" alt="color-film - 34.JPG"></div>
+      <!-- GALLERY:color-film END -->
+        </div>
+      </div>
+
+      <div id="subfolder-color-digital" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder('color')">&#8592; Back</button>
+        <div class="subsection-header">
+          <h3>Digital</h3>
+        </div>
+        <div class="gallery">
+      <!-- GALLERY:digital START -->
+      <div class="gallery-item"><img src="Images/color/DIGITAL/33.jpeg" alt="digital - 33.jpeg"></div>
+      <div class="gallery-item"><img src="Images/color/DIGITAL/34.jpeg" alt="digital - 34.jpeg"></div>
+      <div class="gallery-item"><img src="Images/color/DIGITAL/35.jpeg" alt="digital - 35.jpeg"></div>
+      <div class="gallery-item"><img src="Images/color/DIGITAL/36.jpeg" alt="digital - 36.jpeg"></div>
+      <!-- GALLERY:digital END -->
+        </div>
       </div>
     </div>
   </div>
@@ -796,108 +812,57 @@
       <h2>Digital Art</h2>
     </div>
     <div class="page-content">
-
       <div id="digitalart-cards" class="folder-cards">
-
-        <div class="folder-card" onclick="openSubfolder('composites')">
-          <img src="Images/digitalart/1.jpg" alt="Composites preview">
+        <div class="folder-card" onclick="openSubfolder('digitalart', 'composites')">
+          <img src="Images/digitalart/1.jpg" alt="Composites">
           <div class="folder-card-label">
-            <h3>Composites &amp; Digital Works</h3>
+            <h3>Composites & Digital Works</h3>
           </div>
         </div>
-
-        <div class="folder-card" onclick="openSubfolder('inthesameworld')">
-          <img src="Images/inthesameworld/FINAL-1.png" alt="In The Same World preview">
+        <div class="folder-card" onclick="openSubfolder('digitalart', 'inthesameworld')">
+          <img src="Images/inthesameworld/FINAL-1.png" alt="In The Same World">
           <div class="folder-card-label">
             <h3>In The Same World</h3>
             <p>ART 141 Final Project</p>
           </div>
         </div>
-
       </div>
 
-      <div id="subfolder-composites" class="subfolder-view">
-        <button class="back-btn" onclick="closeSubfolder()">&#8592; Back</button>
+      <div id="subfolder-digitalart-composites" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder('digitalart')">&#8592; Back</button>
         <div class="subsection-header">
-          <h3>Composites &amp; Digital Works</h3>
+          <h3>Composites & Digital Works</h3>
         </div>
-        <div class="thumbnail-grid">
+        <div class="gallery">
       <!-- GALLERY:composites START -->
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/1.jpg')">
-        <img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/2.jpg')">
-        <img src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/3.jpg')">
-        <img src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/4.jpg')">
-        <img src="Images/digitalart/4.jpg" alt="Composites & Digital Works - 4.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/5.jpg')">
-        <img src="Images/digitalart/5.jpg" alt="Composites & Digital Works - 5.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/6.jpg')">
-        <img src="Images/digitalart/6.jpg" alt="Composites & Digital Works - 6.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/7.jpg')">
-        <img src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/8.jpg')">
-        <img src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8.jpg">
-      </div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/9.jpg')">
-        <img src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg">
-      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/1.jpg')"><img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg"></div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/2.jpg')"><img src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2.jpg"></div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/3.jpg')"><img src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3.jpg"></div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/4.jpg')"><img src="Images/digitalart/4.jpg" alt="Composites & Digital Works - 4.jpg"></div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/5.jpg')"><img src="Images/digitalart/5.jpg" alt="Composites & Digital Works - 5.jpg"></div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/6.jpg')"><img src="Images/digitalart/6.jpg" alt="Composites & Digital Works - 6.jpg"></div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/7.jpg')"><img src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7.jpg"></div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/8.jpg')"><img src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8.jpg"></div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/9.jpg')"><img src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg"></div>
       <!-- GALLERY:composites END -->
         </div>
       </div>
 
-      <div id="subfolder-inthesameworld" class="subfolder-view">
-        <button class="back-btn" onclick="closeSubfolder()">&#8592; Back</button>
+      <div id="subfolder-digitalart-inthesameworld" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder('digitalart')">&#8592; Back</button>
         <div class="subsection-header">
           <h3>In The Same World</h3>
           <p>ART 141 Final Project</p>
         </div>
-        <div class="itsw-layout">
-          <div class="itsw-grid" style="flex: 1;">
+        <div class="gallery">
       <!-- GALLERY:inthesameworld START -->
-      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-1.png')">
-        <img src="Images/inthesameworld/FINAL-1.png" alt="In The Same World - FINAL-1.png">
-      </div>
-      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-2.png')">
-        <img src="Images/inthesameworld/FINAL-2.png" alt="In The Same World - FINAL-2.png">
-      </div>
-      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-3.png')">
-        <img src="Images/inthesameworld/FINAL-3.png" alt="In The Same World - FINAL-3.png">
-      </div>
-      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-4.png')">
-        <img src="Images/inthesameworld/FINAL-4.png" alt="In The Same World - FINAL-4.png">
-      </div>
+      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-1.png')"><img src="Images/inthesameworld/FINAL-1.png" alt="In The Same World - FINAL-1.png"></div>
+      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-2.png')"><img src="Images/inthesameworld/FINAL-2.png" alt="In The Same World - FINAL-2.png"></div>
+      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-3.png')"><img src="Images/inthesameworld/FINAL-3.png" alt="In The Same World - FINAL-3.png"></div>
+      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-4.png')"><img src="Images/inthesameworld/FINAL-4.png" alt="In The Same World - FINAL-4.png"></div>
       <!-- GALLERY:inthesameworld END -->
-          </div>
-          <div class="itsw-sidebar">
-            <p style="margin-bottom: 1rem;">Much of my work and techniques have attempted to draw attention to the
-              non-perceptual mediations that ineffably construct our lives. I took a trip to Kenya in January, and the
-              typical mediation I try to represent in my work almost seemed louder than the obvious perceptual
-              observations. Seeing with my own eyes how the food chain functions among animals is something I don't
-              think anyone can fully understand just by looking it up. When I watched how the animals move through life,
-              their family dynamics, relationships, life and death, how they interact and coexist, the ways they
-              communicate, there was something so unmediated about it, and that is what I wanted to make visible. I
-              wanted to show the simplicity of the ways these animals live, but also the depth and complexity of life
-              that we, as people, especially in Western societies, are oblivious to.</p>
-            <p>In ninth grade, I began creating darkroom works that manipulate multiple 35mm negatives using techniques
-              such as layering, using multiple enlargers, superimposing one image onto another, dodging and burning, and
-              even inverting an image or video on my phone and placing it into the enlarger as both the negative and the
-              light source. When my photography teacher introduced me to Uelsmann, I began studying his methods and
-              realized how much they aligned with the theme in most of my work: that our entire lived experience is
-              mediated by factors we aren't aware of. For this project, I tried to digitally mirror the hands-on
-              processes I usually use.</p>
-          </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -912,56 +877,33 @@
   <button id="back-to-top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
   <script>
-    function showPage(pageId, subfolderId, skipHistory) {
+    function showPage(pageId, skipHistory) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(pageId).classList.add('active');
       document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-link'));
       const navLink = document.querySelector('nav a[data-page="' + pageId + '"]');
       if (navLink) navLink.classList.add('active-link');
-      const titles = {
-        home: 'Nora Mahler Photography',
-        experimental: 'Experimental Processes — Nora Mahler',
-        traditional: 'Traditional B&W — Nora Mahler',
-        darkroom: 'Darkroom & Double Exposure — Nora Mahler',
-        color: 'Color Photography — Nora Mahler',
-        digitalart: 'Digital Art — Nora Mahler'
-      };
-      document.title = titles[pageId] || 'Nora Mahler Photography';
       document.getElementById('nav-menu').classList.remove('open');
-      if (pageId === 'digitalart') {
-        if (subfolderId) { openSubfolder(subfolderId, true); }
-        else { closeSubfolder(true); }
-      }
-      if (!skipHistory) {
-        const hash = subfolderId ? '#' + pageId + '/' + subfolderId : '#' + pageId;
-        history.pushState(null, '', hash);
-      }
+      if (!skipHistory) history.pushState(null, '', '#' + pageId);
       window.scrollTo(0, 0);
     }
 
-    function openSubfolder(id, skipHistory) {
-      document.getElementById('digitalart-cards').style.display = 'none';
+    function openSubfolder(page, subfolder) {
+      document.getElementById(page + '-cards').style.display = 'none';
       document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));
-      document.getElementById('subfolder-' + id).classList.add('open');
-      if (!skipHistory) { history.pushState(null, '', '#digitalart/' + id); }
+      document.getElementById('subfolder-' + page + '-' + subfolder).classList.add('open');
       window.scrollTo(0, 0);
     }
 
-    function closeSubfolder(skipHistory) {
+    function closeSubfolder(page) {
       document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));
-      document.getElementById('digitalart-cards').style.display = '';
-      if (!skipHistory) { history.pushState(null, '', '#digitalart'); }
+      document.getElementById(page + '-cards').style.display = '';
       window.scrollTo(0, 0);
     }
 
     function navigateFromHash() {
       const hash = location.hash.replace('#', '') || 'home';
-      const parts = hash.split('/');
-      const pageId = parts[0] || 'home';
-      const subfolderId = parts[1] || null;
-      const validPages = ['home', 'experimental', 'traditional', 'darkroom', 'color', 'digitalart'];
-      const target = validPages.includes(pageId) ? pageId : 'home';
-      showPage(target, subfolderId, true);
+      showPage(hash, true);
     }
 
     window.addEventListener('popstate', navigateFromHash);
@@ -970,21 +912,9 @@
     let lightboxImages = [];
     let lightboxIndex = 0;
 
-    function buildImageList(src) {
-      const imgs = [];
-      const activePage = document.querySelector('.page.active');
-      const activeSubfolder = document.querySelector('.subfolder-view.open');
-
-      if (activeSubfolder) {
-        activeSubfolder.querySelectorAll('.thumbnail-item img, .itsw-item img').forEach(img => imgs.push(img.getAttribute('src')));
-      } else if (activePage.id !== 'digitalart') {
-        activePage.querySelectorAll('.gallery-item img').forEach(img => imgs.push(img.getAttribute('src')));
-      }
-      return imgs;
-    }
-
     function openLightbox(src) {
-      lightboxImages = buildImageList(src);
+      lightboxImages = [];
+      document.querySelectorAll('.page.active .gallery-item img, .page.active .home-image-item img, .subfolder-view.open .gallery-item img').forEach(img => lightboxImages.push(img.src));
       lightboxIndex = lightboxImages.indexOf(src);
       if (lightboxIndex === -1) lightboxIndex = 0;
       document.getElementById('lightbox-img').src = src;
@@ -994,29 +924,19 @@
 
     function closeLightbox() {
       document.getElementById('lightbox').classList.remove('open');
-      document.getElementById('lightbox-img').src = '';
     }
 
     function lightboxStep(dir) {
       if (!lightboxImages.length) return;
-      var next = lightboxIndex + dir;
-      if (next < 0 || next >= lightboxImages.length) return;
-      lightboxIndex = next;
+      lightboxIndex += dir;
+      if (lightboxIndex < 0 || lightboxIndex >= lightboxImages.length) return;
       document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
       updateCounter();
     }
 
     function updateCounter() {
-      var el = document.getElementById('lightbox-counter');
-      el.textContent = lightboxImages.length > 1 ? (lightboxIndex + 1) + ' / ' + lightboxImages.length : '';
+      document.getElementById('lightbox-counter').textContent = lightboxImages.length > 1 ? (lightboxIndex + 1) + ' / ' + lightboxImages.length : '';
     }
-
-    document.querySelectorAll('.gallery-item').forEach(function (item) {
-      item.addEventListener('click', function () {
-        var img = item.querySelector('img');
-        if (img) openLightbox(img.getAttribute('src'));
-      });
-    });
 
     document.addEventListener('keydown', function (e) {
       if (!document.getElementById('lightbox').classList.contains('open')) return;
@@ -1025,43 +945,16 @@
       if (e.key === 'ArrowRight') lightboxStep(1);
     });
 
-    (function () {
-      var startX = null;
-      var lb = document.getElementById('lightbox');
-      lb.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
-      lb.addEventListener('touchend', function (e) {
-        if (startX === null) return;
-        var diff = startX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) lightboxStep(diff > 0 ? 1 : -1);
-        startX = null;
-      }, { passive: true });
-    })();
-
     function toggleMenu() {
       document.getElementById('nav-menu').classList.toggle('open');
     }
 
     function attachFadeIn(img) {
-      if (img.complete) { img.classList.add('loaded'); }
-      else {
-        img.addEventListener('load', function () { img.classList.add('loaded'); });
-        img.addEventListener('error', function () { img.classList.add('loaded'); });
-      }
+      if (img.complete) img.classList.add('loaded');
+      else img.addEventListener('load', function () { img.classList.add('loaded'); });
     }
 
     document.querySelectorAll('img').forEach(attachFadeIn);
-    new MutationObserver(function (mutations) {
-      mutations.forEach(function (m) {
-        m.addedNodes.forEach(function (n) {
-          if (n.nodeName === 'IMG') attachFadeIn(n);
-          if (n.querySelectorAll) n.querySelectorAll('img').forEach(attachFadeIn);
-        });
-      });
-    }).observe(document.body, { childList: true, subtree: true });
-
-    document.querySelectorAll('.gallery-item img, .thumbnail-item img, .itsw-item img').forEach(function (img) {
-      img.setAttribute('loading', 'lazy');
-    });
 
     var btt = document.getElementById('back-to-top');
     window.addEventListener('scroll', function () {

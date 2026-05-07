@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Nora Mahler Photography</title>
+  <link rel="canonical" href="https://noradmahlerphoto.com/">
+  <meta property="og:site_name" content="Nora Mahler Photography">
+  <meta property="og:title" content="Nora Mahler Photography">
+  <meta property="og:description" content="Photography portfolio by Nora Mahler.">
+  <meta property="og:url" content="https://noradmahlerphoto.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://noradmahlerphoto.com/Images/home/featured.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nora Mahler Photography">
+  <meta name="twitter:description" content="Photography portfolio by Nora Mahler.">
+  <meta name="twitter:image" content="https://noradmahlerphoto.com/Images/home/featured.jpg">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial Black', Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding: 1.1rem 2.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #e0e0e0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: Georgia, serif;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: bold;
+      color: #2c2c2c;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-brand:hover {
+      color: #000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: clamp(1rem, 2vw, 2.5rem);
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #2c2c2c;
+      text-decoration: none;
+      font-family: Georgia, serif;
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-weight: bold;
+      white-space: nowrap;
+      display: inline-block;
+      padding: 0.2rem 0;
+      transition: color 0.18s ease;
+    }
+
+    nav a:hover {
+      color: #000;
+      border-bottom: 1px solid #2c2c2c;
+    }
+
+    nav a.active-link {
+      color: #000;
+      border-bottom: 1px solid #2c2c2c;
+    }
+
+    .home-container {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      padding: 1.5rem 2rem 2.5rem;
+    }
+
+    .home-title {
+      text-align: center;
+      color: #2c2c2c;
+      padding: 1rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .home-title h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 5rem;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: 3px;
+      margin-bottom: 0.5rem;
+    }
+
+    .home-layout {
+      display: flex;
+      gap: 5rem;
+      max-width: 1800px;
+      width: 100%;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    .home-images {
+      flex: 0 0 68%;
+      min-width: 0;
+    }
+
+    .home-text {
+      flex: 1;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #000;
+      font-weight: bold;
+      padding-top: 2rem;
+      min-width: 0;
+    }
+
+    .itsw-layout {
+      display: flex;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .itsw-sidebar {
+      flex: 0 0 300px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .page-content {
+      padding: 3rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .page-header h2 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 3.4rem;
+      font-weight: bold;
+      font-style: normal;
+      color: #2c2c2c;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .page-header p {
+      font-size: 1.3rem;
+      color: #666;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 2rem;
+      align-items: stretch;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0;
+      box-shadow: none;
+      transition: transform 0.12s ease;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 620px;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .folder-cards {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 2rem 0 3rem;
+    }
+
+    .folder-card {
+      position: relative;
+      width: 380px;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      cursor: pointer;
+      background: #1a1a1a;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .folder-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+    }
+
+    .folder-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.65;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .folder-card:hover img {
+      opacity: 0.45;
+      transform: scale(1.04);
+    }
+
+    .folder-card-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .folder-card-label h3 {
+      color: #fff;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: bold;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+      margin-bottom: 0.5rem;
+    }
+
+    .folder-card-label p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9rem;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .subfolder-view {
+      display: none;
+    }
+
+    .subfolder-view.open {
+      display: block;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      background: none;
+      border: 2px solid #2c2c2c;
+      color: #2c2c2c;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1rem;
+      padding: 0.5rem 1.2rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .back-btn:hover {
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    .subsection-header {
+      margin: 3rem 0 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid #2c2c2c;
+    }
+
+    .subsection-header h3 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.9rem;
+      font-weight: bold;
+      font-style: normal;
+      color: #2c2c2c;
+    }
+
+    .subsection-header p {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 0.4rem;
+    }
+
+    .thumbnail-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      align-items: center;
+    }
+
+    .thumbnail-item {
+      width: 85%;
+      max-width: 900px;
+      overflow: hidden;
+      background: #f4f4f4;
+      aspect-ratio: unset;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .thumbnail-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .thumbnail-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .thumbnail-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .itsw-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      align-items: center;
+    }
+
+    .itsw-item {
+      width: 85%;
+      max-width: 900px;
+      cursor: pointer;
+    }
+
+    .itsw-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-overlay.open {
+      display: flex;
+    }
+
+    .lightbox-overlay img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 900;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .lightbox-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 900;
+      user-select: none;
+      padding: 1rem;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+      z-index: 1001;
+    }
+
+    .lightbox-arrow:hover {
+      opacity: 1;
+    }
+
+    .lightbox-arrow.prev {
+      left: 1rem;
+    }
+
+    .lightbox-arrow.next {
+      right: 1rem;
+    }
+
+    .lightbox-counter {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      opacity: 0.75;
+      user-select: none;
+    }
+
+    #back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      background: #2c2c2c;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      z-index: 500;
+      transition: opacity 0.2s;
+      opacity: 0.8;
+    }
+
+    #back-to-top:hover {
+      opacity: 1;
+    }
+
+    .gallery-item img,
+    #featured-img,
+    .thumbnail-item img,
+    .itsw-item img,
+    .folder-card img {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .gallery-item img.loaded,
+    #featured-img.loaded,
+    .thumbnail-item img.loaded,
+    .itsw-item img.loaded,
+    .folder-card img.loaded {
+      opacity: 1;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.4rem;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #2c2c2c;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .home-title h1 {
+        font-size: 3rem;
+      }
+
+      .home-layout {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .home-images {
+        flex: none;
+        width: 100%;
+      }
+
+      .home-text {
+        flex: 1;
+        font-size: 1rem;
+        padding-top: 0;
+      }
+
+      .itsw-layout {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .itsw-sidebar {
+        flex: none;
+        width: 100%;
+      }
+
+      .page-header h2 {
+        font-size: 2rem;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .gallery-item {
+        min-height: 320px;
+      }
+
+      .thumbnail-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .folder-card {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hamburger {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 200;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a class="nav-brand" href="#home" onclick="showPage('home')">Nora Mahler</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-menu">
+      <li><a href="#experimental" data-page="experimental" onclick="showPage('experimental')">Experimental</a></li>
+      <li><a href="#traditional" data-page="traditional" onclick="showPage('traditional')">Traditional B&W</a></li>
+      <li><a href="#darkroom" data-page="darkroom" onclick="showPage('darkroom')">Darkroom</a></li>
+      <li><a href="#color" data-page="color" onclick="showPage('color')">Color</a></li>
+      <li><a href="#digitalart" data-page="digitalart" onclick="showPage('digitalart')">Digital Art</a></li>
+    </ul>
+  </nav>
+
+  <div id="home" class="page active">
+    <div class="home-container">
+      <div class="home-title">
+        <h1>Nora Mahler</h1>
+        <h1>Photography</h1>
+      </div>
+      <div class="home-layout">
+        <div class="home-images">
+          <div id="featured" style="width:100%;margin-bottom:8rem;">
+            <img id="featured-img" src="Images/home/featured.jpg" alt="Featured"
+              style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
+              onclick="openLightbox('Images/home/featured.jpg')">
+          </div>
+          <div id="featured2" style="width:100%;margin-bottom:8rem;">
+            <img id="featured-img2" src="Images/home/13.jpg" alt="13"
+              style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
+              onclick="openLightbox('Images/home/13.jpg')">
+          </div>
+          <div id="panorama" style="width:100%;">
+            <img id="panorama-img" src="Images/darkroom/5.jpg" alt="Panorama"
+              style="width:100%;height:auto;display:block;object-fit:cover;cursor:zoom-in;"
+              onclick="openLightbox('Images/darkroom/5.jpg')">
+          </div>
+        </div>
+        <div class="home-text">
+          <p style="margin-bottom: 1.5rem;"><strong>"I can't put into words what I'm trying to say."</strong> Most of us
+            have said this and felt the frustration of struggling to put our thoughts into comprehensible words at least
+            once in our lives. This phrase most accurately captures the frustration of grappling with the gap between a
+            clear thought existing in our minds and the words we use.</p>
+          <p style="margin-bottom: 1.5rem;">Language is our primary tool for connecting our minds to the world, but it
+            also limits the accuracy of what we can express. Our brains, bodies, and perception are present long before
+            words come into play; they shape our experiences in ways that can't always be reproduced verbally. Language
+            is all we have to mediate our brains and the world around us; it's what we use to connect to reality, but it
+            also limits our ability to be accurately understood. Translating complex thoughts into words is akin to
+            writing musical notes as a paragraph in English; the tools capture different kinds of meaning. We value
+            language for its ability to transform personal experiences into universal ones, but in reality, its capacity
+            to do so is severely limited.</p>
+          <p style="margin-bottom: 1.5rem;">In the digital age, the pressure to make our inner lives legible, to turn
+            every thought into something to be consumed, viable for communication, or limpid language, feels even
+            stronger. The moment our inner lives become shareable or consumable, they become vulnerable to others'
+            opinions and subject to change based on what viewers take from them.</p>
+          <p style="margin-bottom: 1.5rem;">It was when I first began experimental darkroom photography that I remember
+            making my first print by manipulating multiple negatives in the enlargers – the first time I had ever
+            successfully translated an image from my imagination into something tangible. There was a sense of relief,
+            because what I had never believed possible, bringing something from my imagination to life, suddenly became
+            feasible. Before this experience, I was content knowing that everything that goes on in my mind, images,
+            thoughts, ideas, opinions, did not need to be proved essential or interesting to anybody, mainly because it
+            couldn't be. However, once it became possible for me to translate at least some of what transpired in my
+            brain, the significance of my work, and coincidentally my imagination, was suddenly placed in the hands of
+            the viewer.</p>
+          <p style="margin-bottom: 1.5rem;">So is the key to a life of expression forming a path that aligns with how
+            you
+            think, or is it the ability to live contentedly and confidently in the significance of our imaginations
+            without needing them to be consumable?</p>
+          <p>I want any viewer of my work to be reminded that inner experience will always be richer, stranger, and more
+            personal than anything to be consumed.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:2rem;font-size:1.1rem;">
+        <strong>Contact:</strong>
+        <a href="mailto:noradmahler@gmail.com" style="color:#2c2c2c;text-decoration:none;">noradmahler@gmail.com</a>
+      </p>
+    </div>
+  </div>
+  <div id="experimental" class="page">
+    <div class="page-header">
+      <h2>Experimental Processes</h2>
+      <p>Van Dyke Brown, Cyanotype, and Pinhole Cameras</p>
+    </div>
+    <div class="page-content">
+      <div class="gallery">
+      <!-- GALLERY:experimental START -->
+      <!-- GALLERY:experimental END -->
+      </div>
+    </div>
+  </div>
+
+  <div id="traditional" class="page">
+    <div class="page-header">
+      <h2>Traditional B&amp;W Photography</h2>
+      <p>35mm</p>
+    </div>
+    <div class="page-content">
+      <div class="gallery">
+      <!-- GALLERY:traditional START -->
+      <div class="gallery-item">
+        <img src="Images/traditional/1.jpg" alt="traditional - 1.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/2.jpg" alt="traditional - 2.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/3.jpg" alt="traditional - 3.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/4.jpg" alt="traditional - 4.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/5.jpg" alt="traditional - 5.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/6.jpg" alt="traditional - 6.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/7.jpg" alt="traditional - 7.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/8.jpg" alt="traditional - 8.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/9.jpg" alt="traditional - 9.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/10.jpg" alt="traditional - 10.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/11.jpg" alt="traditional - 11.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/traditional/12.JPG" alt="traditional - 12.JPG">
+      </div>
+      <!-- GALLERY:traditional END -->
+      </div>
+    </div>
+  </div>
+
+  <div id="darkroom" class="page">
+    <div class="page-header">
+      <h2>Darkroom Techniques &amp; Double Exposure</h2>
+      <p>Superimposing, layering, multiple exposures, and use of digital negatives</p>
+    </div>
+    <div class="page-content">
+      <div class="gallery">
+      <!-- GALLERY:darkroom START -->
+      <!-- GALLERY:darkroom END -->
+      </div>
+    </div>
+  </div>
+
+  <div id="color" class="page">
+    <div class="page-header">
+      <h2>Color Photography</h2>
+      <p>Using a 35mm camera</p>
+    </div>
+    <div class="page-content">
+      <div class="gallery">
+      <!-- GALLERY:color START -->
+      <!-- GALLERY:color END -->
+      </div>
+    </div>
+  </div>
+
+  <div id="digitalart" class="page">
+    <div class="page-header">
+      <h2>Digital Art</h2>
+    </div>
+    <div class="page-content">
+
+      <div id="digitalart-cards" class="folder-cards">
+
+        <div class="folder-card" onclick="openSubfolder('composites')">
+          <img src="Images/digitalart/1.jpg" alt="Composites preview">
+          <div class="folder-card-label">
+            <h3>Composites &amp; Digital Works</h3>
+          </div>
+        </div>
+
+        <div class="folder-card" onclick="openSubfolder('inthesameworld')">
+          <img src="Images/inthesameworld/FINAL-1.png" alt="In The Same World preview">
+          <div class="folder-card-label">
+            <h3>In The Same World</h3>
+            <p>ART 141 Final Project</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="subfolder-composites" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder()">&#8592; Back</button>
+        <div class="subsection-header">
+          <h3>Composites &amp; Digital Works</h3>
+        </div>
+        <div class="thumbnail-grid">
+      <!-- GALLERY:composites START -->
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/1.jpg')">
+        <img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/2.jpg')">
+        <img src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2.jpg">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/3.jpg')">
+        <img src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3.jpg">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/4.jpg')">
+        <img src="Images/digitalart/4.jpg" alt="Composites & Digital Works - 4.jpg">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/5.jpg')">
+        <img src="Images/digitalart/5.jpg" alt="Composites & Digital Works - 5.jpg">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/6.jpg')">
+        <img src="Images/digitalart/6.jpg" alt="Composites & Digital Works - 6.jpg">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/7.jpg')">
+        <img src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7.jpg">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/8.jpg')">
+        <img src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8.jpg">
+      </div>
+      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/9.jpg')">
+        <img src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg">
+      </div>
+      <!-- GALLERY:composites END -->
+        </div>
+      </div>
+
+      <div id="subfolder-inthesameworld" class="subfolder-view">
+        <button class="back-btn" onclick="closeSubfolder()">&#8592; Back</button>
+        <div class="subsection-header">
+          <h3>In The Same World</h3>
+          <p>ART 141 Final Project</p>
+        </div>
+        <div class="itsw-layout">
+          <div class="itsw-grid" style="flex: 1;">
+      <!-- GALLERY:inthesameworld START -->
+      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-1.png')">
+        <img src="Images/inthesameworld/FINAL-1.png" alt="In The Same World - FINAL-1.png">
+      </div>
+      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-2.png')">
+        <img src="Images/inthesameworld/FINAL-2.png" alt="In The Same World - FINAL-2.png">
+      </div>
+      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-3.png')">
+        <img src="Images/inthesameworld/FINAL-3.png" alt="In The Same World - FINAL-3.png">
+      </div>
+      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-4.png')">
+        <img src="Images/inthesameworld/FINAL-4.png" alt="In The Same World - FINAL-4.png">
+      </div>
+      <!-- GALLERY:inthesameworld END -->
+          </div>
+          <div class="itsw-sidebar">
+            <p style="margin-bottom: 1rem;">Much of my work and techniques have attempted to draw attention to the
+              non-perceptual mediations that ineffably construct our lives. I took a trip to Kenya in January, and the
+              typical mediation I try to represent in my work almost seemed louder than the obvious perceptual
+              observations. Seeing with my own eyes how the food chain functions among animals is something I don't
+              think anyone can fully understand just by looking it up. When I watched how the animals move through life,
+              their family dynamics, relationships, life and death, how they interact and coexist, the ways they
+              communicate, there was something so unmediated about it, and that is what I wanted to make visible. I
+              wanted to show the simplicity of the ways these animals live, but also the depth and complexity of life
+              that we, as people, especially in Western societies, are oblivious to.</p>
+            <p>In ninth grade, I began creating darkroom works that manipulate multiple 35mm negatives using techniques
+              such as layering, using multiple enlargers, superimposing one image onto another, dodging and burning, and
+              even inverting an image or video on my phone and placing it into the enlarger as both the negative and the
+              light source. When my photography teacher introduced me to Uelsmann, I began studying his methods and
+              realized how much they aligned with the theme in most of my work: that our entire lived experience is
+              mediated by factors we aren't aware of. For this project, I tried to digitally mirror the hands-on
+              processes I usually use.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span class="lightbox-arrow prev" onclick="event.stopPropagation(); lightboxStep(-1)">&#8592;</span>
+    <img id="lightbox-img" src="" alt="Full size">
+    <span class="lightbox-arrow next" onclick="event.stopPropagation(); lightboxStep(1)">&#8594;</span>
+    <span class="lightbox-counter" id="lightbox-counter"></span>
+  </div>
+
+  <button id="back-to-top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+  <script>
+    function showPage(pageId, subfolderId, skipHistory) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-link'));
+      const navLink = document.querySelector('nav a[data-page="' + pageId + '"]');
+      if (navLink) navLink.classList.add('active-link');
+      const titles = {
+        home: 'Nora Mahler Photography',
+        experimental: 'Experimental Processes — Nora Mahler',
+        traditional: 'Traditional B&W — Nora Mahler',
+        darkroom: 'Darkroom & Double Exposure — Nora Mahler',
+        color: 'Color Photography — Nora Mahler',
+        digitalart: 'Digital Art — Nora Mahler'
+      };
+      document.title = titles[pageId] || 'Nora Mahler Photography';
+      document.getElementById('nav-menu').classList.remove('open');
+      if (pageId === 'digitalart') {
+        if (subfolderId) { openSubfolder(subfolderId, true); }
+        else { closeSubfolder(true); }
+      }
+      if (!skipHistory) {
+        const hash = subfolderId ? '#' + pageId + '/' + subfolderId : '#' + pageId;
+        history.pushState(null, '', hash);
+      }
+      window.scrollTo(0, 0);
+    }
+
+    function openSubfolder(id, skipHistory) {
+      document.getElementById('digitalart-cards').style.display = 'none';
+      document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));
+      document.getElementById('subfolder-' + id).classList.add('open');
+      if (!skipHistory) { history.pushState(null, '', '#digitalart/' + id); }
+      window.scrollTo(0, 0);
+    }
+
+    function closeSubfolder(skipHistory) {
+      document.querySelectorAll('.subfolder-view').forEach(el => el.classList.remove('open'));
+      document.getElementById('digitalart-cards').style.display = '';
+      if (!skipHistory) { history.pushState(null, '', '#digitalart'); }
+      window.scrollTo(0, 0);
+    }
+
+    function navigateFromHash() {
+      const hash = location.hash.replace('#', '') || 'home';
+      const parts = hash.split('/');
+      const pageId = parts[0] || 'home';
+      const subfolderId = parts[1] || null;
+      const validPages = ['home', 'experimental', 'traditional', 'darkroom', 'color', 'digitalart'];
+      const target = validPages.includes(pageId) ? pageId : 'home';
+      showPage(target, subfolderId, true);
+    }
+
+    window.addEventListener('popstate', navigateFromHash);
+    window.addEventListener('DOMContentLoaded', navigateFromHash);
+
+    let lightboxImages = [];
+    let lightboxIndex = 0;
+
+    function buildImageList(src) {
+      const imgs = [];
+      const activePage = document.querySelector('.page.active');
+      const activeSubfolder = document.querySelector('.subfolder-view.open');
+
+      if (activeSubfolder) {
+        activeSubfolder.querySelectorAll('.thumbnail-item img, .itsw-item img').forEach(img => imgs.push(img.getAttribute('src')));
+      } else if (activePage.id !== 'digitalart') {
+        activePage.querySelectorAll('.gallery-item img').forEach(img => imgs.push(img.getAttribute('src')));
+      }
+      return imgs;
+    }
+
+    function openLightbox(src) {
+      lightboxImages = buildImageList(src);
+      lightboxIndex = lightboxImages.indexOf(src);
+      if (lightboxIndex === -1) lightboxIndex = 0;
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+      updateCounter();
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.getElementById('lightbox-img').src = '';
+    }
+
+    function lightboxStep(dir) {
+      if (!lightboxImages.length) return;
+      var next = lightboxIndex + dir;
+      if (next < 0 || next >= lightboxImages.length) return;
+      lightboxIndex = next;
+      document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
+      updateCounter();
+    }
+
+    function updateCounter() {
+      var el = document.getElementById('lightbox-counter');
+      el.textContent = lightboxImages.length > 1 ? (lightboxIndex + 1) + ' / ' + lightboxImages.length : '';
+    }
+
+    document.querySelectorAll('.gallery-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+        var img = item.querySelector('img');
+        if (img) openLightbox(img.getAttribute('src'));
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') lightboxStep(-1);
+      if (e.key === 'ArrowRight') lightboxStep(1);
+    });
+
+    (function () {
+      var startX = null;
+      var lb = document.getElementById('lightbox');
+      lb.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+      lb.addEventListener('touchend', function (e) {
+        if (startX === null) return;
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) lightboxStep(diff > 0 ? 1 : -1);
+        startX = null;
+      }, { passive: true });
+    })();
+
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('open');
+    }
+
+    function attachFadeIn(img) {
+      if (img.complete) { img.classList.add('loaded'); }
+      else {
+        img.addEventListener('load', function () { img.classList.add('loaded'); });
+        img.addEventListener('error', function () { img.classList.add('loaded'); });
+      }
+    }
+
+    document.querySelectorAll('img').forEach(attachFadeIn);
+    new MutationObserver(function (mutations) {
+      mutations.forEach(function (m) {
+        m.addedNodes.forEach(function (n) {
+          if (n.nodeName === 'IMG') attachFadeIn(n);
+          if (n.querySelectorAll) n.querySelectorAll('img').forEach(attachFadeIn);
+        });
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+
+    document.querySelectorAll('.gallery-item img, .thumbnail-item img, .itsw-item img').forEach(function (img) {
+      img.setAttribute('loading', 'lazy');
+    });
+
+    var btt = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function () {
+      btt.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    });
+  </script>
+</body>
+
+</html>
