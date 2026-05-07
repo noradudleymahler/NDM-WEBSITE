@@ -28,7 +28,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
@@ -216,7 +216,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 520px;
+      min-height: 350px;
       cursor: pointer;
       transition: transform 0.12s ease;
     }
@@ -483,7 +483,7 @@
       }
 
       .gallery-item {
-        min-height: 360px;
+        min-height: 280px;
       }
     }
 
@@ -505,6 +505,35 @@
         width: 100%;
         gap: 1rem;
         padding: 1rem 0;
+      }
+
+      .gallery-item {
+        min-height: 240px;
+      }
+
+      .page-header h2 {
+        font-size: 2rem;
+      }
+
+      .home-title h1 {
+        font-size: 2.5rem;
+      }
+
+      #back-to-top {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+        bottom: 1rem;
+        right: 1rem;
+      }
+
+      .folder-cards {
+        padding: 1.5rem 24px;
+      }
+
+      .folder-card {
+        width: 100%;
+        max-width: 320px;
       }
     }
 
@@ -662,7 +691,7 @@
       display: none;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       z-index: 500;
       opacity: 0.7;
       transition: all 0.3s ease;
@@ -674,7 +703,7 @@
     #back-to-top:hover {
       opacity: 1;
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     }
 
     body.dark-mode #back-to-top {
@@ -688,6 +717,7 @@
         opacity: 0;
         transform: translateY(20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -698,16 +728,45 @@
       animation: fadeInUp 0.6s ease forwards;
     }
 
-    .gallery-item:nth-child(1) { animation-delay: 0.05s; }
-    .gallery-item:nth-child(2) { animation-delay: 0.1s; }
-    .gallery-item:nth-child(3) { animation-delay: 0.15s; }
-    .gallery-item:nth-child(4) { animation-delay: 0.2s; }
-    .gallery-item:nth-child(5) { animation-delay: 0.25s; }
-    .gallery-item:nth-child(6) { animation-delay: 0.3s; }
-    .gallery-item:nth-child(7) { animation-delay: 0.35s; }
-    .gallery-item:nth-child(8) { animation-delay: 0.4s; }
-    .gallery-item:nth-child(9) { animation-delay: 0.45s; }
-    .gallery-item:nth-child(10) { animation-delay: 0.5s; }
+    .gallery-item:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .gallery-item:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .gallery-item:nth-child(3) {
+      animation-delay: 0.15s;
+    }
+
+    .gallery-item:nth-child(4) {
+      animation-delay: 0.2s;
+    }
+
+    .gallery-item:nth-child(5) {
+      animation-delay: 0.25s;
+    }
+
+    .gallery-item:nth-child(6) {
+      animation-delay: 0.3s;
+    }
+
+    .gallery-item:nth-child(7) {
+      animation-delay: 0.35s;
+    }
+
+    .gallery-item:nth-child(8) {
+      animation-delay: 0.4s;
+    }
+
+    .gallery-item:nth-child(9) {
+      animation-delay: 0.45s;
+    }
+
+    .gallery-item:nth-child(10) {
+      animation-delay: 0.5s;
+    }
 
     img.loaded {
       opacity: 1 !important;
@@ -839,18 +898,18 @@
           <h3>UV Prints</h3>
         </div>
         <div class="gallery">
-      <!-- GALLERY:uv-prints START -->
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/1.jpg" alt="uv-prints - 1.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/2.jpg" alt="uv-prints - 2.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/3.jpg" alt="uv-prints - 3.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/4.jpg" alt="uv-prints - 4.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/5.jpg" alt="uv-prints - 5.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/6.jpg" alt="uv-prints - 6.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/7.jpg" alt="uv-prints - 7.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/8.jpg" alt="uv-prints - 8.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/12.jpg" alt="uv-prints - 12.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/UV PRINTS/14.jpg" alt="uv-prints - 14.jpg"></div>
-      <!-- GALLERY:uv-prints END -->
+          <!-- GALLERY:uv-prints START -->
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/1.jpg" alt="uv-prints - 1.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/2.jpg" alt="uv-prints - 2.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/3.jpg" alt="uv-prints - 3.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/4.jpg" alt="uv-prints - 4.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/5.jpg" alt="uv-prints - 5.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/6.jpg" alt="uv-prints - 6.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/7.jpg" alt="uv-prints - 7.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/8.jpg" alt="uv-prints - 8.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/12.jpg" alt="uv-prints - 12.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/UV PRINTS/14.jpg" alt="uv-prints - 14.jpg"></div>
+          <!-- GALLERY:uv-prints END -->
         </div>
       </div>
 
@@ -860,14 +919,20 @@
           <h3>Pinhole & Silvering</h3>
         </div>
         <div class="gallery">
-      <!-- GALLERY:pinhole-silvering START -->
-      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/9.jpg" alt="pinhole-silvering - 9.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/10.jpg" alt="pinhole-silvering - 10.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/11.jpg" alt="pinhole-silvering - 11.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/15.jpg" alt="pinhole-silvering - 15.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/16.jpg" alt="pinhole-silvering - 16.jpg"></div>
-      <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/17.jpg" alt="pinhole-silvering - 17.jpg"></div>
-      <!-- GALLERY:pinhole-silvering END -->
+          <!-- GALLERY:pinhole-silvering START -->
+          <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/9.jpg"
+              alt="pinhole-silvering - 9.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/10.jpg"
+              alt="pinhole-silvering - 10.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/11.jpg"
+              alt="pinhole-silvering - 11.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/15.jpg"
+              alt="pinhole-silvering - 15.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/16.jpg"
+              alt="pinhole-silvering - 16.jpg"></div>
+          <div class="gallery-item"><img src="Images/experimental/PINHOLE & SILVERING/17.jpg"
+              alt="pinhole-silvering - 17.jpg"></div>
+          <!-- GALLERY:pinhole-silvering END -->
         </div>
       </div>
     </div>
@@ -880,20 +945,20 @@
     </div>
     <div class="page-content">
       <div class="gallery">
-      <!-- GALLERY:traditional START -->
-      <div class="gallery-item"><img src="Images/traditional/1.jpg" alt="traditional - 1.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/2.jpg" alt="traditional - 2.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/3.jpg" alt="traditional - 3.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/4.jpg" alt="traditional - 4.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/5.jpg" alt="traditional - 5.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/6.jpg" alt="traditional - 6.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/7.jpg" alt="traditional - 7.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/8.jpg" alt="traditional - 8.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/9.jpg" alt="traditional - 9.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/10.jpg" alt="traditional - 10.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/11.jpg" alt="traditional - 11.jpg"></div>
-      <div class="gallery-item"><img src="Images/traditional/12.JPG" alt="traditional - 12.JPG"></div>
-      <!-- GALLERY:traditional END -->
+        <!-- GALLERY:traditional START -->
+        <div class="gallery-item"><img src="Images/traditional/1.jpg" alt="traditional - 1.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/2.jpg" alt="traditional - 2.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/3.jpg" alt="traditional - 3.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/4.jpg" alt="traditional - 4.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/5.jpg" alt="traditional - 5.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/6.jpg" alt="traditional - 6.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/7.jpg" alt="traditional - 7.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/8.jpg" alt="traditional - 8.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/9.jpg" alt="traditional - 9.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/10.jpg" alt="traditional - 10.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/11.jpg" alt="traditional - 11.jpg"></div>
+        <div class="gallery-item"><img src="Images/traditional/12.JPG" alt="traditional - 12.JPG"></div>
+        <!-- GALLERY:traditional END -->
       </div>
     </div>
   </div>
@@ -925,16 +990,24 @@
           <h3>Smartphone Darkroom Printing</h3>
         </div>
         <div class="gallery">
-      <!-- GALLERY:smartphone-darkroom-printing START -->
-      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/6.jpg" alt="smartphone-darkroom-printing - 6.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/8.jpg" alt="smartphone-darkroom-printing - 8.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/9.jpg" alt="smartphone-darkroom-printing - 9.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/11.jpg" alt="smartphone-darkroom-printing - 11.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/17.jpg" alt="smartphone-darkroom-printing - 17.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/21.jpg" alt="smartphone-darkroom-printing - 21.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/29.jpg" alt="smartphone-darkroom-printing - 29.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/30.jpg" alt="smartphone-darkroom-printing - 30.jpg"></div>
-      <!-- GALLERY:smartphone-darkroom-printing END -->
+          <!-- GALLERY:smartphone-darkroom-printing START -->
+          <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/6.jpg"
+              alt="smartphone-darkroom-printing - 6.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/8.jpg"
+              alt="smartphone-darkroom-printing - 8.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/9.jpg"
+              alt="smartphone-darkroom-printing - 9.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/11.jpg"
+              alt="smartphone-darkroom-printing - 11.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/17.jpg"
+              alt="smartphone-darkroom-printing - 17.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/21.jpg"
+              alt="smartphone-darkroom-printing - 21.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/29.jpg"
+              alt="smartphone-darkroom-printing - 29.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SMARTPHONE DARKROOM PRINTING/30.jpg"
+              alt="smartphone-darkroom-printing - 30.jpg"></div>
+          <!-- GALLERY:smartphone-darkroom-printing END -->
         </div>
       </div>
 
@@ -944,27 +1017,46 @@
           <h3>Superimposing & Double Exposures</h3>
         </div>
         <div class="gallery">
-      <!-- GALLERY:superimposing-double-exposures START -->
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/1.jpg" alt="superimposing-double-exposures - 1.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/2.jpg" alt="superimposing-double-exposures - 2.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/3.jpg" alt="superimposing-double-exposures - 3.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/4.jpg" alt="superimposing-double-exposures - 4.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/7.jpg" alt="superimposing-double-exposures - 7.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/12.jpg" alt="superimposing-double-exposures - 12.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/14.jpg" alt="superimposing-double-exposures - 14.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/15.jpg" alt="superimposing-double-exposures - 15.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/16.jpg" alt="superimposing-double-exposures - 16.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/18.jpg" alt="superimposing-double-exposures - 18.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/19.jpg" alt="superimposing-double-exposures - 19.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/20.jpg" alt="superimposing-double-exposures - 20.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/23.jpg" alt="superimposing-double-exposures - 23.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/24.jpg" alt="superimposing-double-exposures - 24.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/25.jpg" alt="superimposing-double-exposures - 25.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/26.jpg" alt="superimposing-double-exposures - 26.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/27.jpg" alt="superimposing-double-exposures - 27.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/28.jpg" alt="superimposing-double-exposures - 28.jpg"></div>
-      <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/31.jpg" alt="superimposing-double-exposures - 31.jpg"></div>
-      <!-- GALLERY:superimposing-double-exposures END -->
+          <!-- GALLERY:superimposing-double-exposures START -->
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/1.jpg"
+              alt="superimposing-double-exposures - 1.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/2.jpg"
+              alt="superimposing-double-exposures - 2.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/3.jpg"
+              alt="superimposing-double-exposures - 3.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/4.jpg"
+              alt="superimposing-double-exposures - 4.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/7.jpg"
+              alt="superimposing-double-exposures - 7.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/12.jpg"
+              alt="superimposing-double-exposures - 12.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/14.jpg"
+              alt="superimposing-double-exposures - 14.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/15.jpg"
+              alt="superimposing-double-exposures - 15.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/16.jpg"
+              alt="superimposing-double-exposures - 16.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/18.jpg"
+              alt="superimposing-double-exposures - 18.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/19.jpg"
+              alt="superimposing-double-exposures - 19.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/20.jpg"
+              alt="superimposing-double-exposures - 20.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/23.jpg"
+              alt="superimposing-double-exposures - 23.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/24.jpg"
+              alt="superimposing-double-exposures - 24.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/25.jpg"
+              alt="superimposing-double-exposures - 25.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/26.jpg"
+              alt="superimposing-double-exposures - 26.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/27.jpg"
+              alt="superimposing-double-exposures - 27.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/28.jpg"
+              alt="superimposing-double-exposures - 28.jpg"></div>
+          <div class="gallery-item"><img src="Images/darkroom/SUPERIMPOSING & DOUBLE EXPOSURES/31.jpg"
+              alt="superimposing-double-exposures - 31.jpg"></div>
+          <!-- GALLERY:superimposing-double-exposures END -->
         </div>
       </div>
     </div>
@@ -997,35 +1089,35 @@
           <h3>Color Film</h3>
         </div>
         <div class="gallery">
-      <!-- GALLERY:color-film START -->
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/1.jpg" alt="color-film - 1.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/3.jpg" alt="color-film - 3.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/4.jpg" alt="color-film - 4.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/5.jpg" alt="color-film - 5.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/6.jpg" alt="color-film - 6.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/7.jpg" alt="color-film - 7.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/8.jpg" alt="color-film - 8.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/9.jpg" alt="color-film - 9.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/10.jpg" alt="color-film - 10.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/11.jpg" alt="color-film - 11.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/12.jpg" alt="color-film - 12.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/13.jpg" alt="color-film - 13.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/14.jpg" alt="color-film - 14.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/15.jpg" alt="color-film - 15.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/16.jpg" alt="color-film - 16.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/17.jpg" alt="color-film - 17.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/18.jpg" alt="color-film - 18.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/19.jpg" alt="color-film - 19.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/25.JPG" alt="color-film - 25.JPG"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/26.JPG" alt="color-film - 26.JPG"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/27.JPG" alt="color-film - 27.JPG"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/28.JPG" alt="color-film - 28.JPG"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/29.JPG" alt="color-film - 29.JPG"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/30.JPG" alt="color-film - 30.JPG"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/32.jpg" alt="color-film - 32.jpg"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/33.JPG" alt="color-film - 33.JPG"></div>
-      <div class="gallery-item"><img src="Images/color/COLOR FILM/34.JPG" alt="color-film - 34.JPG"></div>
-      <!-- GALLERY:color-film END -->
+          <!-- GALLERY:color-film START -->
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/1.jpg" alt="color-film - 1.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/3.jpg" alt="color-film - 3.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/4.jpg" alt="color-film - 4.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/5.jpg" alt="color-film - 5.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/6.jpg" alt="color-film - 6.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/7.jpg" alt="color-film - 7.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/8.jpg" alt="color-film - 8.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/9.jpg" alt="color-film - 9.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/10.jpg" alt="color-film - 10.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/11.jpg" alt="color-film - 11.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/12.jpg" alt="color-film - 12.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/13.jpg" alt="color-film - 13.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/14.jpg" alt="color-film - 14.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/15.jpg" alt="color-film - 15.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/16.jpg" alt="color-film - 16.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/17.jpg" alt="color-film - 17.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/18.jpg" alt="color-film - 18.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/19.jpg" alt="color-film - 19.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/25.JPG" alt="color-film - 25.JPG"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/26.JPG" alt="color-film - 26.JPG"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/27.JPG" alt="color-film - 27.JPG"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/28.JPG" alt="color-film - 28.JPG"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/29.JPG" alt="color-film - 29.JPG"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/30.JPG" alt="color-film - 30.JPG"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/32.jpg" alt="color-film - 32.jpg"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/33.JPG" alt="color-film - 33.JPG"></div>
+          <div class="gallery-item"><img src="Images/color/COLOR FILM/34.JPG" alt="color-film - 34.JPG"></div>
+          <!-- GALLERY:color-film END -->
         </div>
       </div>
 
@@ -1035,12 +1127,12 @@
           <h3>Digital</h3>
         </div>
         <div class="gallery">
-      <!-- GALLERY:digital START -->
-      <div class="gallery-item"><img src="Images/color/DIGITAL/33.jpeg" alt="digital - 33.jpeg"></div>
-      <div class="gallery-item"><img src="Images/color/DIGITAL/34.jpeg" alt="digital - 34.jpeg"></div>
-      <div class="gallery-item"><img src="Images/color/DIGITAL/35.jpeg" alt="digital - 35.jpeg"></div>
-      <div class="gallery-item"><img src="Images/color/DIGITAL/36.jpeg" alt="digital - 36.jpeg"></div>
-      <!-- GALLERY:digital END -->
+          <!-- GALLERY:digital START -->
+          <div class="gallery-item"><img src="Images/color/DIGITAL/33.jpeg" alt="digital - 33.jpeg"></div>
+          <div class="gallery-item"><img src="Images/color/DIGITAL/34.jpeg" alt="digital - 34.jpeg"></div>
+          <div class="gallery-item"><img src="Images/color/DIGITAL/35.jpeg" alt="digital - 35.jpeg"></div>
+          <div class="gallery-item"><img src="Images/color/DIGITAL/36.jpeg" alt="digital - 36.jpeg"></div>
+          <!-- GALLERY:digital END -->
         </div>
       </div>
     </div>
@@ -1073,17 +1165,26 @@
           <h3>Composites & Digital Works</h3>
         </div>
         <div class="gallery">
-      <!-- GALLERY:composites START -->
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/1.jpg')"><img src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg"></div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/2.jpg')"><img src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2.jpg"></div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/3.jpg')"><img src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3.jpg"></div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/4.jpg')"><img src="Images/digitalart/4.jpg" alt="Composites & Digital Works - 4.jpg"></div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/5.jpg')"><img src="Images/digitalart/5.jpg" alt="Composites & Digital Works - 5.jpg"></div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/6.jpg')"><img src="Images/digitalart/6.jpg" alt="Composites & Digital Works - 6.jpg"></div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/7.jpg')"><img src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7.jpg"></div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/8.jpg')"><img src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8.jpg"></div>
-      <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/9.jpg')"><img src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg"></div>
-      <!-- GALLERY:composites END -->
+          <!-- GALLERY:composites START -->
+          <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/1.jpg')"><img
+              src="Images/digitalart/1.jpg" alt="Composites & Digital Works - 1.jpg"></div>
+          <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/2.jpg')"><img
+              src="Images/digitalart/2.jpg" alt="Composites & Digital Works - 2.jpg"></div>
+          <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/3.jpg')"><img
+              src="Images/digitalart/3.jpg" alt="Composites & Digital Works - 3.jpg"></div>
+          <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/4.jpg')"><img
+              src="Images/digitalart/4.jpg" alt="Composites & Digital Works - 4.jpg"></div>
+          <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/5.jpg')"><img
+              src="Images/digitalart/5.jpg" alt="Composites & Digital Works - 5.jpg"></div>
+          <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/6.jpg')"><img
+              src="Images/digitalart/6.jpg" alt="Composites & Digital Works - 6.jpg"></div>
+          <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/7.jpg')"><img
+              src="Images/digitalart/7.jpg" alt="Composites & Digital Works - 7.jpg"></div>
+          <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/8.jpg')"><img
+              src="Images/digitalart/8.jpg" alt="Composites & Digital Works - 8.jpg"></div>
+          <div class="thumbnail-item" onclick="openLightbox('Images/digitalart/9.jpg')"><img
+              src="Images/digitalart/9.jpg" alt="Composites & Digital Works - 9.jpg"></div>
+          <!-- GALLERY:composites END -->
         </div>
       </div>
 
@@ -1094,12 +1195,16 @@
           <p>ART 141 Final Project</p>
         </div>
         <div class="gallery">
-      <!-- GALLERY:inthesameworld START -->
-      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-1.png')"><img src="Images/inthesameworld/FINAL-1.png" alt="In The Same World - FINAL-1.png"></div>
-      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-2.png')"><img src="Images/inthesameworld/FINAL-2.png" alt="In The Same World - FINAL-2.png"></div>
-      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-3.png')"><img src="Images/inthesameworld/FINAL-3.png" alt="In The Same World - FINAL-3.png"></div>
-      <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-4.png')"><img src="Images/inthesameworld/FINAL-4.png" alt="In The Same World - FINAL-4.png"></div>
-      <!-- GALLERY:inthesameworld END -->
+          <!-- GALLERY:inthesameworld START -->
+          <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-1.png')"><img
+              src="Images/inthesameworld/FINAL-1.png" alt="In The Same World - FINAL-1.png"></div>
+          <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-2.png')"><img
+              src="Images/inthesameworld/FINAL-2.png" alt="In The Same World - FINAL-2.png"></div>
+          <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-3.png')"><img
+              src="Images/inthesameworld/FINAL-3.png" alt="In The Same World - FINAL-3.png"></div>
+          <div class="itsw-item" onclick="openLightbox('Images/inthesameworld/FINAL-4.png')"><img
+              src="Images/inthesameworld/FINAL-4.png" alt="In The Same World - FINAL-4.png"></div>
+          <!-- GALLERY:inthesameworld END -->
         </div>
       </div>
     </div>
