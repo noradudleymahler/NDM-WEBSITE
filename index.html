@@ -24,6 +24,14 @@
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
   <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
     * {
       margin: 0;
@@ -499,6 +507,226 @@
         padding: 1rem 0;
       }
     }
+
+    /* DARK MODE */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode nav {
+      background-color: #0d0d0d;
+      border-bottom-color: #333;
+    }
+
+    body.dark-mode nav a,
+    body.dark-mode .nav-brand {
+      color: #e0e0e0;
+    }
+
+    body.dark-mode nav a:hover,
+    body.dark-mode nav a.active-link {
+      border-bottom-color: #e0e0e0;
+    }
+
+    body.dark-mode .page-header h2 {
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .page-header p {
+      color: #aaa;
+    }
+
+    body.dark-mode .gallery-item {
+      background: #2a2a2a;
+    }
+
+    body.dark-mode .folder-card {
+      background: #2a2a2a;
+    }
+
+    /* SEARCH BAR */
+    .search-container {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 96px 1rem;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .search-input {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      font-family: 'Times New Roman', Times, serif;
+      border: 2px solid #2c2c2c;
+      border-radius: 4px;
+      width: 300px;
+      max-width: 100%;
+      background: #fff;
+      color: #000;
+    }
+
+    body.dark-mode .search-input {
+      background: #2a2a2a;
+      color: #e0e0e0;
+      border-color: #e0e0e0;
+    }
+
+    .search-input::placeholder {
+      color: #999;
+    }
+
+    .dark-mode-toggle {
+      background: none;
+      border: 2px solid #2c2c2c;
+      color: #2c2c2c;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: normal;
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode .dark-mode-toggle {
+      border-color: #e0e0e0;
+      color: #e0e0e0;
+    }
+
+    .dark-mode-toggle:hover {
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    body.dark-mode .dark-mode-toggle:hover {
+      background: #e0e0e0;
+      color: #1a1a1a;
+    }
+
+    /* FILTER BUTTONS */
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0 96px 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      background: #f5f5f5;
+      border: 2px solid #2c2c2c;
+      color: #2c2c2c;
+      padding: 0.5rem 1.2rem;
+      cursor: pointer;
+      border-radius: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: normal;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    .filter-btn.active {
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    body.dark-mode .filter-btn {
+      background: #2a2a2a;
+      border-color: #e0e0e0;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .filter-btn:hover,
+    body.dark-mode .filter-btn.active {
+      background: #e0e0e0;
+      color: #1a1a1a;
+    }
+
+    /* IMPROVED BACK TO TOP */
+    #back-to-top {
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      background: #2c2c2c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 500;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+    }
+
+    #back-to-top:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    body.dark-mode #back-to-top {
+      background: #e0e0e0;
+      color: #1a1a1a;
+    }
+
+    /* LOADING ANIMATION */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery-item {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .gallery-item:nth-child(1) { animation-delay: 0.05s; }
+    .gallery-item:nth-child(2) { animation-delay: 0.1s; }
+    .gallery-item:nth-child(3) { animation-delay: 0.15s; }
+    .gallery-item:nth-child(4) { animation-delay: 0.2s; }
+    .gallery-item:nth-child(5) { animation-delay: 0.25s; }
+    .gallery-item:nth-child(6) { animation-delay: 0.3s; }
+    .gallery-item:nth-child(7) { animation-delay: 0.35s; }
+    .gallery-item:nth-child(8) { animation-delay: 0.4s; }
+    .gallery-item:nth-child(9) { animation-delay: 0.45s; }
+    .gallery-item:nth-child(10) { animation-delay: 0.5s; }
+
+    img.loaded {
+      opacity: 1 !important;
+    }
+
+    @media (max-width: 768px) {
+      .search-container {
+        flex-direction: column;
+        padding: 1.5rem 24px 1rem;
+      }
+
+      .search-input {
+        width: 100%;
+      }
+
+      .filter-buttons {
+        padding: 0 24px 1.5rem;
+      }
+    }
   </style>
 </head>
 
@@ -515,6 +743,7 @@
       <li><a href="#darkroom" data-page="darkroom" onclick="showPage('darkroom')">Darkroom</a></li>
       <li><a href="#color" data-page="color" onclick="showPage('color')">Color</a></li>
       <li><a href="#digitalart" data-page="digitalart" onclick="showPage('digitalart')">Digital Art</a></li>
+      <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button></li>
     </ul>
   </nav>
 
@@ -970,6 +1199,90 @@
     window.addEventListener('scroll', function () {
       btt.style.display = window.scrollY > 400 ? 'flex' : 'none';
     });
+
+    // DARK MODE
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    }
+
+    // Load dark mode preference
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+
+    // SEARCH FUNCTIONALITY
+    function searchGalleries(query) {
+      if (!query.trim()) {
+        document.querySelectorAll('.gallery-item').forEach(item => item.style.display = '');
+        return;
+      }
+
+      const searchTerms = query.toLowerCase().split(' ');
+      const techniques = {
+        'uv': ['uv-prints'],
+        'pinhole': ['pinhole-silvering'],
+        'darkroom': ['smartphone-darkroom-printing', 'superimposing-double-exposures'],
+        'exposure': ['superimposing-double-exposures'],
+        'double': ['superimposing-double-exposures'],
+        'smartphone': ['smartphone-darkroom-printing'],
+        'color': ['color-film', 'digital'],
+        'film': ['color-film'],
+        'digital': ['digital'],
+        'traditional': ['traditional'],
+        'bw': ['traditional'],
+        'black': ['traditional'],
+        'white': ['traditional'],
+        'cyanotype': ['uv-prints'],
+        'van dyke': ['uv-prints'],
+        'silvering': ['pinhole-silvering']
+      };
+
+      let matchingIds = new Set();
+      searchTerms.forEach(term => {
+        if (techniques[term]) {
+          techniques[term].forEach(id => matchingIds.add(id));
+        }
+      });
+
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        const src = item.querySelector('img').src || '';
+        let isMatch = false;
+
+        for (let id of matchingIds) {
+          if (src.includes(id)) {
+            isMatch = true;
+            break;
+          }
+        }
+
+        item.style.display = isMatch ? '' : 'none';
+      });
+    }
+
+    // Filter buttons (placeholder for future implementation)
+    function filterByTechnique(technique) {
+      const techniqueMap = {
+        'uv-prints': 'uv-prints',
+        'pinhole': 'pinhole-silvering',
+        'smartphone': 'smartphone-darkroom-printing',
+        'double-exposure': 'superimposing-double-exposures',
+        'color-film': 'color-film',
+        'digital': 'digital',
+        'traditional': 'traditional'
+      };
+
+      if (!techniqueMap[technique]) {
+        document.querySelectorAll('.gallery-item').forEach(item => item.style.display = '');
+        return;
+      }
+
+      const filterTechnique = techniqueMap[technique];
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        const src = item.querySelector('img').src || '';
+        item.style.display = src.includes(filterTechnique) ? '' : 'none';
+      });
+    }
   </script>
 </body>
 
