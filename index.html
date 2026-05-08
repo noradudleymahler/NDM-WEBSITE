@@ -271,7 +271,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 200px;
+      min-height: 220px;
       cursor: pointer;
       transition: transform 0.16s ease, box-shadow 0.16s ease;
       border-radius: 1px;
@@ -295,13 +295,18 @@
       padding: 2rem;
       background: #f9f9f9;
       border-left: 4px solid #2c2c2c;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
       line-height: 1.75;
       color: #333;
     }
 
     .itsw-narrative p {
-      margin: 0;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .itsw-narrative p:last-child {
+      margin-bottom: 0;
     }
 
     body.dark-mode .itsw-narrative {
@@ -572,6 +577,10 @@
       .thumbnail-item {
         min-height: 200px;
       }
+
+      .itsw-item {
+        min-height: 200px;
+      }
     }
 
     @media (max-width: 640px) {
@@ -599,6 +608,10 @@
       }
 
       .thumbnail-item {
+        min-height: 180px;
+      }
+
+      .itsw-item {
         min-height: 180px;
       }
 
