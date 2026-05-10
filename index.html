@@ -236,7 +236,7 @@
       transition: opacity 0.2s ease;
       z-index: 10;
       pointer-events: none;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1"><path d="M3 3l0 18l6 0l9 -9l-9 -9l-6 0z"/></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 40px 40px;
@@ -286,7 +286,7 @@
       transition: opacity 0.2s ease;
       z-index: 10;
       pointer-events: none;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1"><path d="M3 3l0 18l6 0l9 -9l-9 -9l-6 0z"/></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 40px 40px;
@@ -336,7 +336,7 @@
       transition: opacity 0.2s ease;
       z-index: 10;
       pointer-events: none;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1"><path d="M3 3l0 18l6 0l9 -9l-9 -9l-6 0z"/></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 40px 40px;
@@ -681,6 +681,10 @@
         width: 100%;
         gap: 1rem;
         padding: 1rem 0;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+        align-items: center;
       }
 
       .gallery-item {
@@ -730,6 +734,10 @@
     body.dark-mode nav {
       background-color: #0d0d0d;
       border-bottom-color: #333;
+    }
+
+    body.dark-mode nav ul.open {
+      background-color: #0d0d0d;
     }
 
     body.dark-mode nav a,
@@ -1505,11 +1513,16 @@
     let lightboxIndex = 0;
 
     function openLightbox(src) {
+      const absoluteSrc = new URL(src, document.baseURI).href;
       lightboxImages = [];
-      document.querySelectorAll('.page.active .gallery-item img, .page.active .home-image-item img, .subfolder-view.open .gallery-item img').forEach(img => lightboxImages.push(img.src));
-      lightboxIndex = lightboxImages.indexOf(src);
+      document.querySelectorAll(
+        '.page.active .gallery-item img, .page.active .home-image-item img, ' +
+        '.subfolder-view.open .gallery-item img, .subfolder-view.open .thumbnail-item img, ' +
+        '.subfolder-view.open .itsw-item img'
+      ).forEach(img => lightboxImages.push(img.src));
+      lightboxIndex = lightboxImages.indexOf(absoluteSrc);
       if (lightboxIndex === -1) lightboxIndex = 0;
-      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').src = absoluteSrc;
       document.getElementById('lightbox').classList.add('open');
       updateCounter();
     }
@@ -1520,8 +1533,9 @@
 
     function lightboxStep(dir) {
       if (!lightboxImages.length) return;
-      lightboxIndex += dir;
-      if (lightboxIndex < 0 || lightboxIndex >= lightboxImages.length) return;
+      const newIndex = lightboxIndex + dir;
+      if (newIndex < 0 || newIndex >= lightboxImages.length) return;
+      lightboxIndex = newIndex;
       document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
       updateCounter();
     }
