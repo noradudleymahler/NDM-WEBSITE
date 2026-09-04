@@ -114,69 +114,108 @@
     /* HOME PAGE */
     .home-container {
       min-height: calc(100vh - 60px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       background: #ffffff;
-      padding: 3rem 2rem;
+      padding: 3rem 2rem 4rem;
     }
 
     .home-title {
       text-align: center;
       color: #1a1a1a;
-      padding: 2rem 96px;
-      margin-bottom: 3rem;
+      margin: 0 auto 2.5rem;
     }
 
     .home-title h1 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-      font-size: 3.2rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 0.3rem;
+      font-family: Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
     }
 
-    .home-content {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-      max-width: calc(100% - 192px);
+    .home-gallery {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+      gap: 1.25rem;
+      width: min(100%, 1120px);
       margin: 0 auto;
-      align-items: center;
-      padding: 3rem 96px;
-    }
-
-    .home-text-block {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 400;
-      line-height: 1.75;
-      color: #333;
-      text-align: left;
-      letter-spacing: 0.3px;
-    }
-
-    .home-text-block p {
-      margin-bottom: 1.8rem;
-    }
-
-    .home-text-block p:last-child {
-      margin-bottom: 0;
     }
 
     .home-image-item {
-      width: 100%;
       cursor: pointer;
-      display: flex;
-      justify-content: center;
+      overflow: hidden;
+      background: #f4f4f4;
     }
 
     .home-image-item img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
       object-fit: contain;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .home-image-item:hover img {
+      opacity: 0.86;
+      transform: scale(1.015);
+    }
+
+    .home-image-item.featured {
+      grid-row: span 2;
+      min-height: 520px;
+    }
+
+    .home-image-item.portrait {
+      min-height: 330px;
+    }
+
+    .home-image-item.panorama {
+      grid-column: 1 / -1;
+      height: auto;
+      aspect-ratio: 2048 / 659;
+    }
+
+    .home-navigation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem 1.5rem;
+      width: min(100%, 1120px);
+      margin: 3.5rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid #ddd;
+    }
+
+    .home-navigation a {
+      color: #2c2c2c;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 0.35rem 0;
+    }
+
+    .home-navigation a:hover,
+    .home-navigation a:focus-visible {
+      color: #000;
+      text-decoration: underline;
+      text-underline-offset: 0.25rem;
+    }
+
+    .about-content {
+      width: min(100%, 820px);
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+      font-family: Georgia, serif;
+      font-size: 0.975rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .about-content p {
+      margin-bottom: 1.5rem;
+    }
+
+    .about-content p:last-child {
+      margin-bottom: 0;
     }
 
     /* GALLERY PAGES */
@@ -631,6 +670,20 @@
         padding: 2rem 24px;
       }
 
+      .home-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .home-image-item.featured,
+      .home-image-item.portrait {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+      }
+
+      .home-image-item.panorama {
+        grid-column: auto;
+      }
+
       .page-header {
         padding: 3rem 24px 2rem;
         width: 100%;
@@ -640,10 +693,6 @@
         padding: 3rem 24px;
         max-width: 100%;
         width: 100%;
-      }
-
-      .home-text-block {
-        font-size: 1rem;
       }
 
       .gallery {
@@ -1002,6 +1051,7 @@
       <li><a href="#darkroom" data-page="darkroom" onclick="showPage('darkroom')">Darkroom</a></li>
       <li><a href="#color" data-page="color" onclick="showPage('color')">Color</a></li>
       <li><a href="#digitalart" data-page="digitalart" onclick="showPage('digitalart')">Digital Art</a></li>
+      <li><a href="#about" data-page="about" onclick="showPage('about')">About</a></li>
       <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button></li>
     </ul>
   </nav>
@@ -1009,67 +1059,66 @@
   <div id="home" class="page active">
     <div class="home-container">
       <div class="home-title">
-        <h1>Nora Mahler</h1>
-        <h1>Photography</h1>
+        <h1>Nora Mahler Photography</h1>
       </div>
-      <div class="home-content">
-        <div class="home-text-block">
-          <p>"I can't put into words what I'm trying to say." Most of us have said this and felt the frustration of
-            struggling to put our thoughts into comprehensible words at least once in our lives. This phrase most
-            accurately captures the frustration of grappling with the gap between a clear thought existing in our minds
-            and the words we use.</p>
-          <p>Language is our primary tool for connecting our minds to the world, but it also limits the accuracy of what
-            we can express. Our brains, bodies, and perception are present long before words come into play; they shape
-            our experiences in ways that can't always be reproduced verbally. Language is all we have to mediate our
-            brains and the world around us; it's what we use to connect to reality, but it also limits our ability to be
-            accurately understood. Translating complex thoughts into words is akin to writing musical notes as a
-            paragraph in English; the tools capture different kinds of meaning. We value language for its ability to
-            transform personal experiences into universal ones, but in reality, its capacity to do so is severely
-            limited.</p>
+      <div class="home-gallery">
+        <div class="home-image-item featured" onclick="openLightbox('Images/home/featured.jpg')">
+          <img class="loaded" src="Images/home/featured.jpg" alt="Featured photograph">
         </div>
-
-        <div class="home-image-item" onclick="openLightbox('Images/home/featured.jpg')">
-          <img class="loaded" src="Images/home/featured.jpg" alt="Featured">
+        <div class="home-image-item portrait" onclick="openLightbox('Images/home/13.jpg')">
+          <img class="loaded" src="Images/home/13.jpg" alt="Featured portrait photograph">
         </div>
-
-        <div class="home-text-block">
-          <p>In the digital age, the pressure to make our inner lives legible, to turn every thought into something to
-            be consumed, viable for communication, or limpid language, feels even stronger. The moment our inner lives
-            become shareable or consumable, they become vulnerable to others' opinions and subject to change based on
-            what viewers take from them.</p>
-          <p>It was when I first began experimental darkroom photography that I remember making my first print by
-            manipulating multiple negatives in the enlargers – the first time I had ever successfully translated an
-            image from my imagination into something tangible. There was a sense of relief, because what I had never
-            believed possible, bringing something from my imagination to life, suddenly became feasible. Before this
-            experience, I was content knowing that everything that goes on in my mind, images, thoughts, ideas,
-            opinions, did not need to be proved essential or interesting to anybody, mainly because it couldn't be.
-            However, once it became possible for me to translate at least some of what transpired in my brain, the
-            significance of my work, and coincidentally my imagination, was suddenly placed in the hands of the viewer.
-          </p>
-        </div>
-
-        <div class="home-image-item" onclick="openLightbox('Images/home/7Panorama Collage.jpg')">
-          <img class="loaded" src="Images/home/7Panorama Collage.jpg" alt="Panorama">
-        </div>
-
-        <div class="home-text-block">
-          <p>So is the key to a life of expression forming a path that aligns with how you think, or is it the ability
-            to live contentedly and confidently in the significance of our imaginations without needing them to be
-            consumable?</p>
-          <p>I want any viewer of my work to be reminded that inner experience will always be richer, stranger, and more
-            personal than anything to be consumed.</p>
-        </div>
-
-        <div class="home-image-item" onclick="openLightbox('Images/home/13.jpg')">
-          <img class="loaded" src="Images/home/13.jpg" alt="13">
+        <div class="home-image-item panorama" onclick="openLightbox('Images/home/7Panorama Collage.jpg')">
+          <img class="loaded" src="Images/home/7Panorama Collage.jpg" alt="Panorama collage">
         </div>
       </div>
-      <p style="text-align:center;margin-top:3rem;font-size:0.95rem;color:#666;letter-spacing:0.2px;">
-        Contact: <a href="mailto:noradmahler@gmail.com"
-          style="color:#2c2c2c;text-decoration:none;font-weight:500;transition:opacity 0.2s ease;"
-          onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">noradmahler@gmail.com</a>
-      </p>
+      <div class="home-navigation" aria-label="Portfolio sections">
+        <a href="#experimental" onclick="showPage('experimental')">Experimental</a>
+        <a href="#traditional" onclick="showPage('traditional')">Traditional B&amp;W</a>
+        <a href="#darkroom" onclick="showPage('darkroom')">Darkroom</a>
+        <a href="#color" onclick="showPage('color')">Color</a>
+        <a href="#digitalart" onclick="showPage('digitalart')">Digital Art</a>
+        <a href="#about" onclick="showPage('about')">About</a>
+      </div>
     </div>
+  </div>
+
+  <div id="about" class="page">
+    <div class="page-header">
+      <h2>About</h2>
+      <p>Writing and thoughts behind the work</p>
+    </div>
+    <article class="about-content">
+      <p><strong>"I can't put into words what I'm trying to say."</strong> Most of us have said this and felt the
+        frustration of struggling to put our thoughts into comprehensible words at least once in our lives. This phrase
+        most accurately captures the frustration of grappling with the gap between a clear thought existing in our minds
+        and the words we use.</p>
+      <p>Language is our primary tool for connecting our minds to the world, but it also limits the accuracy of what we
+        can express. Our brains, bodies, and perception are present long before words come into play; they shape our
+        experiences in ways that can't always be reproduced verbally. Language is all we have to mediate our brains and
+        the world around us; it's what we use to connect to reality, but it also limits our ability to be accurately
+        understood. Translating complex thoughts into words is akin to writing musical notes as a paragraph in English;
+        the tools capture different kinds of meaning. We value language for its ability to transform personal
+        experiences into universal ones, but in reality, its capacity to do so is severely limited.</p>
+      <p>In the digital age, the pressure to make our inner lives legible, to turn every thought into something to be
+        consumed, viable for communication, or limpid language, feels even stronger. The moment our inner lives become
+        shareable or consumable, they become vulnerable to others' opinions and subject to change based on what viewers
+        take from them.</p>
+      <p>It was when I first began experimental darkroom photography that I remember making my first print by
+        manipulating multiple negatives in the enlargers - the first time I had ever successfully translated an image
+        from my imagination into something tangible. There was a sense of relief, because what I had never believed
+        possible, bringing something from my imagination to life, suddenly became feasible. Before this experience, I
+        was content knowing that everything that goes on in my mind, images, thoughts, ideas, opinions, did not need to
+        be proved essential or interesting to anybody, mainly because it couldn't be. However, once it became possible
+        for me to translate at least some of what transpired in my brain, the significance of my work, and coincidentally
+        my imagination, was suddenly placed in the hands of the viewer.</p>
+      <p>So is the key to a life of expression forming a path that aligns with how you think, or is it the ability to
+        live contentedly and confidently in the significance of our imaginations without needing them to be consumable?
+      </p>
+      <p>I want any viewer of my work to be reminded that inner experience will always be richer, stranger, and more
+        personal than anything to be consumed.</p>
+      <p>Contact: <a href="mailto:noradmahler@gmail.com">noradmahler@gmail.com</a></p>
+    </article>
   </div>
 
   <div id="experimental" class="page">
